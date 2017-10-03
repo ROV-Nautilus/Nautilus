@@ -1,0 +1,90 @@
+\documentclass[a4paper,11pt]{report}
+ 
+% Import des extensions
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{geometry}
+\geometry{hmargin=2.5cm,vmargin=3.5cm}
+
+
+\author{Dylan Bideau, Julien Turpin, Pierre Bogrand, Guillaume Vincenti}
+\title{Nautilus - Cahier des Charges}
+
+
+\begin{document}
+
+
+    % Début du document
+\maketitle
+
+\textbf{\Huge Introduction :\newline \newline \newline \newline \newline \newline \newline \newline \newline}
+
+
+Les fonds marins réunissent aujourd'hui de nombreux secteurs et enjeux, tant professionels que particuliers.
+On y retrouve entre autre l'exploration sous-marine, la surveillance et maintenance d'installations professionelles, ainsi que la cartographie des fonds marins. Tout ces domaines demandent le développement de solutions techniques plus rentables et pratiques qu'une intervention humaine. Notre projet propose ainsi un ROV (Remotely Operated Vehicle) polyvalent et simple d'utilisation à cet effet.
+
+Un ROV est un robot sous-marin contrôlé à distance et permettant une acquisition d'informations, visuelles ou à partir de capteurs. Notre projet de ROV filoguidé, Nautilus, sera transportable et pilotable à l'aide d'un ordinateur portable. Il permettra d'observer facilement des installations ou des fonds marins à l'aide de caméras. Disposant également de fonctions avancées, le Nautilus sera en mesure de recréer le fond marin d'une zone géographique déterminée par l'utilisateur à partir d'une batterie de photographies prises lors de la phase d'exploration. Les différentes fonctionnalités du Nautilus en font ainsi un outil polyvalent, permettant exploration, maintenance et cartographie des fonds.
+\newpage
+
+\textbf{\Huge Analyse Fonctionnelle \newline \newline}
+
+\textbf{\LARGE Structure :\newline \newline}
+Facilement transportable et peu emcombrant.\newline
+\begin{itemize}
+	\item \textbf{Contraintes :}
+	\item - Poids : 2-3kg
+	\item - Dimension : 300*200*150mm
+	\item - Etanche de norme IP 68 \newline \newline
+\end{itemize}
+
+\textbf{\LARGE Commandabilité :\newline \newline}
+Commandé à distance par une liaison filaire.\newline
+\begin{itemize}
+	\item \textbf{Contraintes :}
+	\item - Câble : 15m
+	\item - Carte intégrée dans le ROV
+	\item - FPV (First Point View)
+	\item - Piloté avec une manette \newline \newline
+\end{itemize}
+
+\textbf{\LARGE Milieu d'utilisation :\newline \newline}
+Adapté aux contraintes imposées par son environnement. \newline
+\begin{itemize}
+	\item \textbf{Contraintes :}
+	\item - Eau non salé (moins de 1 g de sels dissous par kilogramme d'eau)
+	\item - Eau translucide (transmittance entre 75\% et 95\%)
+	\item - Ecoulement laminaire
+	\item - Courant marin inferieur à 2 noeuds
+	\item - Profondeur de 10m (résistant à 2 bars) \newline \newline
+\end{itemize}
+
+\textbf{\LARGE Energie :\newline \newline}
+Etre entièrement autonome. \newline
+\begin{itemize}
+	\item \textbf{Contraintes :}
+	\item - Autonomie de 20 minutes \newpage
+\end{itemize}
+
+\textbf{\LARGE Motorisation :\newline \newline}
+Etre mobile une fois immergé. \newline
+\begin{itemize}
+	\item \textbf{Contraintes :}
+	\item - Propulsion electrique
+	\item - Déplacement horizontal (Vitesse maximale de 1m/s)
+	\item - Déplacement vertical (Vitesse maximale de 0.5m/s)
+	\item - Direction droite/gauche à 360 degres   \newline \newline
+\end{itemize}
+
+\textbf{\LARGE Acquisitions :\newline \newline}
+Acquérir et transmettre l'information. \newline
+\begin{itemize}
+	\item \textbf{Contraintes :}
+	\item - Acquisition et retransmission d'un signal vidéo
+	\item - Acquisition et stockage de photographies
+	\item - Mesure de la pression
+	\item - Mesure de la position
+\end{itemize}
+
+\end{document}
+
