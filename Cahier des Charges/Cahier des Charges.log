@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  3 OCT 2017 18:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  10 OCT 2017 13:27
 entering extended mode
 **"./Cahier des Charges.tex"
 ("Cahier des Charges.tex"
@@ -478,177 +478,98 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Chapitre 1.
+[1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-
- []
-
-[1]
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 69--71
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--71
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
 [3] ("Cahier des Charges.aux") ) 
 Here is how much of TeX's memory you used:
- 2442 strings out of 493323
- 31068 string characters out of 3139054
+ 2450 strings out of 493323
+ 31161 string characters out of 3139054
  100860 words of memory out of 3000000
- 5992 multiletter control sequences out of 15000+200000
- 11311 words of font info for 30 fonts, out of 3000000 for 9000
+ 5996 multiletter control sequences out of 15000+200000
+ 14403 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,6n,30p,757b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx109
-5.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\dylan_000\A
-ppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
-i600\ecrm1200.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk>
-Output written on "Cahier des Charges.pdf" (4 pages, 65049 bytes).
+5.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\dylan_000\A
+ppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
+i600\ecbx2488.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <C:\Users
+\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\dylan_000\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk>
+Output written on "Cahier des Charges.pdf" (4 pages, 71818 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
+ 230 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
