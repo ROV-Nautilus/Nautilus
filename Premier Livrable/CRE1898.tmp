@@ -119,62 +119,15 @@
 
 \chapter{Planning prévisionnel}
 		\section{Dylan Bideau}
-		\begin{center}
-			\begin{tabular}{|p{3cm}|p{12cm}|}
+			\begin{tabular}{|c|p{15cm}|}
 				\hline
 					\rowcolor{yellow}Dates & Travaux \\
 				\hline
-					7 Novembre & Stabilisation du flux des caméras en IP \newline Configurations précises des caméras \\
-				\hline
-					14 Novembre & Création de l'interface graphique sous python \\
-				\hline
-					21 Novembre \newline 28 Novembre & Amélioration de l'interface \\
-				\hline
-					5 Decembre \newline 19 Decembre \newline 9 Janvier & Récupération et affichage des informations des capteurs \\
+					3 & 4 \\
 				\hline
 			\end{tabular}
-		\end{center}
 		\section{Julien Turpin}
-		\begin{center}
-			\begin{tabular}{|p{3cm}|p{12cm}|}
-				\hline
-					\rowcolor{yellow}Dates & Travaux \\
-				\hline
-					7 Novembre \newline 14 Novembre & Capteur de pression \\
-				\hline
-					21 Novembre \newline 28 Novembre \newline 5 Decembre & Matrice Inertielle \\
-				\hline
-					19 Decembre \newline 9 Janvier & Début conception 3D \\
-				\hline
-			\end{tabular}
-		\end{center}
 		\section{Pierre Bogrand}
-		\begin{center}
-			\begin{tabular}{|p{3cm}|p{12cm}|}
-				\hline
-					\rowcolor{yellow}Dates & Travaux \\
-				\hline
-					0 & 1 \\
-				\hline
-					2 & 3 \\
-				\hline
-					4 & 5 \\
-				\hline
-			\end{tabular}
-		\end{center}
 		\section{Guillaume Vincenti}
-		\begin{center}
-			\begin{tabular}{|p{3cm}|p{12cm}|}
-				\hline
-					\rowcolor{yellow}Dates & Travaux \\
-				\hline
-					0 & 1 \\
-				\hline
-					2 & 3 \\
-				\hline
-					4 & 5 \\
-				\hline
-			\end{tabular}
-		\end{center}
 
 \end{document}
