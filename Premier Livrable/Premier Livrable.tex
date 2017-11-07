@@ -23,72 +23,80 @@
 \renewcommand{\contentsname}{Sommaire}
 \tableofcontents
 
+
 \chapter{Introduction}
-        \paragraph{Les fonds marins réunissent aujourd'hui de nombreux secteurs et enjeux, tant professionels que particuliers. On y retrouve entre autre l'exploration sous-marine, la surveillance et maintenance d'installations professionelles, ainsi que la cartographie des fonds marins. Tout ces domaines demandent le développement de solutions techniques plus rentables et pratiques qu'une intervention humaine. Notre projet propose ainsi un ROV (Remotely Operated Vehicle) polyvalent et simple d'utilisation à cet effet.}
+
+        Les fonds marins réunissent aujourd'hui de nombreux secteurs et enjeux, tant professionels que particuliers. On y retrouve entre autre l'exploration sous-marine, la surveillance et maintenance d'installations professionelles, ainsi que la cartographie des fonds marins. Tout ces domaines demandent le développement de solutions techniques plus rentables et pratiques qu'une intervention humaine. Notre projet propose ainsi un ROV (Remotely Operated Vehicle) polyvalent et simple d'utilisation à cet effet.
 
 \chapter{Présentation du projet}
-        \paragraph{Un ROV est un robot sous-marin contrôlé à distance et permettant une acquisition d'informations, visuelles ou à partir de capteurs. Notre projet de ROV filoguidé, Nautilus, sera transportable et pilotable à l'aide d'un ordinateur portable. Il permettra d'observer facilement des installations ou des fonds marins à l'aide de caméras. Disposant également de fonctions avancées, le Nautilus sera en mesure de recréer le fond marin d'une zone géographique déterminée par l'utilisateur à partir d'une batterie de photographies prises lors de la phase d'exploration. Les différentes fonctionnalités du Nautilus en font ainsi un outil polyvalent, permettant exploration, maintenance et cartographie des fonds.}
+        
+				Un ROV est un robot sous-marin contrôlé à distance et permettant une acquisition d'informations, visuelles ou à partir de capteurs. Notre projet de ROV filoguidé, Nautilus, sera transportable et pilotable à l'aide d'un ordinateur portable. Il permettra d'observer facilement des installations ou des fonds marins à l'aide de caméras. Disposant également de fonctions avancées, le Nautilus sera en mesure de recréer le fond marin d'une zone géographique déterminée par l'utilisateur à partir d'une batterie de photographies prises lors de la phase d'exploration. Les différentes fonctionnalités du Nautilus en font ainsi un outil polyvalent, permettant exploration, maintenance et cartographie des fonds.
+				
 				
 \chapter{Cahier des charges}
+
         \section{Analyse Fonctionnelle}
 						\subsection{Structure}
 								Facilement transportable et peu emcombrant.\newline
+								\textbf{Contraintes :}
 								\begin{itemize}
-										\item \textbf{Contraintes :}
-										\item - Poids : 2-3kg
-										\item - Dimension : 300*200*150mm
-										\item - Etanche de norme IP 68 \newline \newline
+										\item Poids : 2-3kg
+										\item Dimension : 300*200*150mm
+										\item Etanche de norme IP 68 \newline \newline
 									\end{itemize}
 
 						\subsection{Commandabilité}
 								Commandé à distance par une liaison filaire.\newline
+								\textbf{Contraintes :}
 								\begin{itemize}
-										\item \textbf{Contraintes :}
-										\item - Câble : 15m
-										\item - Carte intégrée dans le ROV
-										\item - FPV (First Point View)
-										\item - Piloté avec une manette \newline \newline
+										\item Câble : 15m
+										\item Carte intégrée dans le ROV
+										\item FPV (First Person View)
+										\item Piloté avec une manette \newline \newline
 								\end{itemize}
 
 						\subsection{Milieu d'utilisation}
 								Adapté aux contraintes imposées par son environnement. \newline
+								\textbf{Contraintes :}
 								\begin{itemize}
-										\item \textbf{Contraintes :}
-										\item - Eau non salé (moins de 1 g de sels dissous par kilogramme d'eau)
-										\item - Eau translucide (transmittance entre 75\% et 95\%)
-										\item - Ecoulement laminaire
-										\item - Courant marin inferieur à 2 noeuds
-										\item - Profondeur de 10m (résistant à 2 bars) \newline \newline
+										\item Eau non salé (moins de 1 g de sels dissous par kilogramme d'eau)
+										\item Eau translucide (transmittance de la lumière entre 75\% et 95\%)
+										\item Lieu : Piscine, lac
+										\item Ecoulement laminaire
+										\item Courant marin inferieur à 2 noeuds
+										\item Profondeur de 10m (résistant à 2 bars) \newline \newline
 								\end{itemize}
 
 						\subsection{Energie}
 								Etre entièrement autonome. \newline
+								\textbf{Contraintes :}
 								\begin{itemize}
-										\item \textbf{Contraintes :}
-										\item - Autonomie de 20 minutes
+										\item Autonomie de 20 minutes
 								\end{itemize}
 
 						\subsection{Motorisation}
 								Etre mobile une fois immergé. \newline
+								\textbf{Contraintes :}
 								\begin{itemize}
-										\item \textbf{Contraintes :}
-										\item - Propulsion electrique
-										\item - Déplacement horizontal (Vitesse maximale de 1m/s)
-										\item - Déplacement vertical (Vitesse maximale de 0.5m/s)
-										\item - Direction droite/gauche à 360 degres   \newline \newline
+										\item Propulsion electrique
+										\item Déplacement horizontal (Vitesse maximale de 1m/s)
+										\item Déplacement vertical (Vitesse maximale de 0.5m/s)
+										\item Direction droite/gauche à 360 degres   \newline \newline
 								\end{itemize}
 
 						\subsection{Acquisitions}
 								Acquérir et transmettre l'information. \newline
+								\textbf{Contraintes :}
 								\begin{itemize}
-										\item \textbf{Contraintes :}
-										\item - Acquisition et retransmission d'un signal vidéo
-										\item - Acquisition et stockage de photographies
-										\item - Mesure de la pression
-										\item - Mesure de la position relative avec signaux GPS
+										\item Acquisition et retransmission d'un signal vidéo
+										\item Acquisition et stockage de photographies
+										\item Mesure de la pression
+										\item Mesure de la position relative avec signaux GPS
 								\end{itemize}
 								
+								
 \chapter{Outils de gestion}
+
         \section{Trello}
 					\paragraph{Notre premier outil de gestion est Trello. Il nous permet de gerer notre projet en terme de planification des tâches. \newline}
 						\begin{figure}[!h]
@@ -109,8 +117,8 @@
 								\includegraphics[scale=0.5]{Illustrations/Planning2.png}
 							\end{center}
 						\end{figure}
+						
         \section{Github}
-					
 					\begin{figure}[!h]
 							\paragraph{Tout notre code, que cela soit pour les documents en latex ou les codes liés au projet, est sur Github :\newline}
 							\url{https://github.com/ROV-Nautilus/Nautilus}
@@ -119,6 +127,24 @@
 								\includegraphics[scale=0.5]{Illustrations/Github.png}
 							\end{center}
 						\end{figure}
+				
+				\section{Gestion de Budget}
+					\begin{figure}[!h]
+							\paragraph{\newline La gestion de notre budget est réalisé à l'aide d'Excel et de Trello, en effet Trello nous permet de mettre en commun les propositions de dépenses et avec Excel nous stockons l'ensemble des commandes par fournisseurs \newline \newline Les voici ci-dessous : \newline}
+							\begin{center}
+								\includegraphics[scale=0.5]{Illustrations/Conrad.png}
+							\end{center}
+					\end{figure}
+					\begin{figure}[!h]
+							\begin{center}
+								\includegraphics[scale=0.5]{Illustrations/Robotshop.png}
+							\end{center}
+					\end{figure}
+					\begin{figure}[!h]
+							\begin{center}
+								\includegraphics[scale=0.5]{Illustrations/Exptech.png}
+							\end{center}
+					\end{figure}
 
 \chapter{Planning prévisionnel}
 		\section{Dylan Bideau}
