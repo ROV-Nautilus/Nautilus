@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1113
-NormalPos.bottom=348
+NormalPos.right=1131
+NormalPos.bottom=366
 Class=LaTeXView
 Document=Premier Livrable.tex
 
 [Frame0_View0,0]
-TopLine=128
-Cursor=5605
+TopLine=0
+Cursor=5906
 
 [SessionInfo]
 FrameCount=1
