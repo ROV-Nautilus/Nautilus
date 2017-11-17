@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  10 NOV 2017 09:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  17 NOV 2017 08:57
 entering extended mode
 **"./Carnet De Bord.tex"
 ("Carnet De Bord.tex"
@@ -569,26 +569,33 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
 \Hy@SectionHShift=\skip51
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip52
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 ) ("Carnet De Bord.aux")
 \openout1 = `"Carnet De Bord.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Info: Redefining \degres on input line 18.
-LaTeX Info: Redefining \dots on input line 18.
-LaTeX Info: Redefining \up on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Info: Redefining \degres on input line 32.
+LaTeX Info: Redefining \dots on input line 32.
+LaTeX Info: Redefining \up on input line 32.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -630,9 +637,9 @@ Package grfext Info: Graphics extension search list:
 * \textheight=645.87756pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-9.68535pt
-* \headheight=12.0pt
-* \headsep=25.0pt
+* \topmargin=27.31465pt
+* \headheight=0.0pt
+* \headsep=0.0pt
 * \topskip=11.0pt
 * \footskip=30.0pt
 * \marginparwidth=50.0pt
@@ -649,7 +656,7 @@ Package grfext Info: Graphics extension search list:
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 18.
+Package hyperref Info: Link coloring OFF on input line 32.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -658,25 +665,28 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count116
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
  ("Carnet De Bord.out") ("Carnet De Bord.out")
 \@outlinefile=\write3
 \openout3 = `"Carnet De Bord.out"'.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 22.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 22.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 22.
 
-[1
+<Illustrations/ensea.png, id=31, 91.09032pt x 91.09032pt>
+File: Illustrations/ensea.png Graphic file (type png)
+ <use Illustrations/ensea.png>
+Package pdftex.def Info: Illustrations/ensea.png used on input line 51.
+(pdftex.def)             Requested size: 113.81102pt x 113.81532pt.
+ [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] ("Carnet De Bord.toc"
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./Illustrations/ensea.png>] ("Carnet De Bord.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
 )
 \tf@toc=\write4
 \openout4 = `"Carnet De Bord.toc"'.
@@ -684,127 +694,145 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 \chapter
+l.58 \chapter
              {Dylan Bideau} [1
 
 ]
 Chapitre 1.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 32.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 63.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) <Illustrations/1.png, id=54, 502.87875pt x 33.87656pt>
+) <Illustrations/1.png, id=55, 502.87875pt x 33.87656pt>
 File: Illustrations/1.png Graphic file (type png)
 
 <use Illustrations/1.png>
-Package pdftex.def Info: Illustrations/1.png used on input line 43.
+Package pdftex.def Info: Illustrations/1.png used on input line 74.
 (pdftex.def)             Requested size: 502.87752pt x 33.87646pt.
 
-Overfull \hbox (47.6334pt too wide) in paragraph at lines 43--44
+Overfull \hbox (47.6334pt too wide) in paragraph at lines 74--75
  [] 
  []
 
-<Illustrations/2.png, id=55, 454.69875pt x 14.30344pt>
+<Illustrations/2.png, id=56, 454.69875pt x 14.30344pt>
 File: Illustrations/2.png Graphic file (type png)
  <use Illustrations/2.png>
-Package pdftex.def Info: Illustrations/2.png used on input line 49.
+Package pdftex.def Info: Illustrations/2.png used on input line 80.
 (pdftex.def)             Requested size: 454.69763pt x 14.30339pt.
 
-Overfull \hbox (99.11787pt too wide) in paragraph at lines 37--52
+Overfull \hbox (99.11787pt too wide) in paragraph at lines 68--83
 []$\T1/cmtt/m/n/10.95 http : / / www . framboise314 . fr / prenez-[]vraiment-[]la-[]main-[]a-[]distance-[]sur-[]votre-[]
 raspberry-[]pi-[]avec-[]x11vnc/$[] 
  []
 
 [2
 
- <./Illustrations/1.png> <./Illustrations/2.png>] <Illustrations/3.png, id=65, 420.06938pt x 327.47343pt>
+ <./Illustrations/1.png> <./Illustrations/2.png>] <Illustrations/3.png, id=66, 420.06938pt x 327.47343pt>
 File: Illustrations/3.png Graphic file (type png)
 
 <use Illustrations/3.png>
-Package pdftex.def Info: Illustrations/3.png used on input line 55.
+Package pdftex.def Info: Illustrations/3.png used on input line 86.
 (pdftex.def)             Requested size: 210.03418pt x 163.73631pt.
- <Illustrations/4.png, id=66, 340.27126pt x 365.86688pt>
+ <Illustrations/4.png, id=67, 340.27126pt x 365.86688pt>
 File: Illustrations/4.png Graphic file (type png)
  <use Illustrations/4.png>
-Package pdftex.def Info: Illustrations/4.png used on input line 61.
+Package pdftex.def Info: Illustrations/4.png used on input line 92.
 (pdftex.def)             Requested size: 170.13521pt x 182.93298pt.
 
-<Illustrations/5.png, id=67, 396.7322pt x 284.56313pt>
+<Illustrations/5.png, id=68, 396.7322pt x 284.56313pt>
 File: Illustrations/5.png Graphic file (type png)
  <use Illustrations/5.png>
-Package pdftex.def Info: Illustrations/5.png used on input line 67.
+Package pdftex.def Info: Illustrations/5.png used on input line 98.
 (pdftex.def)             Requested size: 198.3656pt x 142.2812pt.
 
-<Illustrations/7.png, id=68, 395.97937pt x 61.73062pt>
+<Illustrations/7.png, id=69, 395.97937pt x 61.73062pt>
 File: Illustrations/7.png Graphic file (type png)
  <use Illustrations/7.png>
-Package pdftex.def Info: Illustrations/7.png used on input line 74.
+Package pdftex.def Info: Illustrations/7.png used on input line 105.
 (pdftex.def)             Requested size: 395.97841pt x 61.73045pt.
 
-<Illustrations/8.png, id=69, 302.63063pt x 19.57312pt>
+<Illustrations/8.png, id=70, 302.63063pt x 19.57312pt>
 File: Illustrations/8.png Graphic file (type png)
  <use Illustrations/8.png>
-Package pdftex.def Info: Illustrations/8.png used on input line 80.
+Package pdftex.def Info: Illustrations/8.png used on input line 111.
 (pdftex.def)             Requested size: 302.62988pt x 19.57306pt.
 
-<Illustrations/9.png, id=70, 829.59938pt x 135.50626pt>
+<Illustrations/9.png, id=71, 829.59938pt x 135.50626pt>
 File: Illustrations/9.png Graphic file (type png)
  <use Illustrations/9.png>
-Package pdftex.def Info: Illustrations/9.png used on input line 86.
+Package pdftex.def Info: Illustrations/9.png used on input line 117.
 (pdftex.def)             Requested size: 414.79868pt x 67.75294pt.
 
-<Illustrations/10.png, id=71, 440.39531pt x 43.66313pt>
+<Illustrations/10.png, id=72, 440.39531pt x 43.66313pt>
 File: Illustrations/10.png Graphic file (type png)
  <use Illustrations/10.png>
-Package pdftex.def Info: Illustrations/10.png used on input line 92.
+Package pdftex.def Info: Illustrations/10.png used on input line 123.
 (pdftex.def)             Requested size: 440.39423pt x 43.66301pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--95
+Underfull \hbox (badness 10000) in paragraph at lines 83--126
 
  []
 
 [3 <./Illustrations/3.png> <./Illustrations/4.png> <./Illustrations/5.png>] [4 <./Illustrations/7.png> <./Illustrations/
-8.png> <./Illustrations/9.png> <./Illustrations/10.png>] <Illustrations/6.png, id=81, 665.48625pt x 181.42781pt>
+8.png> <./Illustrations/9.png> <./Illustrations/10.png>] <Illustrations/6.png, id=82, 665.48625pt x 181.42781pt>
 File: Illustrations/6.png Graphic file (type png)
 
 <use Illustrations/6.png>
-Package pdftex.def Info: Illustrations/6.png used on input line 103.
+Package pdftex.def Info: Illustrations/6.png used on input line 134.
 (pdftex.def)             Requested size: 332.74231pt x 90.71368pt.
- [5 <./Illustrations/6.png>]
-Chapitre 2.
-[6
+ <Illustrations/11.png, id=83, 371.88937pt x 317.68687pt>
+File: Illustrations/11.png Graphic file (type png)
+ <use Illustrations/11.png>
+Package pdftex.def Info: Illustrations/11.png used on input line 146.
+(pdftex.def)             Requested size: 260.32079pt x 222.37927pt.
 
-]
-Chapitre 3.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 114.
+<Illustrations/12.png, id=85, 465.99094pt x 51.19125pt>
+File: Illustrations/12.png Graphic file (type png)
+ <use Illustrations/12.png>
+Package pdftex.def Info: Illustrations/12.png used on input line 152.
+(pdftex.def)             Requested size: 326.19142pt x 35.83362pt.
+ [5 <./Illustrations/6.png> <./Illustrations/11.png> <./Illustrations/12.png>] <Illustrations/13.png, id=95, 478.78876pt
+ x 50.43843pt>
+File: Illustrations/13.png Graphic file (type png)
+
+<use Illustrations/13.png>
+Package pdftex.def Info: Illustrations/13.png used on input line 159.
+(pdftex.def)             Requested size: 335.14984pt x 35.30664pt.
+ [6 <./Illustrations/13.png>]
+Chapitre 2.
 [7
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 114.
+Chapitre 3.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
+[8
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
  ("Carnet De Bord.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `"Carnet De Bord".out' has not changed.
 (rerunfilecheck)             Checksum: D58EFB3E276CB9A55DF5130DD7A7562B;413.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 114.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
  ) 
 Here is how much of TeX's memory you used:
- 7397 strings out of 493323
- 106237 string characters out of 3139054
- 204431 words of memory out of 3000000
- 10814 multiletter control sequences out of 15000+200000
- 16105 words of font info for 38 fonts, out of 3000000 for 9000
+ 7534 strings out of 493323
+ 108486 string characters out of 3139054
+ 207166 words of memory out of 3000000
+ 10938 multiletter control sequences out of 15000+200000
+ 15777 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,8n,30p,506b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,13n,30p,506b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\dylan_000\AppD
 ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\
 pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
 0\ecbx2074.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\dy
 lan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\dylan_000\AppData\Local\MiKTe
 X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecrm1200.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk>
-Output written on "Carnet De Bord.pdf" (8 pages, 307717 bytes).
+pen\ec\dpi600\ecrm1200.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk>
+Output written on "Carnet De Bord.pdf" (9 pages, 344220 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 107 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 386 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
+ 127 words of extra memory for PDF output out of 10000 (max. 10000000)
 

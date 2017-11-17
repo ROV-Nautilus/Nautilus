@@ -9,16 +9,47 @@
 \usepackage{colortbl}
 \usepackage{geometry}
 \usepackage{hyperref}
+\usepackage{fullpage}
+\usepackage{eso-pic}
 \geometry{hmargin=2.5cm,vmargin=3.5cm}
 
 
+\newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
+\newcommand\AtUpperLeftCorner[3]{%
+\put(\LenToUnit{#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{#3}}%
+}
+\newcommand\AtTopCenterPage[2]{%
+\put(\LenToUnit{.5\paperwidth},\LenToUnit{\dimexpr\paperheight-#1}){\blap{\hbox to 0pt{\hss#2\hss}}}%
+}
+\newcommand\AtUpperRightCorner[3]{%
+\put(\LenToUnit{\dimexpr\paperwidth-#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{\llap{#3}}}%
+}
+
+
 \author{Dylan Bideau, Julien Turpin, Pierre Bogrand, Guillaume Vincenti}
-\title{Nautilus - Carnet de Bord}
+\title{\huge{Nautilus - Carnet de Bord}}
 
 \begin{document}
+\makeatletter
+\begin{titlepage}
 
-% Début du document
-\maketitle
+	\AddToShipoutPicture{
+		\AtUpperLeftCorner{1.5cm}{1cm}{\includegraphics[width=4cm]{Illustrations/ensea.png}}
+	}
+	\begin{center}
+		\vspace*{10cm}
+		\textsc{\@title}
+		\vspace*{0.5cm}
+		\hrule
+		\vspace*{0.5cm}
+		\large{\@author}
+	\end{center}
+	\vspace*{9.2cm}
+	\begin{center}
+		\large{\@date}
+	\end{center}
+\end{titlepage}
+\ClearShipoutPicture
 
 \renewcommand{\contentsname}{Sommaire}
 \tableofcontents
@@ -106,7 +137,31 @@
 			
 		\subsection{Les Cameras}
 		
+		\subsubsection{Camera V2}
 		
+			Tout d'abord il faut brancher la camera au port prévu sur la raspberry. \newline
+			Puis nous devons activer la camera dans les configurations de la rapsberry :
+			\begin{figure}[!h]
+				\begin{center}
+					\includegraphics[scale=0.7]{Illustrations/11.png}
+				\end{center}
+			\end{figure}
+		  \newline Nous créeons ensuite le script Python qui va permettre d'envoyer le flux video en streaming sur une IP (169.254.14.0X:8000)
+			\begin{figure}[!h]
+				\begin{center}
+					\includegraphics[scale=0.7]{Illustrations/12.png}
+				\end{center}
+			\end{figure}
+			\newline Le code est stocké sur notre gitHub.\newpage
+			Puis nous demarrons notre flux IP par cette commande :
+			\begin{figure}[!h]
+				\begin{center}
+					\includegraphics[scale=0.7]{Illustrations/13.png}
+				\end{center}
+			\end{figure}
+			
+			\subsubsection{Camera C170 Logitech}
+			
 \chapter{Julien Turpin}
 
 \chapter{Pierre et Guillaume}

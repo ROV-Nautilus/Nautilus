@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Soutenance.tex
 
 [Frame0_View0,0]
-TopLine=48
-Cursor=1666
+TopLine=41
+Cursor=1307
 
 [SessionInfo]
 FrameCount=1
