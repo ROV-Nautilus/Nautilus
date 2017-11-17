@@ -1,0 +1,60 @@
+\documentclass[a4paper,11pt]{report}
+ 
+% Import des extensions
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{fullpage}
+\usepackage{eso-pic}
+\geometry{hmargin=2.5cm,vmargin=3.5cm}
+
+\newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
+\newcommand\AtUpperLeftCorner[3]{%
+\put(\LenToUnit{#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{#3}}%
+}
+\newcommand\AtTopCenterPage[2]{%
+\put(\LenToUnit{.5\paperwidth},\LenToUnit{\dimexpr\paperheight-#1}){\blap{\hbox to 0pt{\hss#2\hss}}}%
+}
+\newcommand\AtUpperRightCorner[3]{%
+\put(\LenToUnit{\dimexpr\paperwidth-#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{\llap{#3}}}%
+}
+
+\author{Dylan Bideau, Julien Turpin, Pierre Bogrand, Guillaume Vincenti}
+\title{\huge{Nautilus - Summary}}
+
+\begin{document}
+\makeatletter
+\begin{titlepage}
+
+	\AddToShipoutPicture{
+		\AtUpperLeftCorner{1.5cm}{1cm}{\includegraphics[width=4cm]{Illustration/ensea.png}}
+	}
+	\begin{center}
+		\vspace*{10cm}
+		\textsc{\@title}
+		\vspace*{0.5cm}
+		\hrule
+		\vspace*{0.5cm}
+		\large{\@author}
+	\end{center}
+	\vspace*{9.2cm}
+	\begin{center}
+		\large{\@date}
+	\end{center}
+\end{titlepage}
+\ClearShipoutPicture
+
+\section*{\Huge Project Summary \newline}
+Nowadays, a lot of different sectors are interested in submarine activities, professional companies as well as some hobbyist. Those activities include underwater exploration, installations surveillance and maintenance, and seabed cartography.
+\\Those fields require some technical solutions, cheaper and easier to set up than a human intervention. For this purpose, our project is a ROV (Remotely Operated Vehicle), versatile and easy to use. We proposed this project for four students because we saw the success that aerial drones had recently, and thought that submarine ones could be next.\newline \newline A ROV is a remotely operated submarine, able to acquire data from sensors, or directly via a camera.
+Our ROV project, Nautilus, will be portable and operated from a computer linked to the sub with an Ethernet cable. He will allow us to easily observe underwater installations or seabed with its two cameras. Furthermore, the Nautilus will be able to model the seabed of a specified location using data and pictures acquired when exploring.
+\\All those features make the Nautilus a tool easy to use and able to explore, monitor and cartography.
+
+
+								
+\end{document}

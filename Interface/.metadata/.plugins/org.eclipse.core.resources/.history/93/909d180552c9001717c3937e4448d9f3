@@ -1,0 +1,18 @@
+package Video;
+
+import javax.swing.JFrame;
+
+public class Main {
+
+	public static void main(String[] args) {
+		 
+    	JFrame jframe = new JFrame();
+    	jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    	AxisCamera1 axPanel = new Interface(jframe);
+    	new Thread(axPanel).start();
+    	jframe.getContentPane().add(axPanel);
+    	jframe.pack();
+    	jframe.show();
+    }
+	
+}

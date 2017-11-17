@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Premier Livrable.tex
 
 [Frame0_View0,0]
-TopLine=18
-Cursor=526
+TopLine=0
+Cursor=192
 
 [SessionInfo]
 FrameCount=1

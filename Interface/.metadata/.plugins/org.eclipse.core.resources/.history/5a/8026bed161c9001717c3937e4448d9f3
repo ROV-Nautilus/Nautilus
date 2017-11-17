@@ -1,0 +1,12 @@
+package Video;
+
+import javax.swing.JFrame;
+
+public class Main {
+
+	public static void main(String[] args) {
+		 
+		Interface win = new Interface("Nautilus",0,0,700,500);
+    }
+	
+}

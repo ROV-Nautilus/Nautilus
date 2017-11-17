@@ -1,0 +1,19 @@
+\select@language {french}
+\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
+\contentsline {chapter}{\numberline {2}Pr\IeC {\'e}sentation du projet}{3}{chapter.2}
+\contentsline {chapter}{\numberline {3}Cahier des charges}{4}{chapter.3}
+\contentsline {section}{\numberline {3.1}Analyse Fonctionnelle}{4}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Structure}{4}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Commandabilit\IeC {\'e}}{4}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Milieu d'utilisation}{4}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Energie}{5}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Motorisation}{5}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}Acquisitions}{5}{subsection.3.1.6}
+\contentsline {chapter}{\numberline {4}Outils de gestion}{6}{chapter.4}
+\contentsline {section}{\numberline {4.1}Trello}{6}{section.4.1}
+\contentsline {section}{\numberline {4.2}Github}{6}{section.4.2}
+\contentsline {section}{\numberline {4.3}Gestion de Budget}{6}{section.4.3}
+\contentsline {chapter}{\numberline {5}Planning pr\IeC {\'e}visionnel}{7}{chapter.5}
+\contentsline {section}{\numberline {5.1}Dylan Bideau}{7}{section.5.1}
+\contentsline {section}{\numberline {5.2}Julien Turpin}{7}{section.5.2}
+\contentsline {section}{\numberline {5.3}Pierre Bogrand et Guillaume Vincenti}{7}{section.5.3}

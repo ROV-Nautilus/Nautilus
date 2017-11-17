@@ -1,0 +1,10 @@
+package Video;
+
+public class Main {
+
+	public static void main(String[] args) {
+		 
+		Interface inter = new Interface("Nautilus",10,10,1500,600,true);
+    }
+	
+}

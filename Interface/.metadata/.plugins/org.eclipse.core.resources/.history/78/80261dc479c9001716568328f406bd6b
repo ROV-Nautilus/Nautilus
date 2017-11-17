@@ -1,0 +1,173 @@
+package Video;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
+
+import org.apache.log4j.Logger;
+
+import com.jcraft.jsch.Channel;
+import com.jcraft.jsch.ChannelShell;
+import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.JSchException;
+import com.jcraft.jsch.Session;
+
+/**
+ * This is an example of SSH connector using JSCh library
+ * 
+ * JSch allows you to connect to an sshd server and use port forwarding, X11
+ * forwarding, file transfer, etc., and you can integrate its functionality into
+ * your own Java programs. JSch is licensed under BSD style license.
+ * 
+ * @author kdelfour
+ *
+ */
+public class AnSshConnector implements AutoCloseable {
+
+	// Default logger
+	private static final Logger LOG = Logger.getLogger(SshConnector.class);
+
+	// Constants
+	private static final String STRICT_HOSTKEY_CHECKIN_KEY = "StrictHostKeyChecking";
+	private static final String STRICT_HOSTKEY_CHECKIN_VALUE = "no";
+	private static final String CHANNEL_TYPE = "shell";
+
+	// SSH server ip
+	private String ip;
+	// SSH server port
+	private int port;
+	// User login
+	private String login;
+	// User password
+	private String password;
+	// Connection timeout
+	private int timeout;
+
+	private Session session;
+	private PrintStream ps;
+	private InputStream input;
+	private OutputStream ops;
+	private Channel channel;
+
+	/**
+	 * Basic constructor
+	 * 
+	 * @param ip
+	 *            the ssh server IP
+	 * @param port
+	 *            the ssh server port
+	 * @param login
+	 *            , the ssh user login
+	 * @param password
+	 *            , the ssh user password
+	 * @param timeout
+	 *            , the connection timeout
+	 */
+	public AnSshConnector(String ip, int port, String login, String password,
+			int timeout) {
+		super();
+		this.ip = ip;
+		this.port = port;
+		this.login = login;
+		this.password = password;
+		this.timeout = timeout;
+	}
+
+	/**
+	 * Open a connection
+	 * 
+	 * @throws JSchException
+	 *             if a error due to the ssh server connection...
+	 * @throws IOException
+	 * 
+	 */
+	public void open() throws JSchException, IOException {
+
+		// Prepare session
+		final Log4JOutputStream log4JOutputStream = new Log4JOutputStream();
+		final JSch jsch = new JSch();
+		session = jsch.getSession(login, ip, port);
+		session.setPassword(password);
+		session.setTimeout(timeout);
+		session.setConfig(STRICT_HOSTKEY_CHECKIN_KEY,
+				STRICT_HOSTKEY_CHECKIN_VALUE);
+
+		// Start a connection
+		LOG.debug("-- Try to connect to the server " + ip + ":" + port
+				+ " with user " + login);
+		session.connect();
+		LOG.debug("-- Connexion OK");
+
+		LOG.debug("-- Open SSH channel");
+		channel = session.openChannel(CHANNEL_TYPE);
+		input = channel.getInputStream();
+
+		// Redirection of output stream to log4jOutputStream
+		((ChannelShell) channel).setExtOutputStream(log4JOutputStream);
+		ops = channel.getOutputStream();
+		ps = new PrintStream(ops, true);
+
+		channel.connect();
+		LOG.debug("-- Open SSH channel OK");
+	}
+
+	/**
+	 * Execute a command and return the result as a String
+	 * 
+	 * @param command
+	 *            the command to execute
+	 * @return the result as a String
+	 * @throws IOException
+	 */
+	public String executeCommand(String command) throws IOException {
+		ps.println(command);
+
+		int size = 1024;
+		final byte[] tmp = new byte[size];
+		final StringBuilder sb = new StringBuilder();
+
+		while (true) {
+			while (input.available() > 0) {
+				int i = input.read(tmp, 0, 1024);
+				if (i < 0) {
+					break;
+				}
+				sb.append(new String(tmp, 0, i));
+			}
+
+			final String output = sb.toString();
+			if (output.contains("object")) {
+				break;
+			}
+
+			if (channel.isClosed()) {
+				if (input.available() > 0) {
+					int i = input.read(tmp, 0, 1024);
+					sb.append(new String(tmp, 0, i));
+				}
+				break;
+			}
+
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				LOG.error(e);
+			}
+		}
+
+		return sb.toString();
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.AutoCloseable#close()
+	 */
+	public void close() throws Exception {
+		// Close channel
+		channel.disconnect();
+		// Close session
+		session.disconnect();
+	}
+}
