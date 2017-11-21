@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="remote" key="selection"/>
+		<item value="pass" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="pass"/>
+			<item value="setPass"/>
+			<item value="sleep"/>
 			<item value="remote"/>
 			<item value="Probleme"/>
 			<item value="plein"/>
 			<item value="jFrame"/>
 			<item value="paint"/>
-			<item value="setlocation"/>
-			<item value="setDefaultCloseOperation"/>
-			<item value="parent"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Camera"/>

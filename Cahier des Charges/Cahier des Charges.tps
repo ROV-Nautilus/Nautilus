@@ -11,13 +11,13 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1131
-NormalPos.bottom=366
+NormalPos.right=1113
+NormalPos.bottom=348
 Class=LaTeXView
 Document=Cahier des Charges.tex
 
 [Frame0_View0,0]
-TopLine=0
+TopLine=74
 Cursor=121
 
 [SessionInfo]

@@ -53,11 +53,21 @@ public class Interface extends JFrame implements ActionListener{
 			quitter.addActionListener(this);
 			fichier.add(quitter);
 			menu.add(fichier);
+			
+			JMenu ssh =new JMenu("SSH");
+			JMenuItem shell= new JMenuItem("Shell");
+			JMenuItem commande= new JMenuItem("Commande");
+			shell.addActionListener(this);
+			commande.addActionListener(this);
+			ssh.add(shell);
+			ssh.add(commande);
+			
+			menu.add(ssh);
 			setJMenuBar(menu);
 			
 			/** Bouton */
 			JPanel pan1=new JPanel();
-			pan1.setLayout(new GridLayout(3,2));
+			pan1.setLayout(new GridLayout(2,2));
 			
 			JButton demarrer = new JButton("Demarrer Camera 1");
 			demarrer.addActionListener(this);
@@ -68,16 +78,6 @@ public class Interface extends JFrame implements ActionListener{
 			demarrer2.addActionListener(this);
 			demarrer2.setBackground(Color.white);
 			pan1.add(demarrer2);
-			
-			JButton demarrer1 = new JButton("Afficher Camera 1");
-			demarrer1.addActionListener(this);
-			demarrer1.setBackground(Color.white);
-			pan1.add(demarrer1);
-			
-			JButton demarrer3 = new JButton("Afficher Camera 2");
-			demarrer3.addActionListener(this);
-			demarrer3.setBackground(Color.white);
-			pan1.add(demarrer3);
 			
 			JButton arret = new JButton("Arreter Camera 1");
 			arret.addActionListener(this);
@@ -101,27 +101,39 @@ public class Interface extends JFrame implements ActionListener{
 			System.exit(0);
 		}
 		if(cmd.equals("Demarrer Camera 1")){
-			ssh cam1 = new ssh("python3 rpi_camera_surveillance_system.py");
-		}
-		if(cmd.equals("Demarrer Camera 2")){
-			ssh cam1 = new ssh("sudo motion");
-			ssh cam2 = new ssh("sudo systemctl start motion.service");
-		}
-		if(cmd.equals("Afficher Camera 1")){
+			Exec ex4 = new Exec("python3 rpi_camera_surveillance_system.py");
+			try {
+				Thread.sleep(600);
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
+			}
 			Camera axPanel = new Camera(win,jpgURL,mjpgURL,"FPV");
 	    	new Thread(axPanel).start();
 	    	win.add(axPanel,"West");
 		}
-		if(cmd.equals("Afficher Camera 2")){
+		if(cmd.equals("Demarrer Camera 2")){
+			Exec ex1 = new Exec("sudo motion");
+			Exec ex2 = new Exec("sudo systemctl start motion.service");
+			try {
+				Thread.sleep(600);
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
+			}
 			Camera axPanel1 = new Camera(win,jpgURL1,mjpgURL1,"Cartographie");
 	    	new Thread(axPanel1).start();
 	    	win.add(axPanel1,"East");
 		}
 		if(cmd.equals("Arreter Camera 1")){
-			ssh cam1 = new ssh("");
+			
 		}
 		if(cmd.equals("Arreter Camera 2")){
-			ssh cam1 = new ssh("sudo /etc/init.d/motion stop");
+			Exec ex = new Exec("sudo /etc/init.d/motion stop");
+		}
+		if(cmd.equals("Shell")){
+			Shell s = new Shell();
+		}
+		if(cmd.equals("Commande")){
+			Exec ex = new Exec();
 		}
 	}
 	
