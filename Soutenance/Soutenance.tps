@@ -11,13 +11,13 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1131
-NormalPos.bottom=366
+NormalPos.right=1113
+NormalPos.bottom=357
 Class=LaTeXView
 Document=Soutenance.tex
 
 [Frame0_View0,0]
-TopLine=41
+TopLine=49
 Cursor=1307
 
 [SessionInfo]

@@ -67,7 +67,12 @@ public class Interface extends JFrame implements ActionListener{
 			
 			/** Bouton */
 			JPanel pan1=new JPanel();
-			pan1.setLayout(new GridLayout(2,2));
+			pan1.setLayout(new GridLayout(2,3));
+			
+			JButton photo = new JButton("Prendre Photo");
+			photo.addActionListener(this);
+			photo.setBackground(Color.white);
+			pan1.add(photo);
 			
 			JButton demarrer = new JButton("Demarrer Camera 1");
 			demarrer.addActionListener(this);
@@ -134,6 +139,19 @@ public class Interface extends JFrame implements ActionListener{
 		}
 		if(cmd.equals("Commande")){
 			Exec ex = new Exec();
+		}
+		
+		if(cmd.equals("Prendre Photo")){
+			/*
+			BufferedImage img = new BufferedImage(dessin.getWidth(), dessin.getHeight(), BufferedImage.TYPE_INT_RGB);
+		    dessin.print(img.getGraphics());
+		    try {
+		        ImageIO.write(img, "jpg", new File(chooser.getSelectedFile().getPath()));
+		    }
+		    catch (IOException e5) {
+		        e5.printStackTrace();
+		    }
+		    */
 		}
 	}
 	
