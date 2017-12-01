@@ -1,0 +1,40 @@
+package Video;
+
+import java.awt.Container;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class PhotoZoom extends JFrame{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	public Container win;
+	private String nomPhoto;
+
+	public PhotoZoom(String titre, int x, int y, boolean b, String nomPhoto){
+		super(titre);
+		super.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		super.setLocation(x,y);
+		this.setNomPhoto(nomPhoto);
+		
+		/* Construction du Conteneur */
+		win = getContentPane();
+		JPanel panel = new JPanel();
+		
+		super.setSize(640, 480);
+		super.setVisible(b);
+	}
+
+	public String getNomPhoto() {
+		return nomPhoto;
+	}
+
+	public void setNomPhoto(String nomPhoto) {
+		this.nomPhoto = nomPhoto;
+	}
+	
+}
