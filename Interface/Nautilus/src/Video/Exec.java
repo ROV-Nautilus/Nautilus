@@ -61,13 +61,13 @@ public class Exec{
       UserInfo ui=new MyUserInfo();// username and password will be given via UserInfo interface.
       session.setUserInfo(ui);
       session.connect();
-      Channel channel=session.openChannel("exec");
+      Channel channel = session.openChannel("exec");
       ((ChannelExec)channel).setCommand(commande);
       channel.setInputStream(null);
       ((ChannelExec)channel).setErrStream(System.err);
       InputStream in=channel.getInputStream();
       channel.connect();
-
+      
       byte[] tmp=new byte[1024];
       while(true){
         while(in.available()>0){
@@ -81,6 +81,8 @@ public class Exec{
           break;
         }
         try{Thread.sleep(1000);}catch(Exception ee){}
+        System.out.println("exit-status: "+channel.getExitStatus());
+        break;
       }
       channel.disconnect();
       session.disconnect();

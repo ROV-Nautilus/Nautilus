@@ -1,0 +1,36 @@
+package Video;
+
+import java.awt.Color;
+
+import javax.swing.JPanel;
+
+public class Photo extends JPanel implements Runnable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private BufferedImage image;
+
+    public Photo() {
+       try {                
+          image = ImageIO.read(new File("essaie.jpg"));
+       } catch (IOException ex) {
+            // handle exception...
+       }
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.drawImage(image, 0, 0, this); // see javadoc for more info on the parameters            
+    }
+	
+	public void run() {
+		
+	}
+
+	
+	
+}

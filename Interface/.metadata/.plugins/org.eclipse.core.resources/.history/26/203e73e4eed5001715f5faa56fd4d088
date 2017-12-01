@@ -1,0 +1,96 @@
+package Video;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.AdjustmentListener;
+import java.io.File;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+
+public class Cartographie extends JFrame implements ActionListener {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public Container win;
+	public String nomPhoto = "carto";
+	public int nombrePhoto = 0;
+	
+	public Cartographie(String titre, int x, int y, boolean b){
+		super(titre);
+		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		super.setLocation(x,y);
+		
+		/* Construction du Conteneur */
+		win = getContentPane();
+		JPanel panel = new JPanel();
+		
+		File fichierPhoto = new File(nomPhoto+".jpg");
+		while(fichierPhoto.exists()) {
+			nomPhoto=nomPhoto+"1";
+			fichierPhoto = new File(nomPhoto+".jpg");
+			nombrePhoto++;
+		}
+		Photo[] carto = new Photo[nombrePhoto];
+		nomPhoto="carto";
+		for(int k = 0 ; k < nombrePhoto ; k++) {
+			fichierPhoto = new File(nomPhoto+".jpg");
+			carto[k] = new Photo(fichierPhoto,0,0);
+			nomPhoto=nomPhoto+"1";
+			carto[k].setMinimumSize(new Dimension(320,240));
+			carto[k].setPreferredSize(new Dimension(320,240));
+			panel.add(carto[k]);
+		}
+		
+		FlowLayout affichage = new FlowLayout(FlowLayout.LEFT);
+		affichage.setHgap(0);
+		affichage.setVgap(0);
+		panel.setLayout(affichage); 
+		
+		
+		super.setSize((640/2)*4, (480/2)*2);
+		
+		JScrollPane jsp = new JScrollPane(panel);
+        this.add(jsp,"East");
+		
+		win.add(panel);
+		
+		
+		
+		/** Barre de menu */
+    	JMenuBar menu= new JMenuBar();
+		JMenu fichier=new JMenu("Fichier");
+		JMenuItem quitter= new JMenuItem("Quitter");
+		quitter.addActionListener(this);
+		fichier.add(quitter);
+		menu.add(fichier);
+		
+		setJMenuBar(menu);
+		
+		super.setVisible(b);
+		this.setResizable(false);
+	}
+	public void actionPerformed(ActionEvent e) {
+		String cmd = e.getActionCommand();
+		if(cmd.equals("Quitter")){
+			System.exit(0);
+		}
+	}
+
+}

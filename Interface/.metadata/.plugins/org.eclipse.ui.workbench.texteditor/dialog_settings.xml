@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="pass" key="selection"/>
+		<item value="I" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="pass"/>
-			<item value="setPass"/>
-			<item value="sleep"/>
-			<item value="remote"/>
-			<item value="Probleme"/>
-			<item value="plein"/>
-			<item value="jFrame"/>
+			<item value="i"/>
+			<item value="bImage"/>
 			<item value="paint"/>
+			<item value="start"/>
+			<item value="Stream"/>
+			<item value="Socket"/>
+			<item value="Connection"/>
+			<item value="pass"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Camera"/>
@@ -27,6 +27,6 @@
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
 		<item value="1090" key="DIALOG_X_ORIGIN"/>
-		<item value="216" key="DIALOG_Y_ORIGIN"/>
+		<item value="345" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

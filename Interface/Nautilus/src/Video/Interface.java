@@ -5,8 +5,11 @@ import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -23,15 +26,20 @@ public class Interface extends JFrame implements ActionListener{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	/** Camera carto */
+	/** Camera FPV */
     public String jpgURL1="http://169.254.14.03:8081/";
     public String mjpgURL1="http://169.254.14.03:8081/";
     
-    /** Camera FPV */
+    /** Camera Carto */
     public String jpgURL="http://169.254.14.03:8000/";
     public String mjpgURL="http://169.254.14.03:8000/stream.mjpg";
     
     public Container win;
+    
+    Panel axPanel = new Panel();
+    Panel axPanel1 = new Panel();
+    Cartographie carto = null;
+    public String nomPhoto = "carto";
 
 
 		//Constructeur
@@ -69,11 +77,6 @@ public class Interface extends JFrame implements ActionListener{
 			JPanel pan1=new JPanel();
 			pan1.setLayout(new GridLayout(2,3));
 			
-			JButton photo = new JButton("Prendre Photo");
-			photo.addActionListener(this);
-			photo.setBackground(Color.white);
-			pan1.add(photo);
-			
 			JButton demarrer = new JButton("Demarrer Camera 1");
 			demarrer.addActionListener(this);
 			demarrer.setBackground(Color.white);
@@ -83,6 +86,11 @@ public class Interface extends JFrame implements ActionListener{
 			demarrer2.addActionListener(this);
 			demarrer2.setBackground(Color.white);
 			pan1.add(demarrer2);
+			
+			JButton photo = new JButton("Prendre Photo");
+			photo.addActionListener(this);
+			photo.setBackground(Color.white);
+			pan1.add(photo);
 			
 			JButton arret = new JButton("Arreter Camera 1");
 			arret.addActionListener(this);
@@ -94,8 +102,14 @@ public class Interface extends JFrame implements ActionListener{
 			arret1.setBackground(Color.white);
 			pan1.add(arret1);
 			
+			JButton carte = new JButton("Carte");
+			carte.addActionListener(this);
+			carte.setBackground(Color.white);
+			pan1.add(carte);
+			
 			win.add(pan1,"South");
 			
+			this.setResizable(false);
 	    	super.setVisible(b);
 		}
 	
@@ -106,15 +120,16 @@ public class Interface extends JFrame implements ActionListener{
 			System.exit(0);
 		}
 		if(cmd.equals("Demarrer Camera 1")){
-			Exec ex4 = new Exec("python3 rpi_camera_surveillance_system.py");
+			Exec ex4 = new Exec("python3 rpi_camera_demarrer.py");
 			try {
 				Thread.sleep(600);
 			} catch (InterruptedException e1) {
 				e1.printStackTrace();
 			}
-			Camera axPanel = new Camera(win,jpgURL,mjpgURL,"FPV");
+			axPanel = new Camera(win,jpgURL,mjpgURL,"FPV");
 	    	new Thread(axPanel).start();
 	    	win.add(axPanel,"West");
+	    	
 		}
 		if(cmd.equals("Demarrer Camera 2")){
 			Exec ex1 = new Exec("sudo motion");
@@ -124,7 +139,7 @@ public class Interface extends JFrame implements ActionListener{
 			} catch (InterruptedException e1) {
 				e1.printStackTrace();
 			}
-			Camera axPanel1 = new Camera(win,jpgURL1,mjpgURL1,"Cartographie");
+			axPanel1 = new Camera(win,jpgURL1,mjpgURL1,"Cartographie");
 	    	new Thread(axPanel1).start();
 	    	win.add(axPanel1,"East");
 		}
@@ -142,16 +157,20 @@ public class Interface extends JFrame implements ActionListener{
 		}
 		
 		if(cmd.equals("Prendre Photo")){
-			/*
-			BufferedImage img = new BufferedImage(dessin.getWidth(), dessin.getHeight(), BufferedImage.TYPE_INT_RGB);
-		    dessin.print(img.getGraphics());
+			
+			BufferedImage img = new BufferedImage(axPanel.getWidth(), axPanel.getHeight(), BufferedImage.TYPE_INT_RGB);
+			axPanel.print(img.getGraphics());
 		    try {
-		        ImageIO.write(img, "jpg", new File(chooser.getSelectedFile().getPath()));
+		        ImageIO.write(img, "jpg", new File(nomPhoto+".jpg"));
 		    }
 		    catch (IOException e5) {
 		        e5.printStackTrace();
 		    }
-		    */
+		    nomPhoto=nomPhoto+"1";
+		}
+		
+		if(cmd.equals("Carte")){
+			carto = new Cartographie("Cartographie",0,0,true);
 		}
 	}
 	
