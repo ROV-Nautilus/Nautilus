@@ -3,6 +3,7 @@ package Carto;
 import java.awt.Container;
 import java.io.File;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -21,6 +22,7 @@ public class PhotoZoom extends JFrame{
 		super.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		super.setLocation(x,y);
 		this.setNomPhoto(nomPhoto);
+		this.setIconImage(new ImageIcon(getClass().getResource("/Nautilus.jpg")).getImage());
 		
 		/* Construction du Conteneur */
 		win = getContentPane();

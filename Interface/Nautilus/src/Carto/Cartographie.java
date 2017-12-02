@@ -45,6 +45,7 @@ public class Cartographie extends JFrame implements ActionListener, MouseMotionL
 		super(titre);
 		super.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		super.setLocation(x,y);
+		this.setIconImage(new ImageIcon(getClass().getResource("/Nautilus.jpg")).getImage());
 		
 		/* Construction du Conteneur */
 		win = getContentPane();
