@@ -1,0 +1,42 @@
+package Capteurs;
+
+import Camera.Interface;
+import SSH.Exec;
+
+public class Pression  implements Runnable{
+
+	public String Pression = "0";
+	public String TemperatureC = "0";
+	public String TemperatureF = "0";
+	
+	public Pression() {
+		
+	}
+	
+	public void run() {
+		while(true) {
+		Exec ex3 = new Exec("python MS5803_14BA.py");
+		Thread a3 = new Thread(ex3);
+		a3.start();
+		while( a3.isAlive()) {
+		}
+		//System.out.println(ex3.retour);
+		String[] a = ex3.retour.split("/");
+		this.Pression=a[0];
+		this.TemperatureC=a[1];
+		this.TemperatureF=a[2];
+		
+		
+		Interface.pre=Pression;
+		Interface.tempC=TemperatureC;
+		Interface.tempF=TemperatureF;
+		Interface.pression.setText(" Pression = "+Interface.pre);
+		Interface.pression.repaint();
+		Interface.temperatureC.setText(" TemperatureC = "+Interface.tempC);
+		Interface.temperatureC.repaint();
+		Interface.temperatureF.setText(" TemperatureF = "+Interface.tempF);
+		Interface.temperatureF.repaint();
+		}
+	}
+
+}

@@ -15,7 +15,14 @@ import java.awt.*;
 import javax.swing.*;
 import java.io.*;
 
-public class Exec{
+public class Exec implements Runnable{
+	
+	public String Commande;
+	public String retour;
+	
+	public Exec(String Commande) {
+		this.Commande=Commande;
+	}
 	
 	public Exec(){
 		try{
@@ -37,7 +44,7 @@ public class Exec{
         while(in.available()>0){
           int i=in.read(tmp, 0, 1024);
           if(i<0)break;
-          System.out.print(new String(tmp, 0, i));
+          System.out.print(new String(tmp, 0, i)); //Affichage de la sortie
         }
         if(channel.isClosed()){
           if(in.available()>0) continue; 
@@ -54,7 +61,7 @@ public class Exec{
     }
 }
 	
-	public Exec(String commande){
+	public void Executer(String commande){
 		try{
 			JSch jsch=new JSch();
       		Session session=jsch.getSession("pi", "169.254.14.03", 22);
@@ -64,16 +71,20 @@ public class Exec{
       Channel channel = session.openChannel("exec");
       ((ChannelExec)channel).setCommand(commande);
       channel.setInputStream(null);
+     //channel.setOutputStream(System.out);
       ((ChannelExec)channel).setErrStream(System.err);
       InputStream in=channel.getInputStream();
+      
       channel.connect();
+     
       
       byte[] tmp=new byte[1024];
       while(true){
         while(in.available()>0){
           int i=in.read(tmp, 0, 1024);
           if(i<0)break;
-          System.out.print(new String(tmp, 0, i));
+          //System.out.print(new String(tmp, 0, i));
+          this.retour=new String(tmp, 0, i);
         }
         if(channel.isClosed()){
           if(in.available()>0) continue; 
@@ -81,12 +92,10 @@ public class Exec{
           break;
         }
         try{Thread.sleep(1000);}catch(Exception ee){}
-        System.out.println("exit-status: "+channel.getExitStatus());
-        break;
       }
       channel.disconnect();
       session.disconnect();
-    }
+		}
     catch(Exception e){
       System.out.println(e);
     }
@@ -165,4 +174,10 @@ public class Exec{
       }
     }
   }
+  
+  public void run() {
+	    Executer(Commande);
+	    System.out.println("ok : "+this.Commande);
+	  }
+  
 }

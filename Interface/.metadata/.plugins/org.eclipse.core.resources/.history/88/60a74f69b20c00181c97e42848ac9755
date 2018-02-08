@@ -1,0 +1,30 @@
+package Capteurs;
+
+import Camera.Interface;
+import SSH.Exec;
+
+public class Moteurs implements Runnable{
+
+	public int m1 = 120;
+	public int m2 = 120;
+	public int m3 = 120;
+	
+	public Moteurs(int m1, int m2, int m3) {
+		this.m1=m1;
+		this.m2=m2;
+		this.m3=m3;
+	}
+	 
+	public void run() {
+		m2=m2+10;
+		m3=m3+10;
+		Exec ex1 = new Exec("echo 1="+m2+" > /dev/servoblaster & echo 2="+m3+" > /dev/servoblaster");
+		new Thread(ex1).start();
+		System.out.println("Avant appuyé");
+		Interface.moteur2.setText(" Moteur2 : "+Interface.m2);
+		moteur2.repaint();
+		moteur3.setText(" Moteur3 : "+Interface.m3);
+		moteur3.repaint();
+	}
+
+}

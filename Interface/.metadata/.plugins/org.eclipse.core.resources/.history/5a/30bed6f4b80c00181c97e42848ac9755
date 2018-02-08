@@ -1,0 +1,15 @@
+package Camera;
+
+public class Barre  implements Runnable{
+
+	public boolean stop = false;
+	
+	public Barre(boolean stop) {
+		this.stop=stop;
+	}
+	
+	public void run() {
+		
+	}
+
+}

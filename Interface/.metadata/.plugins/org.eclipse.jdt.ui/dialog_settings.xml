@@ -35,12 +35,13 @@
 		<item value="400" key="height"/>
 	</section>
 	<section name="FatJarPackageWizard">
-		<item value="C:\Users\dylan_000\Desktop\ENSEA\Deuxième année\Projet\github\Nautilus\Interface" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
+		<item value="C:\Users\dylan_000\Desktop\ENSEA\Deuxième année\Projet\github\Nautilus\Interface.xml" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
 		<item value="Main - Nautilus" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
-		<item value="C:\Users\dylan_000\Desktop\ENSEA\Deuxième année\Projet\Nautilus.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="C:\Users\Dylan\Documents\Ecole\ENSEA\Deuxieme année\Projet\Nautilus.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
 		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
 		<item value="1" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="C:\Users\Dylan\Documents\Ecole\ENSEA\Deuxieme année\Projet\Nautilus.jar"/>
 			<item value="C:\Users\dylan_000\Desktop\ENSEA\Deuxième année\Projet\Nautilus.jar"/>
 		</list>
 		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">

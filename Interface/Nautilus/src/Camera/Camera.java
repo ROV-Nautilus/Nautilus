@@ -48,6 +48,23 @@ public class Camera  extends Panel implements Runnable{
     	int h = (int) (source.getHeight() * factor);
     	return source.getScaledInstance(w, h, Image.SCALE_SMOOTH);
     }
+    
+    public BufferedImage scale(BufferedImage bImage, double factor) {
+        int destWidth=(int) (bImage.getWidth() * factor);
+        int destHeight=(int) (bImage.getHeight() * factor);
+        
+        /* créer l'image de destination*/
+        GraphicsConfiguration configuration = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDefaultConfiguration();
+        BufferedImage bImageNew = configuration.createCompatibleImage(destWidth, destHeight);
+        Graphics2D graphics = bImageNew.createGraphics();
+        graphics.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        graphics.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
+        /* dessiner l'image de destination*/
+        graphics.drawImage(bImage, 0, 0, destWidth, destHeight, 0, 0, bImage.getWidth(), bImage.getHeight(), null);
+        graphics.dispose();
+ 
+        return bImageNew;
+    }
  
     /** */
     public static BufferedImage toBufferedImage(Image image) {
@@ -109,7 +126,7 @@ public class Camera  extends Panel implements Runnable{
             readJPG();
             disconnect();
         }
-        imageSize = new Dimension(image.getWidth(this), image.getHeight(this));
+        imageSize = new Dimension((image.getWidth(this)*2), image.getHeight(this)*2);
         setPreferredSize(imageSize);
         parent.validate();
         initCompleted = true;
@@ -118,6 +135,8 @@ public class Camera  extends Panel implements Runnable{
     /** Méthode de tracer */
     public void paint(Graphics g) {
     	if (image != null)
+    		//image = toBufferedImage(getScaledInstanceAWT(image, 2));
+    		image=scale(image, 2);
     		g.drawImage(image, 0, 0, this);
     }
  

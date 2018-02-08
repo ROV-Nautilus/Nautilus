@@ -1,0 +1,39 @@
+package Camera;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JProgressBar;
+
+public class Barre  implements Runnable{
+
+	public boolean stop = false;
+	public JFrame frame = null;
+	
+	public Barre() {
+	}
+	
+	public void stop(){
+		this.stop=true;
+	}
+	
+	public void run() {
+		
+		this.frame = new JFrame("Demarrage en Cours");
+		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+	    JProgressBar aJProgressBar = new JProgressBar(JProgressBar.HORIZONTAL);
+	    aJProgressBar.setIndeterminate(true);
+
+	    this.frame.add(aJProgressBar, BorderLayout.CENTER);
+	    this.frame.setSize(700, 100);
+	    this.frame.setLocation(500,200);
+	    this.frame.setVisible(true);
+	    int x=0;
+	    while(true) {
+	    	System.out.println(x);
+	    	if(x==1000000)break;
+	    	x++;
+	    }
+	}
+
+}
