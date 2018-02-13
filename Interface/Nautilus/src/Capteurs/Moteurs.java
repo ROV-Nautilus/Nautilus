@@ -16,19 +16,19 @@ public class Moteurs implements Runnable{
 	}
 	 
 	public void run() {
-		Exec ex1 = new Exec("echo 0="+m1+" > /dev/servoblaster & echo 1="+m2+" > /dev/servoblaster & echo 2="+m3+" > /dev/servoblaster");
-		Thread a1 = new Thread(ex1);
+		Interface.exMoteur.setCommande("echo 0="+m1+" > /dev/servoblaster & echo 1="+m2+" > /dev/servoblaster & echo 2="+m3+" > /dev/servoblaster");
+		Thread a1 = new Thread(Interface.exMoteur);
 		a1.start();
 		while( a1.isAlive()) {
 		}
 		Interface.m1=this.m1;
 		Interface.m2=this.m2;
 		Interface.m3=this.m3;
-		Interface.moteur1.setText(" Moteur1 : "+Interface.m1);
+		Interface.moteur1.setText(""+Interface.m1+"    ");
 		Interface.moteur1.repaint();
-		Interface.moteur2.setText(" Moteur2 : "+Interface.m2);
+		Interface.moteur2.setText(""+Interface.m2+"    ");
 		Interface.moteur2.repaint();
-		Interface.moteur3.setText(" Moteur3 : "+Interface.m3);
+		Interface.moteur3.setText(""+Interface.m3+"    ");
 		Interface.moteur3.repaint();
 	}
 

@@ -17,90 +17,83 @@ import java.io.*;
 
 public class Exec implements Runnable{
 	
-	public String Commande;
+	public String Commande = " ";
 	public String retour;
+	public Channel channel;
+	public InputStream in;
+	public Session session;
 	
 	public Exec(String Commande) {
 		this.Commande=Commande;
 	}
-	
-	public Exec(){
+	public Exec() {
 		try{
 			JSch jsch=new JSch();
-      		Session session=jsch.getSession("pi", "169.254.14.03", 22);
+      		this.session=jsch.getSession("pi", "169.254.14.03", 22);
       UserInfo ui=new MyUserInfo();// username and password will be given via UserInfo interface.
-      session.setUserInfo(ui);
-      session.connect();
-      String command=JOptionPane.showInputDialog("Entrée une commande");
-      Channel channel=session.openChannel("exec");
-      ((ChannelExec)channel).setCommand(command);
-      channel.setInputStream(null);
-      ((ChannelExec)channel).setErrStream(System.err);
-      InputStream in=channel.getInputStream();
-      channel.connect();
-
-      byte[] tmp=new byte[1024];
-      while(true){
-        while(in.available()>0){
-          int i=in.read(tmp, 0, 1024);
-          if(i<0)break;
-          System.out.print(new String(tmp, 0, i)); //Affichage de la sortie
-        }
-        if(channel.isClosed()){
-          if(in.available()>0) continue; 
-          System.out.println("exit-status: "+channel.getExitStatus());
-          break;
-        }
-        try{Thread.sleep(1000);}catch(Exception ee){}
-      }
-      channel.disconnect();
-      session.disconnect();
-    }
-    catch(Exception e){
-      System.out.println(e);
-    }
-}
-	
-	public void Executer(String commande){
-		try{
-			JSch jsch=new JSch();
-      		Session session=jsch.getSession("pi", "169.254.14.03", 22);
-      UserInfo ui=new MyUserInfo();// username and password will be given via UserInfo interface.
-      session.setUserInfo(ui);
-      session.connect();
-      Channel channel = session.openChannel("exec");
-      ((ChannelExec)channel).setCommand(commande);
-      channel.setInputStream(null);
-     //channel.setOutputStream(System.out);
-      ((ChannelExec)channel).setErrStream(System.err);
-      InputStream in=channel.getInputStream();
+      this.session.setUserInfo(ui);
+      this.session.connect();
       
-      channel.connect();
-     
+      this.channel = this.session.openChannel("exec");
+      ((ChannelExec)this.channel).setCommand(this.Commande);
+      this.channel.setInputStream(null);
+      ((ChannelExec)this.channel).setErrStream(System.err);
+      this.in=this.channel.getInputStream();
+      
+      this.channel.connect();
       
       byte[] tmp=new byte[1024];
       while(true){
-        while(in.available()>0){
-          int i=in.read(tmp, 0, 1024);
+        while(this.in.available()>0){
+          int i=this.in.read(tmp, 0, 1024);
           if(i<0)break;
-          //System.out.print(new String(tmp, 0, i));
-          this.retour=new String(tmp, 0, i);
+          System.out.print(new String(tmp, 0, i));
+          //this.retour=new String(tmp, 0, i);
         }
         if(channel.isClosed()){
-          if(in.available()>0) continue; 
+          if(this.in.available()>0) continue; 
           System.out.println("exit-status: "+channel.getExitStatus());
           break;
         }
-        try{Thread.sleep(1000);}catch(Exception ee){}
       }
-      channel.disconnect();
-      session.disconnect();
 		}
     catch(Exception e){
       System.out.println(e);
     }
 }
-
+	public void setCommande(String Commande) {
+		this.Commande=Commande;
+	}
+	
+	public void Commander(String Commande) {
+		try{
+		this.channel = this.session.openChannel("exec");
+		((ChannelExec)this.channel).setCommand(Commande);
+		this.channel.setInputStream(null);
+	    ((ChannelExec)this.channel).setErrStream(System.err);
+	    this.in=this.channel.getInputStream();
+	    this.channel.connect();
+	    
+		byte[] tmp=new byte[1024];
+	      while(true){
+	        while(this.in.available()>0){
+	          int i=this.in.read(tmp, 0, 1024);
+	          if(i<0)break;
+	          //System.out.print(new String(tmp, 0, i));
+	          this.retour=new String(tmp, 0, i);
+	        }
+	        if(channel.isClosed()){
+	          if(this.in.available()>0) continue; 
+	          System.out.println("exit-status: "+channel.getExitStatus());
+	          break;
+	        }
+	      }
+		}
+	      catch(Exception e){
+	          System.out.println(e);
+	        }
+	}
+	
   public static class MyUserInfo implements UserInfo, UIKeyboardInteractive{
     public String getPassword(){ return passwd; }
     public boolean promptYesNo(String str){return true;}
@@ -176,7 +169,7 @@ public class Exec implements Runnable{
   }
   
   public void run() {
-	    Executer(Commande);
+	    Commander(this.Commande);
 	    System.out.println("ok : "+this.Commande);
 	  }
   

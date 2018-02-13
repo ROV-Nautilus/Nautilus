@@ -1,11 +1,13 @@
 package Camera;
 
+import java.applet.Applet;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -35,7 +37,9 @@ import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 
 import com.jcraft.jsch.JSchException;
+import com.sun.j3d.utils.applet.MainFrame;
 
+import Capteurs.ImportWavefront;
 import Capteurs.Moteurs;
 import Capteurs.Pression;
 import Carto.Cartographie;
@@ -74,6 +78,9 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
     public static int m1 = 120;
     public static int m2 = 120;
     public static int m3 = 120;
+    public static Exec exPression = new Exec();
+    public static Exec exCam = new Exec();
+    public static Exec exMoteur = new Exec();
     public static String pre = "0";
     public static String tempC = "0";
     public static String tempF = "0";
@@ -86,9 +93,9 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 	JLabel positionY = new JLabel(" Position Y = "+posY,SwingConstants.CENTER);
 	JLabel vitesseX = new JLabel(" Vitesse X = "+vitY,SwingConstants.CENTER);
 	JLabel vitesseY = new JLabel(" Vitesse Y = "+vitY,SwingConstants.CENTER);
-	public static JLabel moteur1 = new JLabel(" Moteur1 = "+m1,SwingConstants.CENTER);
-	public static JLabel moteur2 = new JLabel(" Moteur2 = "+m2,SwingConstants.CENTER);
-	public static JLabel moteur3 = new JLabel(" Moteur3 = "+m3,SwingConstants.CENTER);
+	public static JLabel moteur1 = new JLabel(""+m1+"    ",SwingConstants.RIGHT);
+	public static JLabel moteur2 = new JLabel(""+m2+"    ",SwingConstants.RIGHT);
+	public static JLabel moteur3 = new JLabel(""+m3+"    ",SwingConstants.RIGHT);
 	public static JLabel pression = new JLabel(" Pression = "+pre,SwingConstants.CENTER);
 	public static JLabel temperatureC = new JLabel(" TemperatureC = "+tempC,SwingConstants.CENTER);
 	public static JLabel temperatureF = new JLabel(" TemperatureF = "+tempF,SwingConstants.CENTER);
@@ -104,8 +111,12 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			
 			super.setExtendedState(JFrame.MAXIMIZED_BOTH);
 			this.setIconImage(new ImageIcon(getClass().getResource("/Nautilus.jpg")).getImage());
-						
 			
+			/*
+			Moteurs ex1 = new Moteurs(m1,m2,m3);
+			Thread a1 = new Thread(ex1);
+			a1.start();
+			*/
 			/* Construction du Conteneur */
 			win = getContentPane();
 			win.setLayout (new GridBagLayout());
@@ -182,15 +193,18 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 		if(cmd.equals("FPV OFF")) {
 			
 			/* Video FPV*/
-			Exec ex1 = new Exec("sudo motion");
-			Thread a2 = new Thread(ex1);
+			this.exCam.setCommande("sudo motion");
+			Thread a2 = new Thread(exCam);
 			a2.start();
 			
-			Exec ex2 = new Exec("sudo systemctl start motion.service");
-			Thread a1 = new Thread(ex2);
+			while( a2.isAlive()) {
+			}
+			
+			this.exCam.setCommande("sudo systemctl start motion.service");
+			Thread a1 = new Thread(exCam);
 			a1.start();
 			
-			while( a1.isAlive() || a2.isAlive()) {
+			while(a2.isAlive()) {
 			}
 			
 			axPanel.removeAll();
@@ -217,8 +231,8 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			c.gridy = 0; // Ligne
 			c.weighty = 0;
 			c.weightx = 0;
-			c.gridwidth = 2;   //Prend 2 Colonne
-			c.gridheight = 2;   //Prend 2 ligne
+			c.gridwidth = 4;   //Prend 2 Colonne
+			c.gridheight = 3;   //Prend 2 ligne
 			c.insets = new Insets(0, 0, 0, 0); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
 			win.add(axPanel1,c);
 			axPanel1.repaint();
@@ -231,13 +245,13 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			axPanel.setPreferredSize(new Dimension(400,210));
 			c.fill = GridBagConstraints.BOTH;
 			c.anchor = GridBagConstraints.CENTER;
-			c.gridx = 2; // Colonne
+			c.gridx = 4; // Colonne
 			c.gridy = 0; // Ligne
 			c.weighty = 0.0;
 			c.weightx = 0.0;
 			c.gridwidth = 1;   //Prend 1 Colonne
 			c.gridheight = 1;   //Prend 1 ligne
-			c.insets = new Insets(0, 50, 50, 0); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
+			c.insets = new Insets(0, 25, 0, 0); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
 			
 			Bouton1 CARTO = new Bouton1("CARTO OFF",getClass().getResource("/BoutonFPV.jpg"), getClass().getResource("/BoutonFPVRoll.jpg"),getClass().getResource("/BoutonFPVPressed.jpg"));
 			Font font1 = new Font("Arial",Font.BOLD,20);
@@ -251,39 +265,49 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			/* Cadre Position et Vitesse */
 			
 			pan2.setBackground(Color.GRAY);
-			pan2.setLayout(new GridLayout(7,1));
+			pan2.setLayout(new GridLayout(3,1));
 			Font font2 = new Font("Arial",Font.BOLD,20);
-			positionX.setFont(font2);
-			positionY.setFont(font2);
-			vitesseX.setFont(font2);
-			vitesseY.setFont(font2);
+			//positionX.setFont(font2);
+			//positionY.setFont(font2);
+			//vitesseX.setFont(font2);
+			//vitesseY.setFont(font2);
 			pression.setFont(font2);
 			temperatureC.setFont(font2);
 			temperatureF.setFont(font2);
-			pan2.add(positionX);
-			pan2.add(positionY);
-			pan2.add(vitesseX);
-			pan2.add(vitesseY);
+			//pan2.add(positionX);
+			//pan2.add(positionY);
+			//pan2.add(vitesseX);
+			//pan2.add(vitesseY);
 			pan2.add(pression);
 			pan2.add(temperatureC);
 			pan2.add(temperatureF);
 			
-			pan2.setMinimumSize(new Dimension(100,250));
-			pan2.setMaximumSize(new Dimension(100,250));
-			pan2.setPreferredSize(new Dimension(100,250));
+			pan2.setSize(new Dimension(400,200));
+			pan2.setMinimumSize(new Dimension(400,200));
+			pan2.setMaximumSize(new Dimension(400,200));
+			pan2.setPreferredSize(new Dimension(400,200));
 			c.fill = GridBagConstraints.BOTH;
 			c.anchor = GridBagConstraints.CENTER;
-			c.gridx = 2; // Colonne
+			c.gridx = 4; // Colonne
 			c.gridy = 1; // Ligne
 			c.weighty = 0.0;
 			c.weightx = 0.0;
 			c.gridwidth = 1;   //Prend 1 Colonne
 			c.gridheight = 1;   //Prend 1 ligne
-			c.insets = new Insets(50, 50, 50, 0); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
+			c.insets = new Insets(25, 25, 0, 0); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
 			
 			win.add(pan2,c);
 			
 			/* Cadre M1 M2 M3 */
+			
+			panM1=new JPanel(){
+	            protected void paintComponent(Graphics g){
+	                super.paintComponent(g);
+	                ImageIcon m = new ImageIcon("moteur1.jpg");
+	                Image monImage = m.getImage();
+	                g.drawImage(monImage, 0, 0,this);
+	            }
+	        };
 			
 			panM1.setBackground(Color.GRAY);
 			panM1.setLayout(new GridLayout(1,1));
@@ -292,20 +316,31 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			moteur1.setFont(font3);
 			panM1.add(moteur1);
 			
-			panM1.setMinimumSize(new Dimension(400,100));
-			panM1.setMaximumSize(new Dimension(400,100));
-			panM1.setPreferredSize(new Dimension(400,100));
+			panM1.setSize(new Dimension(200,100));
+			panM1.setMinimumSize(new Dimension(200,100));
+			panM1.setMaximumSize(new Dimension(200,100));
+			panM1.setPreferredSize(new Dimension(200,100));
 			c.fill = GridBagConstraints.BOTH;
 			c.anchor = GridBagConstraints.CENTER;
 			c.gridx = 0; // Colonne
-			c.gridy = 2; // Ligne
+			c.gridy = 3; // Ligne
 			c.weighty = 0.0;
 			c.weightx = 0.0;
 			c.gridwidth = 1;   //Prend 1 Colonne
 			c.gridheight = 1;   //Prend 1 ligne
-			c.insets = new Insets(50, 0, 0, 50); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
+			c.insets = new Insets(77, 0, 77, 0); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
 			
 			win.add(panM1,c);
+			
+			
+			panM2=new JPanel(){
+	            protected void paintComponent(Graphics g){
+	                super.paintComponent(g);
+	                ImageIcon m = new ImageIcon("moteur2.jpg");
+	                Image monImage = m.getImage();
+	                g.drawImage(monImage, 0, 0,this);
+	            }
+	        };
 			
 			panM2.setBackground(Color.GRAY);
 			panM2.setLayout(new GridLayout(1,1));
@@ -314,18 +349,19 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			moteur2.setFont(font4);
 			panM2.add(moteur2);
 			
-			panM2.setMinimumSize(new Dimension(400,100));
-			panM2.setMaximumSize(new Dimension(400,100));
-			panM2.setPreferredSize(new Dimension(400,100));
+			panM2.setSize(new Dimension(200,100));
+			panM2.setMinimumSize(new Dimension(200,100));
+			panM2.setMaximumSize(new Dimension(200,100));
+			panM2.setPreferredSize(new Dimension(200,100));
 			c.fill = GridBagConstraints.BOTH;
 			c.anchor = GridBagConstraints.CENTER;
 			c.gridx = 1; // Colonne
-			c.gridy = 2; // Ligne
+			c.gridy = 3; // Ligne
 			c.weighty = 0.0;
 			c.weightx = 0.0;
 			c.gridwidth = 1;   //Prend 1 Colonne
 			c.gridheight = 1;   //Prend 1 ligne
-			c.insets = new Insets(50, 50, 0, 50); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
+			c.insets = new Insets(77, 50, 77, 50); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
 			
 			win.add(panM2,c);
 			
@@ -338,28 +374,59 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 	            }
 	        };
 			
-			panM3.setBackground(Color.GRAY);
+			//panM3.setBackground(Color.GRAY);
 			panM3.setLayout(new GridLayout(1,1));
 			
 			Font font5 = new Font("Arial",Font.BOLD,20);
 			moteur3.setFont(font5);
 			panM3.add(moteur3);
 			
-			panM3.setMinimumSize(new Dimension(400,100));
-			panM3.setMaximumSize(new Dimension(400,100));
-			panM3.setPreferredSize(new Dimension(400,100));
+			panM3.setSize(new Dimension(200,100));
+			panM3.setMinimumSize(new Dimension(200,100));
+			panM3.setMaximumSize(new Dimension(200,100));
+			panM3.setPreferredSize(new Dimension(200,100));
 			c.fill = GridBagConstraints.BOTH;
 			c.anchor = GridBagConstraints.CENTER;
 			c.gridx = 2; // Colonne
-			c.gridy = 2; // Ligne
+			c.gridy = 3; // Ligne
 			c.weighty = 0.0;
 			c.weightx = 0.0;
 			c.gridwidth = 1;   //Prend 1 Colonne
 			c.gridheight = 1;   //Prend 1 ligne
-			c.insets = new Insets(50, 50, 0, 0); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
+			c.insets = new Insets(77, 0, 77, 0); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
 			
 			win.add(panM3,c);
 			
+			
+			/* Rendu mini rov*/
+			
+			/* Test */
+			
+			ImportWavefront.applet = false;
+			Applet singe = new ImportWavefront();
+			//Frame frame = new MainFrame(new ImportWavefront(), 256, 256);
+			
+			singe.setSize(new Dimension(256, 256));
+			singe.setMinimumSize(new Dimension(256, 256));
+			singe.setMaximumSize(new Dimension(256, 256));
+			singe.setPreferredSize(new Dimension(256, 256));
+			c.fill = GridBagConstraints.BOTH;
+			c.anchor = GridBagConstraints.CENTER;
+			c.gridx = 4; // Colonne
+			c.gridy = 3; // Ligne
+			c.weighty = 0.0;
+			c.weightx = 0.0;
+			c.gridwidth = 1;   //Prend 1 Colonne
+			c.gridheight = 1;   //Prend 1 ligne
+			c.insets = new Insets(0, 25, 0, 0); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
+			
+			win.add(singe,c);
+			
+		}
+		
+		if(cmd.equals("CARTO OFF")) {
+			ImportWavefront.applet = false;
+			Frame frame = new MainFrame(new ImportWavefront(), 256, 256);
 		}
 		if(cmd.equals("Demarrer Camera 1")){
 			Exec ex4 = new Exec("python3 rpi_camera_demarrer.py");
@@ -379,7 +446,7 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			Shell s = new Shell();
 		}
 		if(cmd.equals("Commande")){
-			Exec ex = new Exec();
+			//Exec ex = new Exec();
 		}
 		
 		if(cmd.equals("Prendre Photo")){
@@ -418,6 +485,12 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
     			a1.start();
     			System.out.println("Arriere appuyé");
     		}
+    		if (key == KeyEvent.VK_SPACE) {
+    			Moteurs ex1 = new Moteurs(120,120,120);
+    			Thread a1 = new Thread(ex1);
+    			a1.start();
+    			System.out.println("Stop");
+    		}
     		if (key == KeyEvent.VK_LEFT) {
     			Moteurs ex1 = new Moteurs(m1,m2-10,m3+10);
     			Thread a1 = new Thread(ex1);
@@ -430,13 +503,28 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
     			a1.start();
     			System.out.println("Droite appuyé");
     		}
+    		if (key == KeyEvent.VK_Z) {
+    			Moteurs ex1 = new Moteurs(m1+10,m2,m3);
+    			Thread a1 = new Thread(ex1);
+    			a1.start();
+    			System.out.println("Haut appuyé");
+    		}
+    		if (key == KeyEvent.VK_S) {
+    			Moteurs ex1 = new Moteurs(m1-10,m2,m3);
+    			Thread a1 = new Thread(ex1);
+    			a1.start();
+    			System.out.println("Bas appuyé");
+    		}
     		if (key == KeyEvent.VK_A) {
-    			
+    			Moteurs ex1 = new Moteurs(m1,m2+1,m3);
+    			Thread a1 = new Thread(ex1);
+    			a1.start();
+    			System.out.println("Haut appuyé");
     		}
     		if (key == KeyEvent.VK_B) {
     			Shell s = new Shell();
     		}
-    		isPressed = true;
+    		//isPressed = true;
     	}
     }
     

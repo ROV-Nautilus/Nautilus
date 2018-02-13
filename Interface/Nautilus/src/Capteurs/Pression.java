@@ -15,12 +15,8 @@ public class Pression  implements Runnable{
 	
 	public void run() {
 		while(true) {
-			Exec ex3 = new Exec("python MS5803_14BA.py");
-			Thread a3 = new Thread(ex3);
-			a3.start();
-			while( a3.isAlive()) {
-			}
-			String[] a = ex3.retour.split("/");
+			Interface.exPression.Commander("python MS5803_14BA.py");
+			String[] a = Interface.exPression.retour.split("/");
 			this.Pression=a[0];
 			this.TemperatureC=a[1];
 			this.TemperatureF=a[2];
