@@ -75,7 +75,7 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
     public static int posY = 0;
     public static int vitX = 0;
     public static int vitY = 0;
-    public static int m1 = 120;
+    public static int m1 = 150;
     public static int m2 = 120;
     public static int m3 = 120;
     public static Exec exPression = new Exec();
@@ -504,13 +504,13 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
     			System.out.println("Droite appuyé");
     		}
     		if (key == KeyEvent.VK_Z) {
-    			Moteurs ex1 = new Moteurs(m1+10,m2,m3);
+    			Moteurs ex1 = new Moteurs(m1+1,m2,m3);
     			Thread a1 = new Thread(ex1);
     			a1.start();
     			System.out.println("Haut appuyé");
     		}
     		if (key == KeyEvent.VK_S) {
-    			Moteurs ex1 = new Moteurs(m1-10,m2,m3);
+    			Moteurs ex1 = new Moteurs(m1-1,m2,m3);
     			Thread a1 = new Thread(ex1);
     			a1.start();
     			System.out.println("Bas appuyé");

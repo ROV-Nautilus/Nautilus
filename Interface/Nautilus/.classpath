@@ -3,7 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="C:/Users/Dylan/Documents/Ecole/ENSEA/Deuxieme année/Projet/github/Nautilus/Interface/Nautilus/jsch-0.1.54.jar"/>
+	<classpathentry kind="lib" path="D:/Ecole/ENSEA/Deuxieme année/Projet/Git/Nautilus/Interface/Nautilus/jsch-0.1.54.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/java3D">
 		<attributes>
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Program Files/Java/Java3D/1.5.1/bin"/>
