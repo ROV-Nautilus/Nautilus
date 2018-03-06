@@ -1,0 +1,68 @@
+*****************************************************************
+      SolidWorks Corporation - Compte-rendu d'état du Processeur IGES
+*****************************************************************
+=================================================================
+Informations générales
+=================================================================
+Envoi de l'identification du produit système en cours  : OpenROV_Dev_Assy
+Réception de l'identification du produit système en cours: OpenROV_Dev_Assy
+Nom de fichier                    : C:\Users\rick-pc\Desktop\OpenROV_Dev_Assy.IGS
+Envoi du système en cours               : SolidWorks 2014
+Version du préprocesseur         : SolidWorks 2014
+Date de création du fichier           : 150806.090415
+Date de création du modèle          : 150806.090415
+Unités                        : IN
+Echelle de l'espace modèle            : 1
+Auteur                       : rick-pc
+Organisation                 : 
+
+
+=================================================================
+Informations sur le traitement des entités
+=================================================================
+
+
+=================================================================
+Analyse de précision d'un fichier IGES:
+=================================================================
+  Nombre le plus répandu de chiffres significatifs:               9
+  Nombre le plus grand de chiffres significatifs:                     11
+  Nombre moyen de chiffres significatifs :                8.35495
+  Distance maximale jusqu'à l'origine:                          49.5427
+  Distance minimale jusqu'à l'origine:                        0.0340489
+  Nombre effectif de chiffres significatifs:              10.9994
+
+
+=================================================================
+Récapitulatif des entités
+=================================================================
+-----------------------------------------------------------------
+Nom de type                                         Nombre converti
+---- ----                                         ----- ---------
+100  Arc                                           8253      8253
+102  Composite curve                              14448     14448
+110  Line                                         24839     24839
+120  Surface of revolution                         1642      1642
+124  Transformation matrix                         6933      6933
+126  Rational B-spline curve                      32763     32763
+128  Rational B-spline surface                     4977      4977
+142  Curve on a parametric surface                 7224      7224
+144  Trimmed parametric surface                    6619      6619
+308  Subfigure definition                            30        30
+314  Color definition                              3718      3718
+408  Singular subfigure instance                     55        55
+_________________________________________________________________
+
+
+=================================================================
+Récapitulatif des résultats
+=================================================================
+Type de fonction SolidWorks                Nombre
+-----------------------                -----
+Fonction(s) volumique(s)                       201
+Fonction(s) surfacique(s)                     0
+Fonction(s) de courbe/d'esquisse                0
+--------------------------------------------
+Heure de début: lundi, octobre 02, 2017 23:32:42
+Heure de fin: lundi, octobre 02, 2017 23:33:59
+Durée de traitement: 0 days, 00 hours, 01 mins, 17 secs
