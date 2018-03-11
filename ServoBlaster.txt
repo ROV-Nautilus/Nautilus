@@ -1,0 +1,11 @@
+# Installation et configuration de ServoBlaster (commande à rentrer sur le terminal Raspbian) 
+
+sudo apt-get install git
+git clone https://github.com/richardghirst/PiBits.git
+cd PiBits/ServoBlaster/user
+nano init-script
+# Supprimer la valeur --idle-timeout=2000 des options par défaut
+nano servod.c
+# Modifier la ligne 960 pour avoir "else if (strstr(modelstr, "BCM2709") || strstr(modelstr, "BCM2835"))"
+make
+sudo make install
