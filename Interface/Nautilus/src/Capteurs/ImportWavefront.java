@@ -26,11 +26,21 @@ public class ImportWavefront extends Applet {
 	
 	
 public static boolean applet = true ;
+public static Transform3D homothetie = null;
+public double homo = 0.6f;
 
-  public ImportWavefront() {
+public Canvas3D canvas3D = null;
+public SimpleUniverse simpleU = null;
+public BranchGroup scene = null;
+
+  public ImportWavefront(double homo) {
+	  this.homo=homo;
     if (!applet) {
       lanceApplication();
     }
+  }
+  public void setHomo(double homo) {
+	  this.homo=homo;
   }
 
   public void lanceApplication() {
@@ -38,13 +48,12 @@ public static boolean applet = true ;
 
     // Etape 3 :
     // Creation du Canvas 3D
-    Canvas3D canvas3D = new Canvas3D(SimpleUniverse.getPreferredConfiguration());
-
+    canvas3D = new Canvas3D(SimpleUniverse.getPreferredConfiguration());
     this.add(canvas3D, BorderLayout.CENTER);
 
     // Etape 4 :
     // Creation d'un objet SimpleUniverse
-    SimpleUniverse simpleU = new SimpleUniverse(canvas3D);
+    simpleU = new SimpleUniverse(canvas3D);
 
     // Etape 5 :
     // Positionnement du point d'observation pour avoir une vue correcte de la
@@ -53,7 +62,7 @@ public static boolean applet = true ;
 
     // Etape 6 :
     // Creation de la scene 3D qui contient tous les objets 3D que l'on veut visualiser
-    BranchGroup scene = createSceneGraph();
+    scene = createSceneGraph();
 
     // Etape 7 :
     // Compilation de la scene 3D
@@ -62,6 +71,29 @@ public static boolean applet = true ;
     // Etape 8:
     // Attachement de la scene 3D a l'objet SimpleUniverse
     simpleU.addBranchGraph(scene);
+  }
+  
+  public void refresh() {
+	// Etape 4 :
+	// Creation d'un objet SimpleUniverse
+	simpleU = new SimpleUniverse(canvas3D);
+
+	// Etape 5 :
+	// Positionnement du point d'observation pour avoir une vue correcte de la
+	// scene 3D
+	simpleU.getViewingPlatform().setNominalViewingTransform();
+	  
+	// Etape 6 :
+	// Creation de la scene 3D qui contient tous les objets 3D que l'on veut visualiser
+	scene = createSceneGraph();
+
+	// Etape 7 :
+	// Compilation de la scene 3D
+	scene.compile();
+
+	// Etape 8:
+	// Attachement de la scene 3D a l'objet SimpleUniverse
+	simpleU.addBranchGraph(scene);
   }
 
   /**
@@ -100,18 +132,47 @@ public static boolean applet = true ;
     parent.addChild(rotate);
 
     // Creation comportement deplacement a la souris
-    MouseTranslate translate = new MouseTranslate(mouseTransform);
-    translate.setSchedulingBounds(new BoundingSphere());
-    parent.addChild(translate);
+    //MouseTranslate translate = new MouseTranslate(mouseTransform);
+    //translate.setSchedulingBounds(new BoundingSphere());
+    //parent.addChild(translate);
 
     // Creation comportement zoom a la souris
-    MouseZoom zoom = new MouseZoom(mouseTransform);
-    zoom.setSchedulingBounds(new BoundingSphere());
-    parent.addChild(zoom);
+    //MouseZoom zoom = new MouseZoom(mouseTransform);
+    //zoom.setSchedulingBounds(new BoundingSphere());
+    //parent.addChild(zoom);
 
-    // Chargement de l'objet Wavefront et ajout au graphe de la scene
+    // Chargement de l'objet Wavefront
     mouseTransform.addChild(loadWavefrontObject());
-    parent.addChild(mouseTransform);
+    
+    // Creation de l'homethetie (homothetie)
+    this.homothetie = new Transform3D();
+    homothetie.setScale(this.homo); 
+    
+    // Creation de la transformation (translation)
+    Transform3D translation = new Transform3D();
+    translation.setTranslation(new Vector3f(0f, 0f, 0f));
+    translation.mul(homothetie);
+    
+    // Creation de la rotation X(rotation)
+    Transform3D rotationX = new Transform3D();
+    rotationX.rotX( 10f * Math.PI/180f);
+    rotationX.mul(translation);
+    
+    // Creation de la rotation Y(rotation)
+    Transform3D rotationY = new Transform3D();
+    rotationY.rotY( 30f * Math.PI/180f);
+    rotationY.mul(rotationX);
+    
+    // Creation de la rotation Z(rotation)
+    Transform3D rotationZ = new Transform3D();
+    rotationZ.rotZ( 0f * Math.PI/180f);
+    rotationZ.mul(rotationY);
+    
+    TransformGroup rotationGroup = new TransformGroup(rotationZ);
+    
+    // Chargement de l'objet Wavefront et ajout au graphe de la scene
+    rotationGroup.addChild(mouseTransform);
+    parent.addChild(rotationGroup);
 
     return parent;
   }

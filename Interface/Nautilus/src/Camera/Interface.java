@@ -69,8 +69,11 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
     Panel axPanel = new Panel(); //Camera carto
     Panel axPanel1 = new Panel(); //Camera FPV
     
+    /** Initialisation pour la cartographie*/
     Cartographie carto = null;
     public String nomPhoto = "carto";
+    
+    /**  Valeur partagé*/
     public static int posX = 0;
     public static int posY = 0;
     public static int vitX = 0;
@@ -84,11 +87,12 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
     public static String pre = "0";
     public static String tempC = "0";
     public static String tempF = "0";
-    
     JPanel pan2=new JPanel();
     JPanel panM1=new JPanel();
     JPanel panM2=new JPanel();
     JPanel panM3=new JPanel();
+    
+    /** Affichage */
     JLabel positionX = new JLabel(" Position X = "+posX,SwingConstants.CENTER);
 	JLabel positionY = new JLabel(" Position Y = "+posY,SwingConstants.CENTER);
 	JLabel vitesseX = new JLabel(" Vitesse X = "+vitY,SwingConstants.CENTER);
@@ -99,7 +103,10 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 	public static JLabel pression = new JLabel(" Pression = "+pre,SwingConstants.CENTER);
 	public static JLabel temperatureC = new JLabel(" TemperatureC = "+tempC,SwingConstants.CENTER);
 	public static JLabel temperatureF = new JLabel(" TemperatureF = "+tempF,SwingConstants.CENTER);
+	
+	ImportWavefront singe = null;
 
+	/** Pour le clavier */
     boolean isPressed;
 
 		//Constructeur
@@ -107,23 +114,20 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			super(titre);
 			super.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			super.setLocation(0,0);
-			//super.setSize(1920,1040);
 			
 			super.setExtendedState(JFrame.MAXIMIZED_BOTH);
 			this.setIconImage(new ImageIcon(getClass().getResource("/Nautilus.jpg")).getImage());
 			
-			/*
+			/** Initialisation des moteurs*/
 			Moteurs ex1 = new Moteurs(m1,m2,m3);
 			Thread a1 = new Thread(ex1);
 			a1.start();
-			*/
-			/* Construction du Conteneur */
+			
+			/** Construction du Conteneur */
 			win = getContentPane();
 			win.setLayout (new GridBagLayout());
-			//win.setBackground(Color.BLUE);
 			
-			/* Premier Bouton FPV */
-			
+			/** Premier Bouton FPV */
 			axPanel1.setMinimumSize(new Dimension(400,210));
 			axPanel1.setMaximumSize(new Dimension(400,210));
 			axPanel1.setPreferredSize(new Dimension(400,210));
@@ -146,7 +150,7 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 				
 			win.add(axPanel1,c);
 				
-			/* Deuxieme Bouton Carto */
+			/** Deuxieme Bouton Carto */
 			axPanel.setMinimumSize(new Dimension(400,210));
 			axPanel.setMaximumSize(new Dimension(400,210));
 			axPanel.setPreferredSize(new Dimension(400,210));
@@ -171,7 +175,7 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			
 			this.setFocusable(true);
 			
-			/* Clavier */
+			/** Ecouteur du Clavier */
 			this.addKeyListener(this);
 			win.addKeyListener(this);
 			pan2.addKeyListener(this);
@@ -181,32 +185,33 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			axPanel.addKeyListener(this);
 			axPanel1.addKeyListener(this);
 			
+			/** Affichage de la fenetre*/
 	    	super.setVisible(b);
 		}
 	
 		
+		/** Action de la souris sur les panel */
 	public void actionPerformed(ActionEvent e) {
 		String cmd = e.getActionCommand();
-		if(cmd.equals("Quitter")){
-			System.exit(0);
-		}
+		/** Bouton FPV */
 		if(cmd.equals("FPV OFF")) {
 			
 			/* Video FPV*/
 			this.exCam.setCommande("sudo motion");
 			Thread a2 = new Thread(exCam);
 			a2.start();
-			
+			/* Attente du lancement du flux video*/
 			while( a2.isAlive()) {
 			}
-			
+			/* Double commande pour un bon lancement*/
 			this.exCam.setCommande("sudo systemctl start motion.service");
 			Thread a1 = new Thread(exCam);
 			a1.start();
-			
-			while(a2.isAlive()) {
+			/* Attente du lancement du flux video*/
+			while(a1.isAlive()) {
 			}
 			
+			/* Affichage mis a nu*/
 			axPanel.removeAll();
 			axPanel.repaint();
 			axPanel1.removeAll();
@@ -215,12 +220,14 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			win.setLayout (new GridBagLayout());
 			win.repaint();
 			
-			axPanel1 = new Camera(win,jpgURL1,mjpgURL1,"Cartographie");
-	    	new Thread(axPanel1).start();
-	    	
+			/* Recuperation des valeurs du capteur Pression/Temperature*/
 	    	Pression ex4 = new Pression();
 			Thread a4 = new Thread(ex4);
 			a4.start();
+			
+			/* Affichage de la video */
+			axPanel1 = new Camera(win,jpgURL1,mjpgURL1,"Cartographie");
+	    	new Thread(axPanel1).start();
 	    	
 	    	axPanel1.setMinimumSize(new Dimension(1280,720));
 			axPanel1.setMaximumSize(new Dimension(1280,720));
@@ -238,7 +245,7 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			axPanel1.repaint();
 			
 			
-			/* Deuxieme Bouton Carto */
+			/* Affichage Bouton Carto */
 			
 			axPanel.setMinimumSize(new Dimension(400,210));
 			axPanel.setMaximumSize(new Dimension(400,210));
@@ -374,7 +381,6 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 	            }
 	        };
 			
-			//panM3.setBackground(Color.GRAY);
 			panM3.setLayout(new GridLayout(1,1));
 			
 			Font font5 = new Font("Arial",Font.BOLD,20);
@@ -403,8 +409,7 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			/* Test */
 			
 			ImportWavefront.applet = false;
-			Applet singe = new ImportWavefront();
-			//Frame frame = new MainFrame(new ImportWavefront(), 256, 256);
+			singe = new ImportWavefront(0.2f);
 			
 			singe.setSize(new Dimension(256, 256));
 			singe.setMinimumSize(new Dimension(256, 256));
@@ -419,15 +424,20 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			c.gridwidth = 1;   //Prend 1 Colonne
 			c.gridheight = 1;   //Prend 1 ligne
 			c.insets = new Insets(0, 25, 0, 0); // Insets(margeSupérieure, margeGauche, margeInférieur, margeDroite)
-			
 			win.add(singe,c);
 			
 		}
 		
+		/** Bouton carto */
 		if(cmd.equals("CARTO OFF")) {
-			ImportWavefront.applet = false;
-			Frame frame = new MainFrame(new ImportWavefront(), 256, 256);
+			//ImportWavefront.applet = false;
+			//Frame frame = new MainFrame(new ImportWavefront(), 256, 256);
+			singe.setHomo(0.6f);
+			singe.removeAll();
+			singe.lanceApplication();
+			//singe.repaint();
 		}
+		/* Test et autres*/
 		if(cmd.equals("Demarrer Camera 1")){
 			Exec ex4 = new Exec("python3 rpi_camera_demarrer.py");
 			try {
@@ -469,7 +479,7 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 
 
     
-    /** Handle the key pressed event from the text field. */
+    /** Action touche du clavier */
     public void keyPressed(KeyEvent e) {
     	int key = e.getKeyCode();
     	if(!isPressed) {
