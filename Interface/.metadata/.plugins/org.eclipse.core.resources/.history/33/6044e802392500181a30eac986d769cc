@@ -61,13 +61,13 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
     public String jpgURL="http://169.254.14.03:8000/";
     public String mjpgURL="http://169.254.14.03:8000/stream.mjpg";
     
-    /** Container principal avec sa contrainte*/
     public Container win;
-    GridBagConstraints c = new GridBagConstraints();
     
-    /** Panel lié à l'affichage video */
+    GridBagConstraints c = new GridBagConstraints();
     Panel axPanel = new Panel(); //Camera carto
     Panel axPanel1 = new Panel(); //Camera FPV
+    
+    public int f = 0;
     
     Cartographie carto = null;
     public String nomPhoto = "carto";
