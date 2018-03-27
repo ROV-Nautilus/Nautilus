@@ -23,6 +23,8 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import javax.media.j3d.Transform3D;
+import javax.media.j3d.TransformGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -38,6 +40,7 @@ import javax.swing.SwingConstants;
 
 import com.jcraft.jsch.JSchException;
 import com.sun.j3d.utils.applet.MainFrame;
+import javax.vecmath.*;
 
 import Capteurs.ImportWavefront;
 import Capteurs.Moteurs;
@@ -91,6 +94,15 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
     JPanel panM1=new JPanel();
     JPanel panM2=new JPanel();
     JPanel panM3=new JPanel();
+    
+    public static double rotX = 0.0f;
+    public static double rotY = 0.0f;
+    public static double rotZ = 0.0f;
+    public static double transX = 0.0f;
+    public static double transY = 0.0f;
+    public static double transZ = 0.0f;
+    public static double scale = 0.6f;
+    
     
     /** Affichage */
     JLabel positionX = new JLabel(" Position X = "+posX,SwingConstants.CENTER);
@@ -409,7 +421,7 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			/* Test */
 			
 			ImportWavefront.applet = false;
-			singe = new ImportWavefront(0.2f);
+			singe = new ImportWavefront();
 			
 			singe.setSize(new Dimension(256, 256));
 			singe.setMinimumSize(new Dimension(256, 256));
@@ -432,10 +444,8 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 		if(cmd.equals("CARTO OFF")) {
 			//ImportWavefront.applet = false;
 			//Frame frame = new MainFrame(new ImportWavefront(), 256, 256);
-			singe.setHomo(0.6f);
-			singe.removeAll();
-			singe.lanceApplication();
-			//singe.repaint();
+			singe.mouvement(this.rotX, this.rotY, this.rotZ, new Vector3d(this.transX, this.transY, this.transZ), this.scale);
+			this.rotZ=this.rotZ+1;
 		}
 		/* Test et autres*/
 		if(cmd.equals("Demarrer Camera 1")){

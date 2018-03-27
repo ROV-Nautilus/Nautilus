@@ -39,7 +39,6 @@
 <fullyQualifiedTypeName name="java.awt.Font"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="Capteurs.Pression"/>
-<fullyQualifiedTypeName name="Camera.Interface"/>
 <fullyQualifiedTypeName name="Capteurs.Moteurs"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="javax.swing.JProgressBar"/>
@@ -48,4 +47,8 @@
 <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
 <fullyQualifiedTypeName name="javax.swing.SwingConstants"/>
 <fullyQualifiedTypeName name="java.applet.Applet"/>
+<fullyQualifiedTypeName name="java.awt.geom.Line2D"/>
+<fullyQualifiedTypeName name="com.sun.j3d.utils.behaviors.vp.OrbitBehavior"/>
+<fullyQualifiedTypeName name="Camera.Interface"/>
+<fullyQualifiedTypeName name="com.sun.j3d.utils.geometry.Box"/>
 </qualifiedTypeNameHistroy>

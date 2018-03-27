@@ -5,6 +5,7 @@ import com.sun.image.codec.jpeg.*;
 
 import java.io.*;
 import java.awt.*;
+import java.awt.geom.Line2D;
 import java.awt.image.*;
 import javax.swing.*;
 
@@ -138,6 +139,17 @@ public class Camera  extends Panel implements Runnable{
     		//image = toBufferedImage(getScaledInstanceAWT(image, 2));
     		image=scale(image, 2);
     		g.drawImage(image, 0, 0, this);
+    		
+    		Graphics2D g2 = (Graphics2D) g;
+    		
+    		double alpha = Interface.rotZ* Math.PI/180f;
+    		int a = image.getHeight();
+    		int b = image.getWidth();
+    		
+    		double S =(b/2)*(Math.sin(alpha))*(Math.cos((Math.PI/2)-alpha));
+    		double T =(b/2)*(Math.sin(alpha))*(Math.sin((Math.PI/2)-alpha));
+    		
+    		g2.draw(new Line2D.Double(S,(a/2)-T,b-S,(a/2)+T));
     }
  
     /** Lecture du flux streamer pour reaffichage*/
