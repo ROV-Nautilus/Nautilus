@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.26)  1 DEC 2017 08:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.27)  27 MAR 2018 14:59
 entering extended mode
 **"./Carnet De Bord.tex"
 ("Carnet De Bord.tex"
 LaTeX2e <2017-04-15>
-Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+Babel <3.17> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
@@ -344,57 +344,70 @@ Now handling font encoding U ...
    defining Unicode char U+2423 (decimal 9251)
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2017/05/19 3.10 The Babel package
-
+Package: babel 2018/01/24 3.17 The Babel package
+ ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
+File: switch.def 2018/01/24 3.17 Babel switching mechanism
+)
 *************************************
 * Local config file bblopts.cfg used
 *
 ("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel-french\frenchb.ldf"
-Language: frenchb 2017/04/30 v3.3a French support from the babel system
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel-french\francais.ldf"
+Language: francais 2018/02/04 v3.4b French support from the babel system
+
+
+Package francais.ldf Warning: Option `francais' for Babel is *deprecated*,
+(francais.ldf)                it might be removed sooner or later. Please
+(francais.ldf)                use `french' instead; reported on input line 31.
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel-french\french.ldf"
+Language: french 2018/02/04 v3.4b French support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2017/05/19 3.10 Babel common definitions
+File: babel.def 2018/01/24 3.17 Babel common definitions
+ ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
+File: switch.def 2018/01/24 3.17 Babel switching mechanism
+)
 \babel@savecnt=\count88
 \U@D=\dimen103
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\txtbabel.def")
+\bbl@dirlevel=\count89
 )
 \l@acadian = a dialect from \language\l@french 
-\l@canadien = a dialect from \language\l@french 
-\FB@nonchar=\count89
-\FBcolonsp=\toks16
-\FBthinsp=\toks17
-Package babel Info: Making : an active character on input line 362.
-Package babel Info: Making ; an active character on input line 363.
-Package babel Info: Making ! an active character on input line 364.
-Package babel Info: Making ? an active character on input line 365.
-\FBguillsp=\toks18
-\FBguill@level=\count90
-\FB@everypar=\toks19
+\FB@nonchar=\count90
+Package babel Info: Making : an active character on input line 411.
+Package babel Info: Making ; an active character on input line 412.
+Package babel Info: Making ! an active character on input line 413.
+Package babel Info: Making ? an active character on input line 414.
+\FBguill@level=\count91
+\FB@everypar=\toks16
 \FB@Mht=\dimen104
-\mc@charclass=\count91
-\mc@charfam=\count92
-\mc@charslot=\count93
-\std@mcc=\count94
-\dec@mcc=\count95
+\mc@charclass=\count92
+\mc@charfam=\count93
+\mc@charslot=\count94
+\std@mcc=\count95
+\dec@mcc=\count96
+\c@FBcaption@count=\count97
 \listindentFB=\skip43
 \descindentFB=\skip44
 \labelwidthFB=\skip45
 \leftmarginFB=\skip46
 \parindentFFN=\dimen105
 \FBfnindent=\skip47
-))
+)))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\carlisle\scalefnt.sty")
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
+\KV@toks@=\toks17
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
  ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
@@ -403,15 +416,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count96
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
@@ -430,11 +435,11 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen108
 \extrarowheight=\dimen109
-\NC@list=\toks21
+\NC@list=\toks18
 \extratabsurround=\skip48
 \backup@length=\skip49
 )
-\everycr=\toks22
+\everycr=\toks19
 \minrowclearance=\skip50
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -449,9 +454,9 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count97
-\Gm@cntv=\count98
-\c@Gm@tempcnt=\count99
+\Gm@cnth=\count98
+\Gm@cntv=\count99
+\c@Gm@tempcnt=\count100
 \Gm@bindingoffset=\dimen110
 \Gm@wd@mp=\dimen111
 \Gm@odd@mp=\dimen112
@@ -460,11 +465,11 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen115
 \Gm@layouthoffset=\dimen116
 \Gm@layoutvoffset=\dimen117
-\Gm@dimlist=\toks23
+\Gm@dimlist=\toks20
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -472,8 +477,8 @@ Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
-Package hobsub Info: Skipping package `infwarerr' (already loaded).
-Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
@@ -486,7 +491,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO)
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -513,56 +518,55 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen118
-\Hy@linkcounter=\count100
-\Hy@pagecounter=\count101
+\Hy@linkcounter=\count101
+\Hy@pagecounter=\count102
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count102
+\Hy@SavedSpaceFactor=\count103
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4498.
-Package hyperref Info: Link nesting OFF on input line 4503.
-Package hyperref Info: Hyper index ON on input line 4506.
-Package hyperref Info: Plain pages OFF on input line 4513.
-Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4751.
-\c@Hy@tempcnt=\count103
+Package hyperref Info: Bookmarks ON on input line 4762.
+\c@Hy@tempcnt=\count104
  ("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5104.
+LaTeX Info: Redefining \url on input line 5115.
 \XeTeXLinkMargin=\dimen119
-\Fld@menulength=\count104
+\Fld@menulength=\count105
 \Field@Width=\dimen120
 \Fld@charsize=\dimen121
-Package hyperref Info: Hyper figures OFF on input line 6358.
-Package hyperref Info: Link nesting OFF on input line 6363.
-Package hyperref Info: Hyper index ON on input line 6366.
-Package hyperref Info: backreferencing OFF on input line 6373.
-Package hyperref Info: Link coloring OFF on input line 6378.
-Package hyperref Info: Link coloring with OCG OFF on input line 6383.
-Package hyperref Info: PDF/A mode OFF on input line 6388.
-LaTeX Info: Redefining \ref on input line 6428.
-LaTeX Info: Redefining \pageref on input line 6432.
-\Hy@abspage=\count105
-\c@Item=\count106
-\c@Hfootnote=\count107
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count106
+\c@Item=\count107
+\c@Hfootnote=\count108
 )
-
-Package hyperref Message: Driver (autodetected): hpdftex.
+Package hyperref Info: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
-\Fld@listcount=\count108
-\c@bookmark@seq@number=\count109
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count109
+\c@bookmark@seq@number=\count110
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -599,17 +603,17 @@ LaTeX Info: Redefining \up on input line 32.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
+\scratchcounter=\count111
 \scratchdimen=\dimen122
 \scratchbox=\box26
-\nofMPsegments=\count111
-\nofMParguments=\count112
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count113
+\nofMPsegments=\count112
+\nofMParguments=\count113
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count114
 \MPscratchDim=\dimen123
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
-\everyMPtoPDFconversion=\toks25
+\MPnumerator=\count115
+\makeMPintoPDFobject=\count116
+\everyMPtoPDFconversion=\toks22
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -618,7 +622,7 @@ Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 *geometry* driver: auto-detecting
@@ -663,7 +667,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count116
+\c@section@level=\count117
 )
 LaTeX Info: Redefining \ref on input line 32.
 LaTeX Info: Redefining \pageref on input line 32.
@@ -672,15 +676,15 @@ LaTeX Info: Redefining \nameref on input line 32.
 \@outlinefile=\write3
 \openout3 = `"Carnet De Bord.out"'.
 
-
 <Illustrations/ensea.png, id=31, 91.09032pt x 91.09032pt>
 File: Illustrations/ensea.png Graphic file (type png)
- <use Illustrations/ensea.png>
-Package pdftex.def Info: Illustrations/ensea.png used on input line 51.
+<use Illustrations/ensea.png>
+Package pdftex.def Info: Illustrations/ensea.png  used on input line 51.
 (pdftex.def)             Requested size: 113.81102pt x 113.81532pt.
- [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./Illustrations/ensea.png>] ("Carnet De Bord.toc"
+[1
+
+{C:/Users/dylan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Illustrations/ensea.png>] ("Carnet De Bord.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -702,21 +706,21 @@ Chapitre 1.
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 63.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) <Illustrations/1.png, id=56, 502.87875pt x 33.87656pt>
+)
+<Illustrations/1.png, id=55, 502.87875pt x 33.87656pt>
 File: Illustrations/1.png Graphic file (type png)
-
 <use Illustrations/1.png>
-Package pdftex.def Info: Illustrations/1.png used on input line 74.
+Package pdftex.def Info: Illustrations/1.png  used on input line 74.
 (pdftex.def)             Requested size: 502.87752pt x 33.87646pt.
 
 Overfull \hbox (47.6334pt too wide) in paragraph at lines 74--75
  [] 
  []
 
-<Illustrations/2.png, id=57, 454.69875pt x 14.30344pt>
+<Illustrations/2.png, id=56, 454.69875pt x 14.30344pt>
 File: Illustrations/2.png Graphic file (type png)
- <use Illustrations/2.png>
-Package pdftex.def Info: Illustrations/2.png used on input line 80.
+<use Illustrations/2.png>
+Package pdftex.def Info: Illustrations/2.png  used on input line 80.
 (pdftex.def)             Requested size: 454.69763pt x 14.30339pt.
 
 Overfull \hbox (99.11787pt too wide) in paragraph at lines 68--83
@@ -726,46 +730,41 @@ raspberry-[]pi-[]avec-[]x11vnc/$[]
 
 [2
 
- <./Illustrations/1.png> <./Illustrations/2.png>] <Illustrations/3.png, id=67, 420.06938pt x 327.47343pt>
+ <./Illustrations/1.png> <./Illustrations/2.png>]
+<Illustrations/3.png, id=66, 420.06938pt x 327.47343pt>
 File: Illustrations/3.png Graphic file (type png)
-
 <use Illustrations/3.png>
-Package pdftex.def Info: Illustrations/3.png used on input line 86.
+Package pdftex.def Info: Illustrations/3.png  used on input line 86.
 (pdftex.def)             Requested size: 210.03418pt x 163.73631pt.
- <Illustrations/4.png, id=68, 340.27126pt x 365.86688pt>
+<Illustrations/4.png, id=67, 340.27126pt x 365.86688pt>
 File: Illustrations/4.png Graphic file (type png)
- <use Illustrations/4.png>
-Package pdftex.def Info: Illustrations/4.png used on input line 92.
+<use Illustrations/4.png>
+Package pdftex.def Info: Illustrations/4.png  used on input line 92.
 (pdftex.def)             Requested size: 170.13521pt x 182.93298pt.
-
-<Illustrations/5.png, id=69, 396.7322pt x 284.56313pt>
+<Illustrations/5.png, id=68, 396.7322pt x 284.56313pt>
 File: Illustrations/5.png Graphic file (type png)
- <use Illustrations/5.png>
-Package pdftex.def Info: Illustrations/5.png used on input line 98.
+<use Illustrations/5.png>
+Package pdftex.def Info: Illustrations/5.png  used on input line 98.
 (pdftex.def)             Requested size: 198.3656pt x 142.2812pt.
-
-<Illustrations/7.png, id=70, 395.97937pt x 61.73062pt>
+<Illustrations/7.png, id=69, 395.97937pt x 61.73062pt>
 File: Illustrations/7.png Graphic file (type png)
- <use Illustrations/7.png>
-Package pdftex.def Info: Illustrations/7.png used on input line 105.
+<use Illustrations/7.png>
+Package pdftex.def Info: Illustrations/7.png  used on input line 105.
 (pdftex.def)             Requested size: 395.97841pt x 61.73045pt.
-
-<Illustrations/8.png, id=71, 302.63063pt x 19.57312pt>
+<Illustrations/8.png, id=70, 302.63063pt x 19.57312pt>
 File: Illustrations/8.png Graphic file (type png)
- <use Illustrations/8.png>
-Package pdftex.def Info: Illustrations/8.png used on input line 111.
+<use Illustrations/8.png>
+Package pdftex.def Info: Illustrations/8.png  used on input line 111.
 (pdftex.def)             Requested size: 302.62988pt x 19.57306pt.
-
-<Illustrations/9.png, id=72, 829.59938pt x 135.50626pt>
+<Illustrations/9.png, id=71, 829.59938pt x 135.50626pt>
 File: Illustrations/9.png Graphic file (type png)
- <use Illustrations/9.png>
-Package pdftex.def Info: Illustrations/9.png used on input line 117.
+<use Illustrations/9.png>
+Package pdftex.def Info: Illustrations/9.png  used on input line 117.
 (pdftex.def)             Requested size: 414.79868pt x 67.75294pt.
-
-<Illustrations/10.png, id=73, 440.39531pt x 43.66313pt>
+<Illustrations/10.png, id=72, 440.39531pt x 43.66313pt>
 File: Illustrations/10.png Graphic file (type png)
- <use Illustrations/10.png>
-Package pdftex.def Info: Illustrations/10.png used on input line 123.
+<use Illustrations/10.png>
+Package pdftex.def Info: Illustrations/10.png  used on input line 123.
 (pdftex.def)             Requested size: 440.39423pt x 43.66301pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 83--126
@@ -773,52 +772,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--126
  []
 
 [3 <./Illustrations/3.png> <./Illustrations/4.png> <./Illustrations/5.png>] [4 <./Illustrations/7.png> <./Illustrations/
-8.png> <./Illustrations/9.png> <./Illustrations/10.png>] <Illustrations/6.png, id=83, 665.48625pt x 181.42781pt>
+8.png> <./Illustrations/9.png> <./Illustrations/10.png>]
+<Illustrations/6.png, id=82, 665.48625pt x 181.42781pt>
 File: Illustrations/6.png Graphic file (type png)
-
 <use Illustrations/6.png>
-Package pdftex.def Info: Illustrations/6.png used on input line 134.
+Package pdftex.def Info: Illustrations/6.png  used on input line 134.
 (pdftex.def)             Requested size: 332.74231pt x 90.71368pt.
- <Illustrations/11.png, id=84, 371.88937pt x 317.68687pt>
+<Illustrations/11.png, id=83, 371.88937pt x 317.68687pt>
 File: Illustrations/11.png Graphic file (type png)
- <use Illustrations/11.png>
-Package pdftex.def Info: Illustrations/11.png used on input line 146.
+<use Illustrations/11.png>
+Package pdftex.def Info: Illustrations/11.png  used on input line 146.
 (pdftex.def)             Requested size: 260.32079pt x 222.37927pt.
-
-<Illustrations/12.png, id=86, 465.99094pt x 51.19125pt>
+<Illustrations/12.png, id=85, 465.99094pt x 51.19125pt>
 File: Illustrations/12.png Graphic file (type png)
- <use Illustrations/12.png>
-Package pdftex.def Info: Illustrations/12.png used on input line 152.
+<use Illustrations/12.png>
+Package pdftex.def Info: Illustrations/12.png  used on input line 152.
 (pdftex.def)             Requested size: 326.19142pt x 35.83362pt.
- [5 <./Illustrations/6.png> <./Illustrations/11.png> <./Illustrations/12.png>] <Illustrations/13.png, id=96, 478.78876pt
- x 50.43843pt>
+ [5 <./Illustrations/6.png> <./Illustrations/11.png> <./Illustrations/12.png>]
+<Illustrations/13.png, id=95, 478.78876pt x 50.43843pt>
 File: Illustrations/13.png Graphic file (type png)
-
 <use Illustrations/13.png>
-Package pdftex.def Info: Illustrations/13.png used on input line 159.
+Package pdftex.def Info: Illustrations/13.png  used on input line 159.
 (pdftex.def)             Requested size: 335.14984pt x 35.30664pt.
- <Illustrations/14.png, id=97, 224.33812pt x 24.09pt>
+<Illustrations/14.png, id=96, 224.33812pt x 24.09pt>
 File: Illustrations/14.png Graphic file (type png)
- <use Illustrations/14.png>
-Package pdftex.def Info: Illustrations/14.png used on input line 168.
+<use Illustrations/14.png>
+Package pdftex.def Info: Illustrations/14.png  used on input line 168.
 (pdftex.def)             Requested size: 224.33757pt x 24.08992pt.
-
-<Illustrations/15.png, id=98, 185.94469pt x 36.135pt>
+<Illustrations/15.png, id=97, 185.94469pt x 36.135pt>
 File: Illustrations/15.png Graphic file (type png)
- <use Illustrations/15.png>
-Package pdftex.def Info: Illustrations/15.png used on input line 174.
+<use Illustrations/15.png>
+Package pdftex.def Info: Illustrations/15.png  used on input line 174.
 (pdftex.def)             Requested size: 185.94421pt x 36.13489pt.
-
-<Illustrations/16.png, id=99, 253.69781pt x 36.88782pt>
+<Illustrations/16.png, id=98, 253.69781pt x 36.88782pt>
 File: Illustrations/16.png Graphic file (type png)
- <use Illustrations/16.png>
-Package pdftex.def Info: Illustrations/16.png used on input line 180.
+<use Illustrations/16.png>
+Package pdftex.def Info: Illustrations/16.png  used on input line 180.
 (pdftex.def)             Requested size: 253.69719pt x 36.88771pt.
-
-<Illustrations/17.png, id=100, 403.5075pt x 21.83156pt>
+<Illustrations/17.png, id=99, 403.5075pt x 21.83156pt>
 File: Illustrations/17.png Graphic file (type png)
- <use Illustrations/17.png>
-Package pdftex.def Info: Illustrations/17.png used on input line 187.
+<use Illustrations/17.png>
+Package pdftex.def Info: Illustrations/17.png  used on input line 187.
 (pdftex.def)             Requested size: 403.50652pt x 21.8315pt.
  [6 <./Illustrations/13.png> <./Illustrations/14.png> <./Illustrations/15.png> <./Illustrations/16.png> <./Illustrations
 /17.png>]
@@ -840,24 +834,23 @@ Package rerunfilecheck Info: File `"Carnet De Bord".out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
  ) 
 Here is how much of TeX's memory you used:
- 7559 strings out of 493323
- 108963 string characters out of 3139054
- 207166 words of memory out of 3000000
- 10956 multiletter control sequences out of 15000+200000
- 16541 words of font info for 37 fonts, out of 3000000 for 9000
+ 7577 strings out of 493303
+ 109982 string characters out of 3138856
+ 207033 words of memory out of 3000000
+ 10986 multiletter control sequences out of 15000+200000
+ 15777 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,13n,30p,506b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\dylan_000\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\
-pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecbx2074.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\dy
-lan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\dylan_000\AppData\Local\MiKTe
-X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecrm0800.pk> <C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> 
-<C:\Users\dylan_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk>
-Output written on "Carnet De Bord.pdf" (9 pages, 352579 bytes).
+ <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\dylan\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecbx1440.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <
+C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\dylan\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
+en\ec\dpi600\ecbx2488.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\U
+sers\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk>
+Output written on "Carnet De Bord.pdf" (9 pages, 351308 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
+ 398 PDF objects out of 1000 (max. 8388607)
  21 named destinations out of 1000 (max. 500000)
  147 words of extra memory for PDF output out of 10000 (max. 10000000)
 

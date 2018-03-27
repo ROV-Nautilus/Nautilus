@@ -10,14 +10,14 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=1131
-NormalPos.bottom=366
+NormalPos.top=32
+NormalPos.right=1562
+NormalPos.bottom=497
 Class=LaTeXView
 Document=Carnet De Bord.tex
 
 [Frame0_View0,0]
-TopLine=159
+TopLine=158
 Cursor=6052
 
 [SessionInfo]

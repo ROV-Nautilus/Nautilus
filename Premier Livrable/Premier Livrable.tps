@@ -10,9 +10,9 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=1131
-NormalPos.bottom=366
+NormalPos.top=32
+NormalPos.right=1562
+NormalPos.bottom=497
 Class=LaTeXView
 Document=Premier Livrable.tex
 

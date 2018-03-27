@@ -1,4 +1,4 @@
-\select@language {french}
+\babel@toc {french}{}
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
 \contentsline {chapter}{\numberline {2}Pr\IeC {\'e}sentation du projet}{3}{chapter.2}
 \contentsline {chapter}{\numberline {3}Cahier des charges}{4}{chapter.3}
