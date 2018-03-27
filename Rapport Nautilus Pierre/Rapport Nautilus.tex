@@ -136,9 +136,20 @@
 					\includegraphics{Photos/moteur-brushless}
 				\end{center}
 			\end{figure}\newline
-							Le principal avantage de ces moteurs est qu'ils peuvent être utilisés immergés dans l'eau sans aucun traitement particulier au préalable. En revanche, un système électronique de commande doit assurer la commutation du courant dans les enroulements statoriques : les ESC, ou Electronic Speed Controllers. Un ESC transforme un signal d'alimentation continu, dans notre cas issu d'une batterie, en un signal triphasé envoyé ensuite au moteur brushless. Pour contrôler la vitesse du moteur, on envoie à l'ESC un signal de commande, généralement créneau, et dont le rapport cyclique définit la vitesse du moteur. Les trois ESC commandés dans un premier temps (\href{https://www.robotshop.com/eu/fr/esc-multirotor-20a-m20a.html}{Référence 2})  
+							Le principal avantage de ces moteurs est qu'ils peuvent être utilisés immergés dans l'eau sans aucun traitement particulier au préalable. En revanche, un système électronique de commande doit assurer la commutation du courant dans les enroulements statoriques : les ESC, ou Electronic Speed Controllers.
+			Un ESC transforme un signal d'alimentation continu, dans notre cas issu d'une batterie, en un signal triphasé envoyé ensuite au moteur brushless. Pour contrôler la vitesse de rotation du moteur, on envoie à l'ESC un signal de commande, généralement créneau, et dont le rapport cyclique définit la vitesse du moteur. 
+			\begin{figure}[!h]
+				\begin{center}
+					\includegraphics[scale=2]{Photos/esc}
+				\end{center}
+			\end{figure}
+			\newpage 
+			Les trois ESC utilisés dans un premier temps pour nos moteurs (\href{https://www.robotshop.com/eu/fr/esc-multirotor-20a-m20a.html}{Référence 2}) sont également équipés d'un circuit éliminateur de batterie, ou BEC, permettant de générer un signal d'alimentation constant de 5V et 3A maximum. Ce dernier permet d'alimenter un autre composant, comme une carte Raspberry Pi dans notre cas, sans avoir à recourir à une seconde batterie. 
+			\newline\newline Cependant, ces ESC ne permettent la rotation du moteur que dans un seul sens. Le seul moyen de modifier le sens de rotation du moteur dans ce cas est d'échanger deux des trois signaux déphasés envoyés au moteur. La direction droite/gauche étant assurée par les deux moteurs de propulsion arrière, cette particularité n'est pas problématique: la rotation plus rapide d'un des deux moteurs arrière par rapport à l'autre permet de diriger le ROV à gauche ou à droite. En revanche, le moteur verical devant assuré la propulsion verticale doit pouvoir tourner dans les deux sens. Un second modèle d'ESC a donc été nécessaire pour permettre au moteur de tourner dans les deux sens. Ce dernier (\href{https://hobbyking.com/fr_fr/hobbykingr-tm-brushless-car-esc-30a-w-reverse.html}{Référence 3}) possède ainsi un mode "reverse" permettant au moteur de tourner dans les deux sens, ainsi qu'un BEC, et sera donc attribué au moteur vertical du ROV.
 	
-				\section{Calibration des ESC}
+				\newpage\section{Calibration des ESC}
+				
+				Les ESC nécessitent d'être calibrés avant leur utilisation. En effet, en fonction des radiocommandes ou autre dispositifs utilisés, le signal de commande envoyé à l'ESC peux différer : valeur maximale et minimale, fréquence, amplitude... 
 				
 				\section{Alimentation et montage}
 				(BEC)
