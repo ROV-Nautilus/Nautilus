@@ -35,8 +35,13 @@
 \begin{titlepage}
 
 	\AddToShipoutPicture{
-		\AtUpperLeftCorner{1.5cm}{1cm}{\includegraphics[width=4cm]{Photos/ensea.png}}
+		\AtUpperLeftCorner{1.5cm}{1cm}{\includegraphics[width=4cm]{Photos/ensea2}}
 	}
+	\AddToShipoutPicture{
+		\AtUpperRightCorner{1.5cm}{1cm}{\includegraphics[width=4cm]{Photos/nautilus}}
+	}
+	
+	
 	\begin{center}
 		\vspace*{10cm}
 		\textsc{\@title}
@@ -147,12 +152,62 @@
 			Les trois ESC utilisés dans un premier temps pour nos moteurs (\href{https://www.robotshop.com/eu/fr/esc-multirotor-20a-m20a.html}{Référence 2}) sont également équipés d'un circuit éliminateur de batterie, ou BEC, permettant de générer un signal d'alimentation constant de 5V et 3A maximum. Ce dernier permet d'alimenter un autre composant, comme une carte Raspberry Pi dans notre cas, sans avoir à recourir à une seconde batterie. 
 			\newline\newline Cependant, ces ESC ne permettent la rotation du moteur que dans un seul sens. Le seul moyen de modifier le sens de rotation du moteur dans ce cas est d'échanger deux des trois signaux déphasés envoyés au moteur. La direction droite/gauche étant assurée par les deux moteurs de propulsion arrière, cette particularité n'est pas problématique: la rotation plus rapide d'un des deux moteurs arrière par rapport à l'autre permet de diriger le ROV à gauche ou à droite. En revanche, le moteur verical devant assuré la propulsion verticale doit pouvoir tourner dans les deux sens. Un second modèle d'ESC a donc été nécessaire pour permettre au moteur de tourner dans les deux sens. Ce dernier (\href{https://hobbyking.com/fr_fr/hobbykingr-tm-brushless-car-esc-30a-w-reverse.html}{Référence 3}) possède ainsi un mode "reverse" permettant au moteur de tourner dans les deux sens, ainsi qu'un BEC, et sera donc attribué au moteur vertical du ROV.
 	
-				\newpage\section{Calibration des ESC}
+				\newpage\section{Calibration et commande des ESC}
 				
-				Les ESC nécessitent d'être calibrés avant leur utilisation. En effet, en fonction des radiocommandes ou autre dispositifs utilisés, le signal de commande envoyé à l'ESC peux différer : valeur maximale et minimale, fréquence, amplitude... 
+				Traditionnellement, le signal de contrôle envoyé à l'ESC est un signal PWM de fréquence 50 Hz environ, un certain écart de cette valeur étant accepté. Dans notre cas, le signal est généré par une Raspberry Pi 3, et l'amplitude du signal est donc de 3,3 V environ.
+				\begin{figure}[!h]
+				  \begin{center}
+				  	\includegraphics[scale=0.6]{Photos/signal_pwm}
+				  \end{center}
+		  	\end{figure}
+				\newline\newline La caractéristique la plus importante de ce signal est la largeur de chaque impulsion. C'est cette dernière, généralement entre 0.5 ms et 2.5 ms, qui commande directement l'amplitude du signal envoyé aux moteurs et donc leur vitesse de rotation. Notre carte doit donc être capable de générer un signal créneau à 50 Hz, et de rapport cyclique variable sur commande. Pour générer un tel signal, on utlise le programme \href{https://github.com/richardghirst/PiBits/tree/master/ServoBlaster}{ServoBlaster}, disponible sur Github. En effet ce dernier a été conçu pour piloter des servomoteurs à partir des pins GPIO de la Raspberry Pi, et est donc le plus adapté pour générer un tel signal. Pour installer ServoBlaster sur la carte, on rentre les commandes suivantes sur le terminal de Raspbian:
+				\begin{figure}[!h]
+				  \begin{center}
+				  	\includegraphics[scale=1]{Photos/ServoBlaster}
+				  \end{center}
+		  	\end{figure}
+				
+				Une fois cette installation effectuée, on peut générer le signal à l'aide de la commande, toujours dans le terminal de Raspbian, "echo x=y > /dev/servoblaster", où x représente le GPIO que l'on utilise et y la valeur du temps d'état haut, en dizaine de us ( par exemple y=100 correspond à un temps d'état haut de 1 ms). Les valeurs de y peuvent aller de 50 à 250, correspondant respectivement à un temps haut de 0.5 ms et 2.5 ms. \newpage Les valeurs de x désignent les GPIO suivant:
+					\begin{figure}[!h]
+				  \begin{center}
+				  	\includegraphics[scale=1]{Photos/gpio}
+				  \end{center}
+		  	\end{figure}
+				
+				On obtient ainsi des commandes comme ci-dessous:
+				
+					\begin{figure}[!h]
+				  \begin{center}
+				  	\includegraphics[scale=1]{Photos/sb}
+				  \end{center}
+		  	\end{figure}
+			
+			Avec chaque nouvelle valeur de y modifiant la valeur du temps haut du signal sortant. \newline
+			
+			Toutefois, avant leur utilisation, les ESC nécessitent d'être calibrés. En effet, en fonction des radiocommandes ou autre dispositifs de commande utilisés, l'intervalle des valeurs du temps d'état haut du signal de commande envoyé à l'ESC peux différer. L'ESC doit donc être calibré pour que la valeur maximale de temps d'état haut corresponde à la vitesse maximale de rotation du moteur. De même pour une valeur neutre (moteur à l'arrêt), et une valeur minimale correspondant à la vitesse de rotation inverse maximale, disponible uniquement pour l'ESC "Reverse"', et donc le moteur vertical associé. \newline
+			La calibration ne peut pas être effectuée à l'aide des commandes issues de ServoBlaster, l'ESC nécessitant une variation douce du temps d'état haut pour cela. C'est le cas d'un joystick de télécommande, mais pas du programme ne permettant que des variations abrupts de la valeur du temps d'état haut. La calibration des ESC a donc été effectuée à l'aide d'une radiocommande disponible à l'ENSEA (\href{https://www.topmodel.fr/product-detail-18656-graupner-mx-20-hott-12160?lang=fr}{Référence 4}). Pour celà, on place le joystick de la manette au point neutre, on branche l'ESC à l'émetteur de la radiocommande et on allume dans l'ordre la radiocommande, puis l'ESC. Lorsque ce dernier s'allume, il associe ainsi automatiquement le signal en train d'être reçu au point neutre, donc moteur immobile. On effectue la même opération avec le joystick au maximum pour calibrer la valeur maximale de temps d'état haut et l'associer à la vitesse maximale de rotation du moteur. Une fois cette calibration effectuée, l'ESC en marche ne fonctionnera qu'après avoir reçu le signal correspondant à l'état neutre pendant un certain temps. Celà permet d'éviter entre autres un démarrage intempestif des moteurs. \newline
+			
+			Une fois la calibration effectuée, on observe à l'oscilloscope le signal de commande envoyé par la manette pour déterminer le temps d'état haut correspondant au point neutre, à la vitesse maximale, et à la vitesse maximale en rotation inverse pour le moteur vertical. \newpage On obtient les résultats suivants:
+			
+			\begin{figure}[!h]
+				  \begin{center}
+				  	\includegraphics[scale=0.8]{Photos/tempsesc}
+				  \end{center}
+		  	\end{figure}
+				
+				Après calibration et relevé de ces valeurs, on peut bien commander les 3 moteurs à l'aide des commandes de ServoBlaster. \newpage
 				
 				\section{Alimentation et montage}
-				(BEC)
+				
+				On utilise pour l'alimentation des ESC et des moteurs une batterie NiMh, de capacité 3000 mAh et délivrant une tension de 7,2 V (\href{http://www.conrad.fr/ce/fr/product/206028/Batterie-daccumulateurs-NiMh-72-V-3000-mAh-Conrad-energy-206028-stick-fiche-Tamiya-mle?ref=searchDetail}{Référence 5}). L'alimentation de la Raspberry est elle assurée par les BEC des ESC : ces derniers, mis en parallèle, délivrent une alimentation constante d'environ 5V et 3A, suffisante à alimenter la carte. On obtient donc le schéma fonctionnel suivant:
+				\begin{figure}[!h]
+				  \begin{center}
+				  	\includegraphics[scale=0.7]{Photos/archi_rov}
+				  \end{center}
+		  	\end{figure}
+				
+				
+				Lorsque les 3 moteurs sont à leur vitesse maximale, avec la carte fonctionnelle, le courant prélevé sur la batterie est de 2A maximum. L'autonomie théorique dans cette configuration est donc d'environ 90 minutes. Toutefois cette dernière risque de diminuer avec l'utilisation et donc l'alimentation des différents capteurs, ainsi que la résistance de l'eau en condition.
 				
 				
 \chapter{Références}
@@ -161,7 +216,9 @@
 				\begin{itemize}
 							\item \textbf{\href{http://www.conrad.fr/ce/fr/product/231891/Moteur-davion-lectrique-brushless-ROXXY-315079?ref=searchDetail}{Référence 1}} : Moteur d'avion électrique brushless ROXXY 315079 chez Conrad (x3)
 							\item \textbf{\href{https://www.robotshop.com/eu/fr/esc-multirotor-20a-m20a.html}{Référence 2}} : ESC Suppo Multirotor 20A M20A chez RobotShop (x3)
-										
+							\item \textbf{\href{https://hobbyking.com/fr_fr/hobbykingr-tm-brushless-car-esc-30a-w-reverse.html}{Référence 3}} : ESC HobbyKing 30A avec Reverse (x1)
+							\item \textbf{\href{https://www.topmodel.fr/product-detail-18656-graupner-mx-20-hott-12160?lang=fr}{Référence 4}} : Radiocommande Graupner MX-20 (disponible à l'ENSEA)
+							\item \textbf{\href{http://www.conrad.fr/ce/fr/product/206028/Batterie-daccumulateurs-NiMh-72-V-3000-mAh-Conrad-energy-206028-stick-fiche-Tamiya-mle?ref=searchDetail}{Référence 5}} : Batterie d'accumulateurs (NiMh) 7.2 V 3000 mAh Conrad (x1)
 				\end{itemize}
 
 \end{document}
