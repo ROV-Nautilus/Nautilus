@@ -10,9 +10,11 @@
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{fullpage}
+\usepackage{listings}
 \usepackage{eso-pic}
 \geometry{hmargin=2.5cm,vmargin=3.5cm}
 
+\lstset{numbers=left, stepnumber =1, firstnumber =1, numberfirstline=true, frame=lines}
 
 \newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
 \newcommand\AtUpperLeftCorner[3]{%
@@ -127,5 +129,130 @@
 								\end{itemize}
 								
 \chapter{Acquisition et Commandabilité}
+	
+	Dans un second temps, nous devions relier les differents elements de notre ROV sur une carte et ensuite traiter les informations reçu pour pouvoir agir sur les moteurs vus précedement. Nous avons choisie la Raspberry.
+	
+	\section{Raspberry}
+		Une partie de la programmation et des calculs est effectué sur une Raspberry PI 3 qui supportait tout les types de connections que l'on voulait, en voici la description.
+			\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.2]{Photos/Raspberry.jpg}
+					\end{center}
+				\end{figure}
+				
+		\subsection{Cameras}
+			Nous avons 2 caméras qui permettent, l'une la direction (vision frontale) et l'autre la cartographie (vision par dessous). Dans un premier temps, detaillons leur connection entre la Raspberry et le traitement effectué par celle-ci.
+			
+				\subsubsection{Logitech C170}
+					La première est une webcam Logitech C170, que nous avons démonté pour l'assemblage, relié en USB à la Raspberry. 
+					\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.1]{Photos/Camera11.jpg}
+					\end{center}
+				\end{figure}
+				\newline Nous l'avons choisi car le pilote de celle ci est deja installé nativement sur la Raspberry. Nous utilisons motion qui permet d'envoyer le flux video venant de la camera et de le diffuser en ligne sur notre adresse local (\href{http://169.254.14.03:8081/}{Référence 6}). En voici le résultat sur un navigateur:
+				\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.4]{Photos/Camera1.png}
+					\end{center}
+				\end{figure}
+				\newline Cette video sera recuperé par l'interface (expliquer dans le chapitre associé) en 640*360.
+				
+				\subsubsection{Caméra V2}
+					La deuxieme est un module caméra pour raspberry (\href{https://www.mouser.fr/ProductDetail/SparkFun/DEV-14028?qs=sGAEpiMZZMsB9HsreUc \%252biQuTz4\%2fXD\%2fVgeee971KrtC4\%3d}{Référence 7}) qui se raccorde directement par une nappe (un bus de type CSI-2). 
+					\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.1]{Photos/Camera21.jpg}
+					\end{center}
+				\end{figure}
+				\newline Elle se paramètre en python avec les librairies données par le constructeur. De même que l'autre caméra, nous renvoyons un flux video en ligne sur notre adresse local (\href{http://169.254.14.03:8000/}{Référence 8}) mais cette fois-ci sur un autre port.
+				\newline
+				\newline Le résultat sur un navigateur:
+					\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.4]{Photos/Camera2.png}
+					\end{center}
+				\end{figure}
+				\newline La video est diffusée en 1920*1080 et affichée par l'interface.
+				
+		\subsection{Capteur de Pression/Temperature}
+		
+		\subsection{Central Inertielle}
+		Julien
+		\newpage
+	\section{PC}
+		Maintenant que nous avons relié tous nos moteurs, caméras et capteurs à la raspberry ainsi qu'un premier traitement des informations, nous allons voir comment nous traitons cela sur le PC.
+		
+		\subsection{Interface}
+			En premier lieu parlons de l'interface, celle ci à pris differentes formes au cours du temps, ici nous presenterons que la derniere version. Toute la partie PC a été programmé en JAVA (Disponible ici: \href{https://github.com/ROV-Nautilus/Nautilus/tree/master/Interface}{Référence 9}), l'interface utilise la bibliothèque graphique Swing qui nous permet de gerer l'affichage facilement que ce soit pour la video ou pour les interactions.
+			Lorsque l'application est lancé, nous arrivons donc dans un premier menu:
+			\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.35]{Photos/Interface1.png}
+					\end{center}
+				\end{figure}
+				\newline Le bouton de Droite mène à une partie que nous developerons dans la partie~\ref{subsec:Cartographie} liée à la Cartographie.
+				\newline \newline Nous avons donc crée une fenetre JFrame:
+				\begin{lstlisting}[language=java]
+Interface inter = new Interface("Nautilus",0,0,1920,1080,true);
+				\end{lstlisting}
+				Elle est parametrée de façon à prendre tous l'écran, ici 1920*1080, les objets se trouvant dans cette fenetre sont geré pour se placer en fonction de la taille de l'ecran.
+				\newline Le manager s'appelle GridBagLayout, il necessite de paramétrer chaque objet.
+				Ce manager crée une grille qui se construit en fonction des parametres de chaque objet qu'elle contient.
+				\newpage Prenons exemple du premier bouton FPV:
+				\begin{lstlisting}[language=java]
+axPanel1.setMinimumSize(new Dimension(400,210));
+axPanel1.setMaximumSize(new Dimension(400,210));
+axPanel1.setPreferredSize(new Dimension(400,210));
+c.fill = GridBagConstraints.BOTH;
+c.anchor = GridBagConstraints.CENTER;
+c.gridx = 0;
+c.gridy = 0;
+c.weighty = 0.0;
+c.weightx = 0.0;
+c.gridwidth = 1;
+c.gridheight = 1;
+c.insets = new Insets(0, 0, 0, 200);
+				\end{lstlisting}
+				Les 3 premières lignes correspondent à la taille du bouton, que nous avons choisis ici de garder fixe.
+				\newline La ligne 4 n'est pas utile dans ce cas mais permet de correctement redimensionner l'objet lorsque la fenetre change de taille.
+				\newline La ligne 5 fixe l'objet au centre de la partie qui lui a été alloué.
+				\newline La ligne 6 et 7 donne la ligne et la colonne où doit se situé l'objet.
+				\newline La ligne 8 et 9 définissent des poids en x et y qui sont utilisé lors d'un redimensionement, cela permet de donner plus de poids à un objet plutot qu'à un autre. Nous ne l'utilisons pas d'où la valeur 0.
+				\newline La ligne 10 et 11 permettent de definir combien de ligne et combien de colonne va prendre notre objet.
+				\newline La ligne 12 insere une marge dans l'ordre suivant (margeSupérieure, margeGauche, margeInférieur, margeDroite).
+				\newline Chaque objet de notre interface est defini de cette façon.
+				\newline \newline Ensuite il y a le bouton de Gauche qui lance le systeme complet. Un nouveau menu remplace le précédent:
+				\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.3]{Photos/Interface1.png}
+					\end{center}
+				\end{figure}
+				\newline Nous avons maintenant la FPV en haut à gauche, le bouton à droite est le même que celui précédement, les informations des capteurs sont affichées dans le cadre à droite, les commandes envoyées aux moteurs sont en bas et pour finir un affichage 3D avec JAVA3D du ROV en bas à droite. Toutes les informations etant actualisées en temps reel avec la Raspberry. Nous allons voir comment.
+		\subsection{Tunnel SSH}
+		\subsection{Videos}
+		\subsection{Capteurs et Moteurs}
+		\subsection{Affichage 3D}
+		\subsection{Cartographie}
+			\label{subsec:Cartographie}
 
+\chapter{Références}
+
+				\textbf{Motorisation et énergie :}
+				\begin{itemize}
+							\item \textbf{\href{http://www.conrad.fr/ce/fr/product/231891/Moteur-davion-lectrique-brushless-ROXXY-315079?ref=searchDetail}{Référence 1}} : Moteur d'avion électrique brushless ROXXY 315079 chez Conrad (x3)
+							\item \textbf{\href{https://www.robotshop.com/eu/fr/esc-multirotor-20a-m20a.html}{Référence 2}} : ESC Suppo Multirotor 20A M20A chez RobotShop (x3)
+							\item \textbf{\href{https://hobbyking.com/fr_fr/hobbykingr-tm-brushless-car-esc-30a-w-reverse.html}{Référence 3}} : ESC HobbyKing 30A avec Reverse (x1)
+							\item \textbf{\href{https://www.topmodel.fr/product-detail-18656-graupner-mx-20-hott-12160?lang=fr}{Référence 4}} : Radiocommande Graupner MX-20 (disponible à l'ENSEA)
+							\item \textbf{\href{http://www.conrad.fr/ce/fr/product/206028/Batterie-daccumulateurs-NiMh-72-V-3000-mAh-Conrad-energy-206028-stick-fiche-Tamiya-mle?ref=searchDetail}{Référence 5}} : Batterie d'accumulateurs (NiMh) 7.2 V 3000 mAh Conrad (x1)
+				\end{itemize}
+
+			 \textbf{Acquisition et Commandabilité :}
+				 \begin{itemize}
+							\item \textbf{\href{http://169.254.14.03:8081/}{Référence 6}} : Adresse Camera Frontal
+							\item \textbf{\href{https://www.mouser.fr/ProductDetail/SparkFun/DEV-14028?qs=sGAEpiMZZMsB9HsreUc \%252biQuTz4\%2fXD\%2fVgeee971KrtC4\%3d}{Référence 7}} : Module Camera V2 chez Mouser Electronics
+							\item \textbf{\href{http://169.254.14.03:8000/}{Référence 8}} : Adresse Camera du Dessous
+							\item \textbf{\href{https://github.com/ROV-Nautilus/Nautilus/tree/master/Interface}{Référence 9}} : Code JAVA de l'interface
+				\end{itemize}
+		
 \end{document}

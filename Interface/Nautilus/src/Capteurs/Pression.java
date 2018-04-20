@@ -1,5 +1,7 @@
 package Capteurs;
 
+import javax.vecmath.Vector3d;
+
 import Camera.Interface;
 import SSH.Exec;
 
@@ -8,6 +10,9 @@ public class Pression  implements Runnable{
 	public String Pression = "0";
 	public String TemperatureC = "0";
 	public String TemperatureF = "0";
+	public String Yaw = "0";
+	public String Pitch = "0";
+	public String Roll = "0";
 	
 	public Pression() {
 		
@@ -15,7 +20,21 @@ public class Pression  implements Runnable{
 	
 	public void run() {
 		while(true) {
+			
+			Interface.exMatrice2.Commander("python matrice.py");
+			String[] a1 = Interface.exMatrice2.retour.split("/");
+			this.Yaw=a1[1];
+			this.Pitch=a1[0];
+			this.Roll=a1[2];
+			System.out.println("yaw: "+a1[1]);
+			Interface.rotX=Double.parseDouble(Yaw);
+			Interface.rotY=-1*Double.parseDouble(Pitch);
+			Interface.rotZ=Double.parseDouble(Roll);
+			Interface.singe.mouvement(Interface.rotX, Interface.rotY, Interface.rotZ, new Vector3d(Interface.transX, Interface.transY, Interface.transZ), Interface.scale);
+			
+			
 			Interface.exPression.Commander("python MS5803_14BA.py");
+			System.out.println("1");
 			String[] a = Interface.exPression.retour.split("/");
 			this.Pression=a[0];
 			this.TemperatureC=a[1];
@@ -29,6 +48,8 @@ public class Pression  implements Runnable{
 			Interface.temperatureC.repaint();
 			Interface.temperatureF.setText(" TemperatureF = "+Interface.tempF);
 			Interface.temperatureF.repaint();
+			
+			
 		}
 	}
 

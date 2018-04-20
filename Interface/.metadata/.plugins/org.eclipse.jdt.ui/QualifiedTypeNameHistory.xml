@@ -51,4 +51,5 @@
 <fullyQualifiedTypeName name="com.sun.j3d.utils.behaviors.vp.OrbitBehavior"/>
 <fullyQualifiedTypeName name="Camera.Interface"/>
 <fullyQualifiedTypeName name="com.sun.j3d.utils.geometry.Box"/>
+<fullyQualifiedTypeName name="Capteurs.Matrice"/>
 </qualifiedTypeNameHistroy>

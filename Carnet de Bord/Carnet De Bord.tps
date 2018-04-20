@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Carnet De Bord.tex
 
 [Frame0_View0,0]
-TopLine=158
-Cursor=6052
+TopLine=156
+Cursor=5928
 
 [SessionInfo]
 FrameCount=1

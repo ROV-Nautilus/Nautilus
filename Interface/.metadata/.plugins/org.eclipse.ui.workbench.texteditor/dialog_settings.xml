@@ -2,12 +2,18 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="f" key="selection"/>
+		<item value="matrice" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Matrice"/>
+			<item value="exMatrice2"/>
+			<item value="ok"/>
+			<item value="pression"/>
+			<item value="exPression"/>
+			<item value="singe"/>
 			<item value="set"/>
 			<item value="f"/>
 			<item value="Pression"/>
@@ -17,12 +23,6 @@
 			<item value="start"/>
 			<item value="output"/>
 			<item value="axPanel1"/>
-			<item value="pan2"/>
-			<item value="commande"/>
-			<item value="setLayout"/>
-			<item value="i"/>
-			<item value="bImage"/>
-			<item value="paint"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Camera"/>
@@ -33,7 +33,7 @@
 		<item value="336" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="454" key="DIALOG_HEIGHT"/>
-		<item value="632" key="DIALOG_X_ORIGIN"/>
-		<item value="345" key="DIALOG_Y_ORIGIN"/>
+		<item value="1170" key="DIALOG_X_ORIGIN"/>
+		<item value="226" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

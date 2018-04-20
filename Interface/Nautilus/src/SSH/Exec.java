@@ -84,7 +84,7 @@ public class Exec implements Runnable{
 	        }
 	        if(channel.isClosed()){
 	          if(this.in.available()>0) continue; 
-	          System.out.println("exit-status: "+channel.getExitStatus());
+	          //System.out.println("exit-status: "+channel.getExitStatus());
 	          break;
 	        }
 	      }

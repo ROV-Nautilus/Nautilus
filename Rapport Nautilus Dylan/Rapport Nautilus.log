@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.27)  27 MAR 2018 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.27)  20 APR 2018 13:29
 entering extended mode
 **"./Rapport Nautilus.tex"
 ("Rapport Nautilus.tex"
@@ -578,42 +578,67 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip52
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count111
+\lst@gtempboxa=\box26
+\lst@token=\toks21
+\lst@length=\count112
+\lst@currlwidth=\dimen122
+\lst@column=\count113
+\lst@pos=\count114
+\lst@lostspace=\dimen123
+\lst@width=\dimen124
+\lst@newlines=\count115
+\lst@lineno=\count116
+\lst@maxwidth=\dimen125
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count117
+\lst@skipnumbers=\count118
+\lst@framebox=\box27
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
 Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 ) ("Rapport Nautilus.aux")
 \openout1 = `"Rapport Nautilus.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Info: Redefining \degres on input line 33.
-LaTeX Info: Redefining \dots on input line 33.
-LaTeX Info: Redefining \up on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Info: Redefining \degres on input line 35.
+LaTeX Info: Redefining \dots on input line 35.
+LaTeX Info: Redefining \up on input line 35.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
-\scratchdimen=\dimen122
-\scratchbox=\box26
-\nofMPsegments=\count112
-\nofMParguments=\count113
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count114
-\MPscratchDim=\dimen123
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count119
+\scratchdimen=\dimen126
+\scratchbox=\box28
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen127
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks23
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -659,27 +684,28 @@ Package grfext Info: Graphics extension search list:
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 33.
+\AtBeginShipoutBox=\box29
+Package hyperref Info: Link coloring OFF on input line 35.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count117
+\c@section@level=\count125
 )
-LaTeX Info: Redefining \ref on input line 33.
-LaTeX Info: Redefining \pageref on input line 33.
-LaTeX Info: Redefining \nameref on input line 33.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
  ("Rapport Nautilus.out") ("Rapport Nautilus.out")
 \@outlinefile=\write3
 \openout3 = `"Rapport Nautilus.out"'.
 
-<Photos/ensea.png, id=47, 91.09032pt x 91.09032pt>
+\c@lstlisting=\count126
+<Photos/ensea.png, id=95, 91.09032pt x 91.09032pt>
 File: Photos/ensea.png Graphic file (type png)
 <use Photos/ensea.png>
-Package pdftex.def Info: Photos/ensea.png  used on input line 52.
+Package pdftex.def Info: Photos/ensea.png  used on input line 54.
 (pdftex.def)             Requested size: 113.81102pt x 113.81532pt.
  [1
 
@@ -697,7 +723,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.59 \chapter
+l.61 \chapter
              {Introduction} [1
 
 ]
@@ -711,78 +737,137 @@ Chapitre 2.
 ]
 Chapitre 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
 [5]
 Chapitre 4.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 131.
+<Photos/Raspberry.jpg, id=152, 1505.625pt x 968.61874pt>
+File: Photos/Raspberry.jpg Graphic file (type jpg)
+<use Photos/Raspberry.jpg>
+Package pdftex.def Info: Photos/Raspberry.jpg  used on input line 139.
+(pdftex.def)             Requested size: 301.11966pt x 193.7203pt.
+<Photos/Camera11.jpg, id=153, 3276.24pt x 2457.18pt>
+File: Photos/Camera11.jpg Graphic file (type jpg)
+<use Photos/Camera11.jpg>
+Package pdftex.def Info: Photos/Camera11.jpg  used on input line 150.
+(pdftex.def)             Requested size: 327.64319pt x 245.73239pt.
+<Photos/Camera1.png, id=155, 770.27776pt x 457.71pt>
+File: Photos/Camera1.png Graphic file (type png)
+<use Photos/Camera1.png>
+Package pdftex.def Info: Photos/Camera1.png  used on input line 156.
+(pdftex.def)             Requested size: 308.10564pt x 183.08075pt.
 [6
 
+ <./Photos/Raspberry.jpg>]
+<Photos/Camera21.jpg, id=163, 2926.935pt x 2195.20125pt>
+File: Photos/Camera21.jpg Graphic file (type jpg)
+<use Photos/Camera21.jpg>
+Package pdftex.def Info: Photos/Camera21.jpg  used on input line 165.
+(pdftex.def)             Requested size: 292.71065pt x 219.53297pt.
+<Photos/Camera2.png, id=165, 973.83826pt x 590.80725pt>
+File: Photos/Camera2.png Graphic file (type png)
+<use Photos/Camera2.png>
+Package pdftex.def Info: Photos/Camera2.png  used on input line 173.
+(pdftex.def)             Requested size: 389.5284pt x 236.31871pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--177
+
+ []
+
+[7 <./Photos/Camera11.jpg> <./Photos/Camera1.png>] [8 <./Photos/Camera21.jpg> <./Photos/Camera2.png>] [9]
+<Photos/Interface1.png, id=183, 1155.1155pt x 619.113pt>
+File: Photos/Interface1.png Graphic file (type png)
+<use Photos/Interface1.png>
+Package pdftex.def Info: Photos/Interface1.png  used on input line 191.
+(pdftex.def)             Requested size: 404.29648pt x 216.6928pt.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+Underfull \hbox (badness 10000) in paragraph at lines 187--196
+
+ []
+
+[10 <./Photos/Interface1.png>]
+File: Photos/Interface1.png Graphic file (type png)
+<use Photos/Interface1.png>
+Package pdftex.def Info: Photos/Interface1.png  used on input line 228.
+(pdftex.def)             Requested size: 346.53732pt x 185.73534pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--232
+
+ []
+
+[11] [12]
+Chapitre 5.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
+[13
+
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
  ("Rapport Nautilus.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
 Package rerunfilecheck Info: File `"Rapport Nautilus".out' has not changed.
-(rerunfilecheck)             Checksum: 0BED5471DBEC258C3E0BE49ADCA71D30;702.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
+(rerunfilecheck)             Checksum: A40B2FC2672C9D0AB47591637A69A76B;1481.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
  ) 
 Here is how much of TeX's memory you used:
- 7475 strings out of 493303
- 107765 string characters out of 3138856
- 207038 words of memory out of 3000000
- 10907 multiletter control sequences out of 15000+200000
+ 9267 strings out of 493303
+ 131463 string characters out of 3138856
+ 250361 words of memory out of 3000000
+ 12640 multiletter control sequences out of 15000+200000
  15463 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,13n,30p,759b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,13n,42p,759b,1142s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\dylan\AppData\Loca
 l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
 nappen\ec\dpi600\ecbx2074.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <
 C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\dylan\AppData\Local\Mi
 KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
 en\ec\dpi600\ecrm1200.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk>
-Output written on "Rapport Nautilus.pdf" (7 pages, 105736 bytes).
+Output written on "Rapport Nautilus.pdf" (14 pages, 3984177 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 539 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
+ 220 words of extra memory for PDF output out of 10000 (max. 10000000)
 

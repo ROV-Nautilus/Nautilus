@@ -1,0 +1,342 @@
+\documentclass[a4paper,11pt]{report}
+ 
+% Import des extensions
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{eso-pic}
+\geometry{hmargin=2.5cm,vmargin=3.5cm}
+
+\lstset{numbers=left, stepnumber =1, firstnumber =1, numberfirstline=true, frame=lines}
+
+\newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
+\newcommand\AtUpperLeftCorner[3]{%
+\put(\LenToUnit{#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{#3}}%
+}
+\newcommand\AtTopCenterPage[2]{%
+\put(\LenToUnit{.5\paperwidth},\LenToUnit{\dimexpr\paperheight-#1}){\blap{\hbox to 0pt{\hss#2\hss}}}%
+}
+\newcommand\AtUpperRightCorner[3]{%
+\put(\LenToUnit{\dimexpr\paperwidth-#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{\llap{#3}}}%
+}
+
+
+\author{Dylan Bideau, Julien Turpin, Pierre Bogrand, Guillaume Vincenti}
+\title{\huge{Nautilus - Rapport}}
+\date{10 Avril 2018}
+
+\begin{document}
+\makeatletter
+\begin{titlepage}
+
+	\AddToShipoutPicture{
+		\AtUpperLeftCorner{1.5cm}{1cm}{\includegraphics[width=4cm]{Photos/ensea2}}
+	}
+	\AddToShipoutPicture{
+		\AtUpperRightCorner{1.5cm}{1cm}{\includegraphics[width=5cm]{Photos/nautilus}}
+	}
+	
+	
+	\begin{center}
+		\vspace*{10cm}
+		\textsc{\@title}
+		\vspace*{0.5cm}
+		\hrule
+		\vspace*{0.5cm}
+		\large{\@author}
+	\end{center}
+	\vspace*{9.2cm}
+	\begin{center}
+		\large{\@date}
+	\end{center}
+\end{titlepage}
+\ClearShipoutPicture
+
+\renewcommand{\contentsname}{Sommaire}
+\tableofcontents
+
+
+\chapter{Introduction}
+
+        Les fonds marins réunissent aujourd'hui de nombreux secteurs et enjeux, tant professionels que particuliers. On y retrouve entre autre l'exploration sous-marine, la surveillance et maintenance d'installations professionelles, ainsi que la cartographie des fonds marins. Tout ces domaines demandent le développement de solutions techniques plus rentables et pratiques qu'une intervention humaine. Notre projet propose ainsi un ROV (Remotely Operated Vehicle) polyvalent et simple d'utilisation à cet effet.
+
+\chapter{Présentation du projet}
+        
+				Un ROV est un robot sous-marin contrôlé à distance et permettant une acquisition d'informations, visuelles ou à partir de capteurs. Notre projet de ROV filoguidé, Nautilus, sera transportable et pilotable à l'aide d'un ordinateur portable. Il permettra d'observer facilement des installations ou des fonds marins à l'aide de caméras. Disposant également de fonctions avancées, le Nautilus sera en mesure de recréer le fond marin d'une zone géographique déterminée par l'utilisateur à partir d'une batterie de photographies prises lors de la phase d'exploration. Les différentes fonctionnalités du Nautilus en font ainsi un outil polyvalent, permettant exploration, maintenance et cartographie des fonds.
+				
+				
+\chapter{Cahier des charges}
+
+        \section{Analyse Fonctionnelle}
+						\subsection{Structure}
+								Facilement transportable et peu emcombrant.\newline
+								\textbf{Contraintes :}
+								\begin{itemize}
+										\item Poids : 2-3kg
+										\item Dimension : 300*200*150mm
+										\item Etanche de norme IP 68 \newline \newline
+									\end{itemize}
+
+						\subsection{Commandabilité}
+								Commandé à distance par une liaison filaire.\newline
+								\textbf{Contraintes :}
+								\begin{itemize}
+										\item Câble : 15m
+										\item Carte intégrée dans le ROV
+										\item FPV (First Person View)
+										\item Piloté au clavier\newline \newline
+								\end{itemize}
+
+						\subsection{Milieu d'utilisation}
+								Adapté aux contraintes imposées par son environnement. \newline
+								\textbf{Contraintes :}
+								\begin{itemize}
+										\item Eau non salé (moins de 1 g de sels dissous par kilogramme d'eau)
+										\item Eau translucide (transmittance de la lumière entre 75\% et 95\%)
+										\item Lieu : Piscine, lac
+										\item Ecoulement laminaire
+										\item Courant marin inferieur à 2 noeuds
+										\item Profondeur de 10m (résistant à 2 bars) \newline \newline
+								\end{itemize}
+
+						\subsection{Energie}
+								Etre entièrement autonome. \newline
+								\textbf{Contraintes :}
+								\begin{itemize}
+										\item Autonomie de 20 minutes
+								\end{itemize}
+
+						\subsection{Motorisation}
+								Etre mobile une fois immergé. \newline
+								\textbf{Contraintes :}
+								\begin{itemize}
+										\item Propulsion electrique
+										\item Déplacement horizontal (Vitesse maximale de 1m/s)
+										\item Déplacement vertical (Vitesse maximale de 0.5m/s)
+										\item Direction droite/gauche à 360 degres   \newline \newline
+								\end{itemize}
+
+						\subsection{Acquisitions}
+								Acquérir et transmettre l'information. \newline
+								\textbf{Contraintes :}
+								\begin{itemize}
+										\item Acquisition et retransmission d'un signal vidéo
+										\item Acquisition et stockage de photographies
+										\item Mesure de la pression
+										\item Mesure de la position relative avec signaux GPS
+								\end{itemize}
+								
+\chapter{Motorisation et énergie}
+
+				\section{Moteurs brushless et ESC} 
+				
+							Dans un premier temps, il a été question de la technologie des moteurs à utiliser. Après une étude des différentes solutions disponibles, nous avons finalement choisi des moteurs brushless (\href{http://www.conrad.fr/ce/fr/product/231891/Moteur-davion-lectrique-brushless-ROXXY-315079?ref=searchDetail}{Référence 1}). En effet, les moteurs brushless sont des machines synchrones auto-pilotées à aimants permanents et donc sans balais. \newline
+			\begin{figure}[!h]
+				\begin{center}
+					\includegraphics{Photos/moteur-brushless}
+				\end{center}
+			\end{figure}\newline
+							Le principal avantage de ces moteurs est qu'ils peuvent être utilisés immergés dans l'eau sans aucun traitement particulier au préalable. En revanche, un système électronique de commande doit assurer la commutation du courant dans les enroulements statoriques : les ESC, ou Electronic Speed Controllers.
+			Un ESC transforme un signal d'alimentation continu, dans notre cas issu d'une batterie, en un signal triphasé envoyé ensuite au moteur brushless. Pour contrôler la vitesse de rotation du moteur, on envoie à l'ESC un signal de commande, généralement créneau, et dont le rapport cyclique définit la vitesse du moteur. 
+			\begin{figure}[!h]
+				\begin{center}
+					\includegraphics[scale=2]{Photos/esc}
+				\end{center}
+			\end{figure}
+			\newpage 
+			Les trois ESC utilisés dans un premier temps pour nos moteurs (\href{https://www.robotshop.com/eu/fr/esc-multirotor-20a-m20a.html}{Référence 2}) sont également équipés d'un circuit éliminateur de batterie, ou BEC, permettant de générer un signal d'alimentation constant de 5V et 3A maximum. Ce dernier permet d'alimenter un autre composant, comme une carte Raspberry Pi dans notre cas, sans avoir à recourir à une seconde batterie. 
+			\newline\newline Cependant, ces ESC ne permettent la rotation du moteur que dans un seul sens. Le seul moyen de modifier le sens de rotation du moteur dans ce cas est d'échanger deux des trois signaux déphasés envoyés au moteur. La direction droite/gauche étant assurée par les deux moteurs de propulsion arrière, cette particularité n'est pas problématique: la rotation plus rapide d'un des deux moteurs arrière par rapport à l'autre permet de diriger le ROV à gauche ou à droite. En revanche, le moteur verical devant assuré la propulsion verticale doit pouvoir tourner dans les deux sens. Un second modèle d'ESC a donc été nécessaire pour permettre au moteur de tourner dans les deux sens. Ce dernier (\href{https://hobbyking.com/fr_fr/hobbykingr-tm-brushless-car-esc-30a-w-reverse.html}{Référence 3}) possède ainsi un mode "reverse" permettant au moteur de tourner dans les deux sens, ainsi qu'un BEC, et sera donc attribué au moteur vertical du ROV.
+	
+				\newpage\section{Calibration et commande des ESC}
+				
+				Traditionnellement, le signal de contrôle envoyé à l'ESC est un signal PWM de fréquence 50 Hz environ, un certain écart de cette valeur étant accepté. Dans notre cas, le signal est généré par une Raspberry Pi 3, et l'amplitude du signal est donc de 3,3 V environ.
+				\begin{figure}[!h]
+				  \begin{center}
+				  	\includegraphics[scale=0.6]{Photos/signal_pwm}
+				  \end{center}
+		  	\end{figure}
+				\newline\newline La caractéristique la plus importante de ce signal est la largeur de chaque impulsion. C'est cette dernière, généralement entre 0.5 ms et 2.5 ms, qui commande directement l'amplitude du signal envoyé aux moteurs et donc leur vitesse de rotation. Notre carte doit donc être capable de générer un signal créneau à 50 Hz, et de rapport cyclique variable sur commande. Pour générer un tel signal, on utlise le programme \href{https://github.com/richardghirst/PiBits/tree/master/ServoBlaster}{ServoBlaster}, disponible sur Github. En effet ce dernier a été conçu pour piloter des servomoteurs à partir des pins GPIO de la Raspberry Pi, et est donc le plus adapté pour générer un tel signal. Pour installer ServoBlaster sur la carte, on rentre les commandes suivantes sur le terminal de Raspbian:
+				\begin{figure}[!h]
+				  \begin{center}
+				  	\includegraphics[scale=1]{Photos/ServoBlaster}
+				  \end{center}
+		  	\end{figure}
+				
+				Une fois cette installation effectuée, on peut générer le signal à l'aide de la commande, toujours dans le terminal de Raspbian, "echo x=y > /dev/servoblaster", où x représente le GPIO que l'on utilise et y la valeur du temps d'état haut, en dizaine de us ( par exemple y=100 correspond à un temps d'état haut de 1 ms). Les valeurs de y peuvent aller de 50 à 250, correspondant respectivement à un temps haut de 0.5 ms et 2.5 ms. \newpage Les valeurs de x désignent les GPIO suivant:
+					\begin{figure}[!h]
+				  \begin{center}
+				  	\includegraphics[scale=1]{Photos/gpio}
+				  \end{center}
+		  	\end{figure}
+				
+				On obtient ainsi des commandes comme ci-dessous:
+				
+					\begin{figure}[!h]
+				  \begin{center}
+				  	\includegraphics[scale=1]{Photos/sb}
+				  \end{center}
+		  	\end{figure}
+			
+			Avec chaque nouvelle valeur de y modifiant la valeur du temps haut du signal sortant. \newline
+			
+			Toutefois, avant leur utilisation, les ESC nécessitent d'être calibrés. En effet, en fonction des radiocommandes ou autre dispositifs de commande utilisés, l'intervalle des valeurs du temps d'état haut du signal de commande envoyé à l'ESC peux différer. L'ESC doit donc être calibré pour que la valeur maximale de temps d'état haut corresponde à la vitesse maximale de rotation du moteur. De même pour une valeur neutre (moteur à l'arrêt), et une valeur minimale correspondant à la vitesse de rotation inverse maximale, disponible uniquement pour l'ESC "Reverse"', et donc le moteur vertical associé. \newline
+			La calibration ne peut pas être effectuée à l'aide des commandes issues de ServoBlaster, l'ESC nécessitant une variation douce du temps d'état haut pour cela. C'est le cas d'un joystick de télécommande, mais pas du programme ne permettant que des variations abrupts de la valeur du temps d'état haut. La calibration des ESC a donc été effectuée à l'aide d'une radiocommande disponible à l'ENSEA (\href{https://www.topmodel.fr/product-detail-18656-graupner-mx-20-hott-12160?lang=fr}{Référence 4}). Pour celà, on place le joystick de la manette au point neutre, on branche l'ESC à l'émetteur de la radiocommande et on allume dans l'ordre la radiocommande, puis l'ESC. Lorsque ce dernier s'allume, il associe ainsi automatiquement le signal en train d'être reçu au point neutre, donc moteur immobile. On effectue la même opération avec le joystick au maximum pour calibrer la valeur maximale de temps d'état haut et l'associer à la vitesse maximale de rotation du moteur. Une fois cette calibration effectuée, l'ESC en marche ne fonctionnera qu'après avoir reçu le signal correspondant à l'état neutre pendant un certain temps. Celà permet d'éviter entre autres un démarrage intempestif des moteurs. \newline
+			
+			Une fois la calibration effectuée, on observe à l'oscilloscope le signal de commande envoyé par la manette pour déterminer le temps d'état haut correspondant au point neutre, à la vitesse maximale, et à la vitesse maximale en rotation inverse pour le moteur vertical. \newpage On obtient les résultats suivants:
+			
+			\begin{figure}[!h]
+				  \begin{center}
+				  	\includegraphics[scale=0.8]{Photos/tempsesc}
+				  \end{center}
+		  	\end{figure}
+				
+				Après calibration et relevé de ces valeurs, on peut bien commander les 3 moteurs à l'aide des commandes de ServoBlaster. \newpage
+				
+				\section{Alimentation et montage}
+				
+				On utilise pour l'alimentation des ESC et des moteurs une batterie NiMh, de capacité 3000 mAh et délivrant une tension de 7,2 V (\href{http://www.conrad.fr/ce/fr/product/206028/Batterie-daccumulateurs-NiMh-72-V-3000-mAh-Conrad-energy-206028-stick-fiche-Tamiya-mle?ref=searchDetail}{Référence 5}). L'alimentation de la Raspberry est elle assurée par les BEC des ESC : ces derniers, mis en parallèle, délivrent une alimentation constante d'environ 5V et 3A, suffisante à alimenter la carte. On obtient donc le schéma fonctionnel suivant:
+				\begin{figure}[!h]
+				  \begin{center}
+				  	\includegraphics[scale=0.7]{Photos/archi_rov}
+				  \end{center}
+		  	\end{figure}
+				
+				
+				Lorsque les 3 moteurs sont à leur vitesse maximale, avec la carte fonctionnelle, le courant prélevé sur la batterie est de 2A maximum. L'autonomie théorique dans cette configuration est donc d'environ 90 minutes. Toutefois cette dernière risque de diminuer avec l'utilisation et donc l'alimentation des différents capteurs, ainsi que la résistance de l'eau en condition.
+				
+	
+\chapter{Acquisition et Commandabilité}
+	
+	Dans un second temps, nous devions relier les differents elements de notre ROV sur une carte et ensuite traiter les informations reçu pour pouvoir agir sur les moteurs vus précedement. Nous avons choisie la Raspberry.
+	
+	\section{Raspberry}
+		Une partie de la programmation et des calculs est effectué sur une Raspberry PI 3 qui supportait tout les types de connections que l'on voulait, en voici la description.
+			\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.2]{Photos/Raspberry.jpg}
+					\end{center}
+				\end{figure}
+				
+		\subsection{Cameras}
+			Nous avons 2 caméras qui permettent, l'une la direction (vision frontale) et l'autre la cartographie (vision par dessous). Dans un premier temps, detaillons leur connection entre la Raspberry et le traitement effectué par celle-ci.
+			
+				\subsubsection{Logitech C170}
+					La première est une webcam Logitech C170, que nous avons démonté pour l'assemblage, relié en USB à la Raspberry. 
+					\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.1]{Photos/Camera11.jpg}
+					\end{center}
+				\end{figure}
+				\newline Nous l'avons choisi car le pilote de celle ci est deja installé nativement sur la Raspberry. Nous utilisons motion qui permet d'envoyer le flux video venant de la camera et de le diffuser en ligne sur notre adresse local (\href{http://169.254.14.03:8081/}{Référence 6}). En voici le résultat sur un navigateur:
+				\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.4]{Photos/Camera1.png}
+					\end{center}
+				\end{figure}
+				\newline Cette video sera recuperé par l'interface (expliquer dans le chapitre associé) en 640*360.
+				
+				\subsubsection{Caméra V2}
+					La deuxieme est un module caméra pour raspberry (\href{https://www.mouser.fr/ProductDetail/SparkFun/DEV-14028?qs=sGAEpiMZZMsB9HsreUc \%252biQuTz4\%2fXD\%2fVgeee971KrtC4\%3d}{Référence 7}) qui se raccorde directement par une nappe (un bus de type CSI-2). 
+					\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.1]{Photos/Camera21.jpg}
+					\end{center}
+				\end{figure}
+				\newline Elle se paramètre en python avec les librairies données par le constructeur. De même que l'autre caméra, nous renvoyons un flux video en ligne sur notre adresse local (\href{http://169.254.14.03:8000/}{Référence 8}) mais cette fois-ci sur un autre port.
+				\newline
+				\newline Le résultat sur un navigateur:
+					\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.4]{Photos/Camera2.png}
+					\end{center}
+				\end{figure}
+				\newline La video est diffusée en 1920*1080 et affichée par l'interface.
+				
+		\subsection{Capteur de Pression/Temperature}
+		
+		\subsection{Central Inertielle}
+		Julien
+		\newpage
+	\section{PC}
+		Maintenant que nous avons relié tous nos moteurs, caméras et capteurs à la raspberry ainsi qu'un premier traitement des informations, nous allons voir comment nous traitons cela sur le PC.
+		
+		\subsection{Interface}
+			En premier lieu parlons de l'interface, celle ci à pris differentes formes au cours du temps, ici nous presenterons que la derniere version. Toute la partie PC a été programmé en JAVA (Disponible ici: \href{https://github.com/ROV-Nautilus/Nautilus/tree/master/Interface}{Référence 9}), l'interface utilise la bibliothèque graphique Swing qui nous permet de gerer l'affichage facilement que ce soit pour la video ou pour les interactions.
+			Lorsque l'application est lancé, nous arrivons donc dans un premier menu:
+			\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.35]{Photos/Interface1.png}
+					\end{center}
+				\end{figure}
+				\newline Le bouton de Droite mène à une partie que nous developerons dans la partie~\ref{subsec:Cartographie} liée à la Cartographie.
+				\newline \newline Nous avons donc crée une fenetre JFrame:
+				\begin{lstlisting}[language=java]
+Interface inter = new Interface("Nautilus",0,0,1920,1080,true);
+				\end{lstlisting}
+				Elle est parametrée de façon à prendre tous l'écran, ici 1920*1080, les objets se trouvant dans cette fenetre sont geré pour se placer en fonction de la taille de l'ecran.
+				\newline Le manager s'appelle GridBagLayout, il necessite de paramétrer chaque objet.
+				Ce manager crée une grille qui se construit en fonction des parametres de chaque objet qu'elle contient.
+				\newpage Prenons exemple du premier bouton FPV:
+				\begin{lstlisting}[language=java]
+axPanel1.setMinimumSize(new Dimension(400,210));
+axPanel1.setMaximumSize(new Dimension(400,210));
+axPanel1.setPreferredSize(new Dimension(400,210));
+c.fill = GridBagConstraints.BOTH;
+c.anchor = GridBagConstraints.CENTER;
+c.gridx = 0;
+c.gridy = 0;
+c.weighty = 0.0;
+c.weightx = 0.0;
+c.gridwidth = 1;
+c.gridheight = 1;
+c.insets = new Insets(0, 0, 0, 200);
+				\end{lstlisting}
+				Les 3 premières lignes correspondent à la taille du bouton, que nous avons choisis ici de garder fixe.
+				\newline La ligne 4 n'est pas utile dans ce cas mais permet de correctement redimensionner l'objet lorsque la fenetre change de taille.
+				\newline La ligne 5 fixe l'objet au centre de la partie qui lui a été alloué.
+				\newline La ligne 6 et 7 donne la ligne et la colonne où doit se situé l'objet.
+				\newline La ligne 8 et 9 définissent des poids en x et y qui sont utilisé lors d'un redimensionement, cela permet de donner plus de poids à un objet plutot qu'à un autre. Nous ne l'utilisons pas d'où la valeur 0.
+				\newline La ligne 10 et 11 permettent de definir combien de ligne et combien de colonne va prendre notre objet.
+				\newline La ligne 12 insere une marge dans l'ordre suivant (margeSupérieure, margeGauche, margeInférieur, margeDroite).
+				\newline Chaque objet de notre interface est defini de cette façon.
+				\newline \newline Ensuite il y a le bouton de Gauche qui lance le systeme complet. Un nouveau menu remplace le précédent:
+				\begin{figure}[!h]
+					\begin{center}
+						\includegraphics[scale=0.3]{Photos/Interface1.png}
+					\end{center}
+				\end{figure}
+				\newline Nous avons maintenant la FPV en haut à gauche, le bouton à droite est le même que celui précédement, les informations des capteurs sont affichées dans le cadre à droite, les commandes envoyées aux moteurs sont en bas et pour finir un affichage 3D avec JAVA3D du ROV en bas à droite. Toutes les informations etant actualisées en temps reel avec la Raspberry. Nous allons voir comment.
+		\subsection{Tunnel SSH}
+		\subsection{Videos}
+		\subsection{Capteurs et Moteurs}
+		\subsection{Affichage 3D}
+		\subsection{Cartographie}
+			\label{subsec:Cartographie}
+		
+
+\chapter{Références}
+
+				\textbf{Motorisation et énergie :}
+				\begin{itemize}
+							\item \textbf{\href{http://www.conrad.fr/ce/fr/product/231891/Moteur-davion-lectrique-brushless-ROXXY-315079?ref=searchDetail}{Référence 1}} : Moteur d'avion électrique brushless ROXXY 315079 chez Conrad (x3)
+							\item \textbf{\href{https://www.robotshop.com/eu/fr/esc-multirotor-20a-m20a.html}{Référence 2}} : ESC Suppo Multirotor 20A M20A chez RobotShop (x3)
+							\item \textbf{\href{https://hobbyking.com/fr_fr/hobbykingr-tm-brushless-car-esc-30a-w-reverse.html}{Référence 3}} : ESC HobbyKing 30A avec Reverse (x1)
+							\item \textbf{\href{https://www.topmodel.fr/product-detail-18656-graupner-mx-20-hott-12160?lang=fr}{Référence 4}} : Radiocommande Graupner MX-20 (disponible à l'ENSEA)
+							\item \textbf{\href{http://www.conrad.fr/ce/fr/product/206028/Batterie-daccumulateurs-NiMh-72-V-3000-mAh-Conrad-energy-206028-stick-fiche-Tamiya-mle?ref=searchDetail}{Référence 5}} : Batterie d'accumulateurs (NiMh) 7.2 V 3000 mAh Conrad (x1)
+				\end{itemize}
+				
+				\textbf{Acquisition et Commandabilité :}
+				 \begin{itemize}
+							\item \textbf{\href{http://169.254.14.03:8081/}{Référence 6}} : Adresse Camera Frontal
+							\item \textbf{\href{https://www.mouser.fr/ProductDetail/SparkFun/DEV-14028?qs=sGAEpiMZZMsB9HsreUc \%252biQuTz4\%2fXD\%2fVgeee971KrtC4\%3d}{Référence 7}} : Module Camera V2 chez Mouser Electronics
+							\item \textbf{\href{http://169.254.14.03:8000/}{Référence 8}} : Adresse Camera du Dessous
+							\item \textbf{\href{https://github.com/ROV-Nautilus/Nautilus/tree/master/Interface}{Référence 9}} : Code JAVA de l'interface
+				\end{itemize}
+\end{document}
