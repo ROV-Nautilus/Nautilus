@@ -6,6 +6,7 @@
 \usepackage[francais]{babel}
 \usepackage{graphicx}
 \usepackage{color}
+\usepackage[table]{xcolor}
 \usepackage{colortbl}
 \usepackage{geometry}
 \usepackage{hyperref}
@@ -14,7 +15,72 @@
 \usepackage{eso-pic}
 \geometry{hmargin=2.5cm,vmargin=3.5cm}
 
-\lstset{numbers=left, stepnumber =1, firstnumber =1, numberfirstline=true, frame=lines}
+\definecolor{darkWhite}{rgb}{0.94,0.94,0.94}
+
+\lstset{
+  aboveskip=3mm,
+  belowskip=-2mm,
+  backgroundcolor=\color{darkWhite},
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{red},
+  deletekeywords={...},
+  escapeinside={\%*}{*)},
+  extendedchars=true,
+  framexleftmargin=16pt,
+  framextopmargin=3pt,
+  framexbottommargin=6pt,
+  frame=tb,
+  keepspaces=true,
+  keywordstyle=\color{purple},
+  literate=
+  {²}{{\textsuperscript{2}}}1
+  {⁴}{{\textsuperscript{4}}}1
+  {⁶}{{\textsuperscript{6}}}1
+  {⁸}{{\textsuperscript{8}}}1
+  {€}{{\euro{}}}1
+  {é}{{\'e}}1
+  {è}{{\`{e}}}1
+  {ê}{{\^{e}}}1
+  {ë}{{\¨{e}}}1
+  {É}{{\'{E}}}1
+  {Ê}{{\^{E}}}1
+  {û}{{\^{u}}}1
+  {ù}{{\`{u}}}1
+  {â}{{\^{a}}}1
+  {à}{{\`{a}}}1
+  {á}{{\'{a}}}1
+  {ã}{{\~{a}}}1
+  {Á}{{\'{A}}}1
+  {Â}{{\^{A}}}1
+  {Ã}{{\~{A}}}1
+  {ç}{{\c{c}}}1
+  {Ç}{{\c{C}}}1
+  {õ}{{\~{o}}}1
+  {ó}{{\'{o}}}1
+  {ô}{{\^{o}}}1
+  {Õ}{{\~{O}}}1
+  {Ó}{{\'{O}}}1
+  {Ô}{{\^{O}}}1
+  {î}{{\^{i}}}1
+  {Î}{{\^{I}}}1
+  {í}{{\'{i}}}1
+  {Í}{{\~{Í}}}1,
+  morekeywords={*,...},
+  numbers=left,
+  numbersep=10pt,
+  numberstyle=\tiny\color{black},
+  rulecolor=\color{black},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=1,
+  stringstyle=\color{gray},
+  tabsize=4,
+  title=\lstname,
+}
 
 \newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
 \newcommand\AtUpperLeftCorner[3]{%
@@ -312,11 +378,161 @@ c.insets = new Insets(0, 0, 0, 200);
 						\includegraphics[scale=0.3]{Photos/Interface1.png}
 					\end{center}
 				\end{figure}
-				\newline Nous avons maintenant la FPV en haut à gauche, le bouton à droite est le même que celui précédement, les informations des capteurs sont affichées dans le cadre à droite, les commandes envoyées aux moteurs sont en bas et pour finir un affichage 3D avec JAVA3D du ROV en bas à droite. Toutes les informations etant actualisées en temps reel avec la Raspberry. Nous allons voir comment.
+				\newline Nous avons maintenant la FPV en haut à gauche, le bouton à droite est le même que celui précédement, les informations des capteurs sont affichées dans le cadre à droite, les commandes envoyées aux moteurs sont en bas et pour finir un affichage 3D (\ref{subsec:Affichage 3D}) avec JAVA3D du ROV en bas à droite. Toutes les informations etant actualisées en temps reel avec la Raspberry. Nous allons voir comment.
 		\subsection{Tunnel SSH}
+			Nous avons choisi d'échanger les données avec la Raspberry par SSH, pour cela on utilise la bibliothèque Jcraft, plus précisement jsch. Au lancement de l'application, il y a 5 tunnels qui se créent (1 pour chaque caméras, 1 pour chaque capteurs et 1 pour les moteurs), ils sont crées au tout debut pour ensuite permettre de transmettre directement les données sans refaire la procédure de connection, le systeme gagne en rapidité. 
+			\newline Détaillons maintenant la procédure qui permet de crée ses tunnels. Comme nous sommes en JAVA, une seule classe permet de crée un tunnel et cette classe est ensuite instancié autant de fois que l'on veut.
+			\newline Voici le code (Disponible dans /SSH/Exec.java) de création d'un tunnel :
+			
+			\begin{lstlisting}[language=java]
+try{
+	JSch jsch=new JSch();
+	this.session=jsch.getSession("pi", "169.254.14.03", 22);
+	UserInfo ui=new MyUserInfo();
+  this.session.setUserInfo(ui);
+  this.session.connect();
+  this.channel = this.session.openChannel("exec");
+  ((ChannelExec)this.channel).setCommand(this.Commande);
+  this.channel.setInputStream(null);
+  ((ChannelExec)this.channel).setErrStream(System.err);
+  this.in=this.channel.getInputStream();
+  this.channel.connect();
+  byte[] tmp=new byte[1024];
+  while(true){
+		while(this.in.available()>0){
+			int i=this.in.read(tmp, 0, 1024);
+      if(i<0)break;
+      System.out.print(new String(tmp, 0, i));
+      this.retour=new String(tmp, 0, i);
+    }
+    if(channel.isClosed()){
+			if(this.in.available()>0) continue; 
+			System.out.println("exit-status: "+channel.getExitStatus());
+      break;
+     }
+   }
+}
+catch(Exception e){
+	System.out.println(e);
+}
+			\end{lstlisting}
+			De la ligne 1 à 5, le tunnel est crée et les informations tel que le nom d'utilisateur, le mot de passe, l'adresse IP et le port sont ajouté aux couches correspondante du tunnel, puis ligne 6 la session est lancé.
+		\newline A la ligne 7, nous ouvrons un canal d'execution de commande et ligne 8 nous donnons à ce canal la commande que nous voulons envoyée.
+		\newline Les lignes 9,10 et 11 definissent où vont les données entrées, sorties et sorties erreur. Dans notre cas l'entrée ne nous interesse pas car cela passe par une commande, la sortie normal sera stockée et la sortie erreur renvoyé sur l'afficheur d'erreur du systeme (la console). La ligne 12 lance la connection du canal, c'est ici que la commande est envoyée.
+		\newline De la ligne 13 à 20 nous permet de récuperer les valeurs retournées par la Raspberry et de les stockées pour ensuite pouvoir les traiter.
+		\newline Puis les dernieres lignes, permettent de gerer le cas où le canal est coupé et nous renvoyer d'où vient l'erreur (par exceptions).
+		\newline \newline Ces tunnels nous permettent d'envoyer des commandes à la Raspberry et de pouvoir récuperer le retour de cette commande. C'est par ce moyen que nous récuperons presque tous. L'exception étant pour la video IP. Abordons ce sujet.
 		\subsection{Videos}
+		Nous avons donc 2 flux vidéos à récuperer depuis une adresse IP. Tout d'abord nous devons introduire quelque chse que nous utilisons partout dans notre code: le multi-Thread. Cela permet de lancer plusieurs actions en même temps, c'est ce qu'il se passe avec la récupération des flux videos. Chaque image des flux videos est récuperé puis traité puis affiché en temps reel sans interrompre le reste du programme, tout comme l'envoie de chaque commande.
+		\newline Pour les flux videos, c'est une connection http qui est effectué, pour cela la méthode connect est appelée:
+		\begin{lstlisting}[language=java]
+public void connect()
+	{
+		try
+		{
+			URL u = new URL(useMJPGStream?mjpgURL:jpgURL);
+			huc = (HttpURLConnection) u.openConnection();
+			InputStream is = huc.getInputStream();
+			connected = true;
+			BufferedInputStream bis = new BufferedInputStream(is);
+			dis= new DataInputStream(bis);
+			if (!initCompleted) initDisplay();
+		}
+		catch(IOException e)
+		{ //Relance la connection si pas de connection en attendant 60 sec
+			try
+			{
+				huc.disconnect();
+				Thread.sleep(60);
+			}
+			catch(InterruptedException ie)
+			{
+				System.out.println(ie);
+			}
+		}
+		catch(Exception e){;}
+	}
+			\end{lstlisting}
+			De la ligne 5 à 10, la procédure de connection http est effectué.
+			\newline Après la ligne 12, on gère les execeptions liées à la connection.
+			\newline A la ligne 10, les données récuperées sont stockées dans une variable globale à Caméra.
+			\newline Les informations vont être ensuite traité par initDisplay qui est appelé en ligne 11.
+			\newline Observons cette méthode :
+		\begin{lstlisting}[language=java]
+public void initDisplay()
+	{ 
+		if (useMJPGStream)readMJPGStream();
+		else
+		{
+			readJPG();
+			disconnect();
+		}
+		imageSize = new Dimension((image.getWidth(this)*2), image.getHeight(this)*2);
+		setPreferredSize(imageSize);
+		parent.validate();
+		initCompleted = true;
+	}
+		\end{lstlisting}
+		Le premier If/Else permet de distinguer le cas où le flux serait videos ou juste photo. Dans notre cas c'est un flux videos composé d'image JPG.
+		\newline Le reste de la méthode permet de preparé l'affichage des images.
+		\newline Nous somme toujours dans la procedure de connection, la lecture de la premiere image récuperé est fait. Pour cela la méthode readMJPGStream qui appel readJPG permet de décoder l'image et de la stocké dans la variable image. Voici les 2 méthodes :
+		\begin{lstlisting}[language=java]
+public void readMJPGStream()
+	{
+		readLine(4,dis); //enleve les 3 premieres lignes
+		readJPG();
+		readLine(1,dis); //enleve les 2 dernieres lignes
+	}
+	
+public void readJPG()
+	{
+		try{
+			JPEGImageDecoder decoder = JPEGCodec.createJPEGDecoder(dis);
+			image = decoder.decodeAsBufferedImage();
+		}catch(Exception e){
+			disconnect();
+		}
+	}
+		\end{lstlisting}
+		La procédure de decodage d'une image JPEG est faite par une bibliothèque externe.
+		\newpage Après cette procédure de connection, les 2 méthodes ci dessus sont appelé en boucle et l'affichage mis à jour:
+		\begin{lstlisting}[language=java]
+public void readStream()
+	{
+		try{
+			if (useMJPGStream){
+				while(true){
+					readMJPGStream();
+					parent.repaint();
+				}
+			}
+    	}catch(Exception e){;}
+    }
+		\end{lstlisting}
+		L'affichage étant geré par la bibliothèque Swing, c'est la méthode paint() qui affiche l'image et de plus trace une ligne qui en fonction des angles d'euler renvoyé par la centrale intertiel :
+		\begin{lstlisting}[language=java]
+public void paint(Graphics g)
+	{
+		if (image != null)
+			image=scale(image, 2);
+			g.drawImage(image, 0, 0, this);
+			Graphics2D g2 = (Graphics2D) g;
+			double alpha = Interface.rotZ* Math.PI/180f;
+    	int a = image.getHeight();
+    	int b = image.getWidth();
+    	double S =(b/2)*(Math.sin(alpha))*(Math.cos((Math.PI/2)-alpha));
+    	double T =(b/2)*(Math.sin(alpha))*(Math.sin((Math.PI/2)-alpha));
+    	g2.draw(new Line2D.Double(S,(a/2)-T,b-S,(a/2)+T));
+	}
+		\end{lstlisting}
+	L'image est redimensionnée pour le bien de l'affichage et la ligne est tracé avec 2 points calculé par rapport à une rotation avec une origine au centre de l'image.
+	\newline \newline Nos 2 flux videos sont donc récuperés et peuvent donc être appelés par un JPanel n'importe où.
+
 		\subsection{Capteurs et Moteurs}
+		
 		\subsection{Affichage 3D}
+			\label{subsec:Affichage 3D}
+			
 		\subsection{Cartographie}
 			\label{subsec:Cartographie}
 		
