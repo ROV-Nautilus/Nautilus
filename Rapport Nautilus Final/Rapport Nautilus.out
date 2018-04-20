@@ -8,20 +8,26 @@
 \BOOKMARK [2][-]{subsection.3.1.4}{Energie}{section.3.1}% 8
 \BOOKMARK [2][-]{subsection.3.1.5}{Motorisation}{section.3.1}% 9
 \BOOKMARK [2][-]{subsection.3.1.6}{Acquisitions}{section.3.1}% 10
-\BOOKMARK [0][-]{chapter.4}{Motorisation et \351nergie}{}% 11
-\BOOKMARK [1][-]{section.4.1}{Moteurs brushless et ESC}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.2}{Calibration et commande des ESC}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.3}{Alimentation et montage}{chapter.4}% 14
-\BOOKMARK [0][-]{chapter.5}{Acquisition et Commandabilit\351}{}% 15
-\BOOKMARK [1][-]{section.5.1}{Raspberry}{chapter.5}% 16
-\BOOKMARK [2][-]{subsection.5.1.1}{Cameras}{section.5.1}% 17
-\BOOKMARK [2][-]{subsection.5.1.2}{Capteur de Pression/Temperature}{section.5.1}% 18
-\BOOKMARK [2][-]{subsection.5.1.3}{Central Inertielle}{section.5.1}% 19
-\BOOKMARK [1][-]{section.5.2}{PC}{chapter.5}% 20
-\BOOKMARK [2][-]{subsection.5.2.1}{Interface}{section.5.2}% 21
-\BOOKMARK [2][-]{subsection.5.2.2}{Tunnel SSH}{section.5.2}% 22
-\BOOKMARK [2][-]{subsection.5.2.3}{Videos}{section.5.2}% 23
-\BOOKMARK [2][-]{subsection.5.2.4}{Capteurs et Moteurs}{section.5.2}% 24
-\BOOKMARK [2][-]{subsection.5.2.5}{Affichage 3D}{section.5.2}% 25
-\BOOKMARK [2][-]{subsection.5.2.6}{Cartographie}{section.5.2}% 26
-\BOOKMARK [0][-]{chapter.6}{R\351f\351rences}{}% 27
+\BOOKMARK [0][-]{chapter.4}{Outils de gestion}{}% 11
+\BOOKMARK [1][-]{section.4.1}{Trello}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.2}{Github}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.3}{Gestion de Budget}{chapter.4}% 14
+\BOOKMARK [0][-]{chapter.5}{Motorisation et \351nergie}{}% 15
+\BOOKMARK [1][-]{section.5.1}{Moteurs brushless et ESC}{chapter.5}% 16
+\BOOKMARK [1][-]{section.5.2}{Calibration et commande des ESC}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.3}{Alimentation et montage}{chapter.5}% 18
+\BOOKMARK [0][-]{chapter.6}{Acquisition et Commandabilit\351}{}% 19
+\BOOKMARK [1][-]{section.6.1}{Raspberry}{chapter.6}% 20
+\BOOKMARK [2][-]{subsection.6.1.1}{Cameras}{section.6.1}% 21
+\BOOKMARK [2][-]{subsection.6.1.2}{Capteur de Pression/Temperature}{section.6.1}% 22
+\BOOKMARK [2][-]{subsection.6.1.3}{Central Inertielle}{section.6.1}% 23
+\BOOKMARK [1][-]{section.6.2}{PC}{chapter.6}% 24
+\BOOKMARK [2][-]{subsection.6.2.1}{Interface}{section.6.2}% 25
+\BOOKMARK [2][-]{subsection.6.2.2}{Tunnel SSH}{section.6.2}% 26
+\BOOKMARK [2][-]{subsection.6.2.3}{Videos}{section.6.2}% 27
+\BOOKMARK [2][-]{subsection.6.2.4}{Capteurs et Moteurs}{section.6.2}% 28
+\BOOKMARK [2][-]{subsection.6.2.5}{Affichage 3D}{section.6.2}% 29
+\BOOKMARK [2][-]{subsection.6.2.6}{Cartographie}{section.6.2}% 30
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 31
+\BOOKMARK [0][-]{chapter*.6}{Bibliographie}{}% 32
+\BOOKMARK [0][-]{chapter*.7}{Table des figures}{}% 33

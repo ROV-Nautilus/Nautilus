@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="matrice" key="selection"/>
+		<item value="readStream" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="readStream"/>
+			<item value="exCam"/>
 			<item value="Matrice"/>
 			<item value="exMatrice2"/>
 			<item value="ok"/>
@@ -21,8 +23,6 @@
 			<item value="init"/>
 			<item value="run"/>
 			<item value="start"/>
-			<item value="output"/>
-			<item value="axPanel1"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Camera"/>

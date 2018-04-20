@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{ref1}
+Nautilus.
+\newblock Adresse video caméra frontale.
+\newblock \href{http://169.254.14.03:8081}{169.254.14.03:8081}, 2018.
+
+\bibitem{ref2}
+Mouse Electronics.
+\newblock Module camera v2 raspberry.
+\newblock
+  \href{https://www.mouser.fr/ProductDetail/SparkFun/DEV-14028?qs=sGAEpiMZZMsB9HsreUc%20%252biQuTz4%2fXD%2fVgeee971KrtC4%3d}{Mouse
+  Electronics}, 2018.
+
+\bibitem{ref3}
+Nautilus.
+\newblock Adresse video caméra du dessous.
+\newblock \href{http://169.254.14.03:8000/}{169.254.14.03:8000}, 2018.
+
+\bibitem{ref4}
+GitHub.
+\newblock Code java de l'interface.
+\newblock
+  \href{https://github.com/ROV-Nautilus/Nautilus/tree/master/Interface}{Github},
+  2018.
+
+\end{thebibliography}

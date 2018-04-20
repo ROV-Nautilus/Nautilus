@@ -543,15 +543,6 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
     			a1.start();
     			System.out.println("Bas appuyé");
     		}
-    		if (key == KeyEvent.VK_A) {
-    			Moteurs ex1 = new Moteurs(m1,m2+1,m3);
-    			Thread a1 = new Thread(ex1);
-    			a1.start();
-    			System.out.println("Haut appuyé");
-    		}
-    		if (key == KeyEvent.VK_B) {
-    			Shell s = new Shell();
-    		}
     		//isPressed = true;
     	}
     }

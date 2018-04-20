@@ -70,7 +70,6 @@ public TransformGroup rotationGroup = null;
     TransformGroup steerTG = vp.getViewPlatformTransform();
     Transform3D t3d = new Transform3D();
     steerTG.getTransform(t3d);
-    // args are: viewer posn, where looking, up direction
     t3d.lookAt(new Point3d(-1.2,1.2,1.2), new Point3d(0,0,0), new Vector3d(0,1,0));
     t3d.invert();
     steerTG.setTransform(t3d);

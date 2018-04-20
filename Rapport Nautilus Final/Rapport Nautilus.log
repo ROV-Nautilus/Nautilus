@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.27)  20 APR 2018 16:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.27)  20 APR 2018 19:48
 entering extended mode
 **"./Rapport Nautilus.tex"
 ("Rapport Nautilus.tex"
@@ -623,28 +623,35 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
 Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty"
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
 ) ("Rapport Nautilus.aux")
 \openout1 = `"Rapport Nautilus.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Info: Redefining \degres on input line 101.
-LaTeX Info: Redefining \dots on input line 101.
-LaTeX Info: Redefining \up on input line 101.
-
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Info: Redefining \degres on input line 102.
+LaTeX Info: Redefining \dots on input line 102.
+LaTeX Info: Redefining \up on input line 102.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count120
 \scratchdimen=\dimen126
@@ -703,7 +710,7 @@ Package grfext Info: Graphics extension search list:
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 101.
+Package hyperref Info: Link coloring OFF on input line 102.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -712,23 +719,23 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count126
 )
-LaTeX Info: Redefining \ref on input line 101.
-LaTeX Info: Redefining \pageref on input line 101.
-LaTeX Info: Redefining \nameref on input line 101.
+LaTeX Info: Redefining \ref on input line 102.
+LaTeX Info: Redefining \pageref on input line 102.
+LaTeX Info: Redefining \nameref on input line 102.
  ("Rapport Nautilus.out") ("Rapport Nautilus.out")
 \@outlinefile=\write3
 \openout3 = `"Rapport Nautilus.out"'.
 
 \c@lstlisting=\count127
-<Photos/ensea2.png, id=111, 300.3722pt x 302.63063pt>
+<Photos/ensea2.png, id=135, 300.3722pt x 302.63063pt>
 File: Photos/ensea2.png Graphic file (type png)
 <use Photos/ensea2.png>
-Package pdftex.def Info: Photos/ensea2.png  used on input line 125.
+Package pdftex.def Info: Photos/ensea2.png  used on input line 126.
 (pdftex.def)             Requested size: 113.81102pt x 114.66835pt.
-<Photos/nautilus.png, id=112, 722.7pt x 633.36626pt>
+<Photos/nautilus.png, id=136, 722.7pt x 633.36626pt>
 File: Photos/nautilus.png Graphic file (type png)
 <use Photos/nautilus.png>
-Package pdftex.def Info: Photos/nautilus.png  used on input line 125.
+Package pdftex.def Info: Photos/nautilus.png  used on input line 126.
 (pdftex.def)             Requested size: 142.26378pt x 124.68015pt.
  [1
 
@@ -740,264 +747,328 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 5.
-)
-\tf@toc=\write4
-\openout4 = `"Rapport Nautilus.toc"'.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.132 \chapter
-              {Introduction} [1
+l.37 ...e {chapter}{Bibliographie}{32}{chapter*.6}
+                                                   [1
 
-]
+])
+\tf@toc=\write4
+\openout4 = `"Rapport Nautilus.toc"'.
+
+ [2]
 Chapitre 1.
-[2
+[3
 
 ]
 Chapitre 2.
-[3
+[4
 
 ]
 Chapitre 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
-[4
+[5
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
-[5]
+[6]
 Chapitre 4.
-<Photos/moteur-brushless.png, id=176, 376.40625pt x 225.09094pt>
+<Illustrations/Couleur.png, id=210, 211.54031pt x 292.09125pt>
+File: Illustrations/Couleur.png Graphic file (type png)
+<use Illustrations/Couleur.png>
+Package pdftex.def Info: Illustrations/Couleur.png  used on input line 209.
+(pdftex.def)             Requested size: 105.76988pt x 146.04526pt.
+<Illustrations/Planning1.png, id=211, 843.15pt x 299.61937pt>
+File: Illustrations/Planning1.png Graphic file (type png)
+<use Illustrations/Planning1.png>
+Package pdftex.def Info: Illustrations/Planning1.png  used on input line 216.
+(pdftex.def)             Requested size: 337.25401pt x 119.84561pt.
+[7
+
+ <./Illustrations/Couleur.png> <./Illustrations/Planning1.png>]
+<Illustrations/Planning2.png, id=221, 421.575pt x 385.44pt>
+File: Illustrations/Planning2.png Graphic file (type png)
+<use Illustrations/Planning2.png>
+Package pdftex.def Info: Illustrations/Planning2.png  used on input line 223.
+(pdftex.def)             Requested size: 210.78697pt x 192.71953pt.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 230.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+<Illustrations/Github.png, id=223, 772.38562pt x 489.32813pt>
+File: Illustrations/Github.png Graphic file (type png)
+<use Illustrations/Github.png>
+Package pdftex.def Info: Illustrations/Github.png  used on input line 234.
+(pdftex.def)             Requested size: 308.94878pt x 195.72777pt.
+<Illustrations/Conrad.png, id=224, 737.00343pt x 160.34906pt>
+File: Illustrations/Conrad.png Graphic file (type png)
+<use Illustrations/Conrad.png>
+Package pdftex.def Info: Illustrations/Conrad.png  used on input line 243.
+(pdftex.def)             Requested size: 368.50081pt x 80.17433pt.
+<Illustrations/Robotshop.png, id=225, 737.00343pt x 98.61844pt>
+File: Illustrations/Robotshop.png Graphic file (type png)
+<use Illustrations/Robotshop.png>
+Package pdftex.def Info: Illustrations/Robotshop.png  used on input line 249.
+(pdftex.def)             Requested size: 368.50081pt x 49.30908pt.
+<Illustrations/Exptech.png, id=226, 737.75626pt x 120.45pt>
+File: Illustrations/Exptech.png Graphic file (type png)
+<use Illustrations/Exptech.png>
+Package pdftex.def Info: Illustrations/Exptech.png  used on input line 255.
+(pdftex.def)             Requested size: 368.87723pt x 60.22484pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--259
+
+ []
+
+[8 <./Illustrations/Planning2.png> <./Illustrations/Github.png>] [9 <./Illustrations/Conrad.png> <./Illustrations/Robots
+hop.png> <./Illustrations/Exptech.png>]
+Chapitre 5.
+<Photos/moteur-brushless.png, id=247, 376.40625pt x 225.09094pt>
 File: Photos/moteur-brushless.png Graphic file (type png)
 <use Photos/moteur-brushless.png>
-Package pdftex.def Info: Photos/moteur-brushless.png  used on input line 209.
+Package pdftex.def Info: Photos/moteur-brushless.png  used on input line 267.
 (pdftex.def)             Requested size: 376.40532pt x 225.09038pt.
-<Photos/esc.jpg, id=177, 144.54pt x 144.54pt>
+<Photos/esc.jpg, id=248, 144.54pt x 144.54pt>
 File: Photos/esc.jpg Graphic file (type jpg)
 <use Photos/esc.jpg>
-Package pdftex.def Info: Photos/esc.jpg  used on input line 216.
-(pdftex.def)             Requested size: 289.07925pt x 289.07925pt.
+Package pdftex.def Info: Photos/esc.jpg  used on input line 275.
+(pdftex.def)             Requested size: 260.17177pt x 260.17177pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6
+[10
 
  <./Photos/moteur-brushless.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 220--222
+Underfull \hbox (badness 10000) in paragraph at lines 280--282
 
  []
 
-[7 <./Photos/esc.jpg>]
-<Photos/signal_pwm.png, id=190, 800.9925pt x 201.75375pt>
+[11 <./Photos/esc.jpg>]
+<Photos/signal_pwm.png, id=265, 800.9925pt x 201.75375pt>
 File: Photos/signal_pwm.png Graphic file (type png)
 <use Photos/signal_pwm.png>
-Package pdftex.def Info: Photos/signal_pwm.png  used on input line 228.
+Package pdftex.def Info: Photos/signal_pwm.png  used on input line 288.
 (pdftex.def)             Requested size: 480.5992pt x 121.05318pt.
 
-Overfull \hbox (25.35509pt too wide) in paragraph at lines 228--229
+Overfull \hbox (25.35509pt too wide) in paragraph at lines 288--289
  [] 
  []
 
-<Photos/ServoBlaster.png, id=192, 453.19313pt x 112.92188pt>
+<Photos/ServoBlaster.png, id=267, 453.19313pt x 112.92188pt>
 File: Photos/ServoBlaster.png Graphic file (type png)
 <use Photos/ServoBlaster.png>
-Package pdftex.def Info: Photos/ServoBlaster.png  used on input line 234.
+Package pdftex.def Info: Photos/ServoBlaster.png  used on input line 295.
 (pdftex.def)             Requested size: 453.19202pt x 112.92159pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--237
+Underfull \hbox (badness 10000) in paragraph at lines 285--299
 
  []
 
-[8 <./Photos/signal_pwm.png> <./Photos/ServoBlaster.png>]
-<Photos/gpio.png, id=197, 155.07938pt x 137.01187pt>
+[12 <./Photos/signal_pwm.png> <./Photos/ServoBlaster.png>]
+<Photos/gpio.png, id=276, 155.07938pt x 137.01187pt>
 File: Photos/gpio.png Graphic file (type png)
 <use Photos/gpio.png>
-Package pdftex.def Info: Photos/gpio.png  used on input line 241.
+Package pdftex.def Info: Photos/gpio.png  used on input line 303.
 (pdftex.def)             Requested size: 155.07898pt x 137.01154pt.
-<Photos/sb.png, id=198, 462.97969pt x 33.12375pt>
+<Photos/sb.png, id=277, 462.97969pt x 33.12375pt>
 File: Photos/sb.png Graphic file (type png)
 <use Photos/sb.png>
-Package pdftex.def Info: Photos/sb.png  used on input line 249.
+Package pdftex.def Info: Photos/sb.png  used on input line 312.
 (pdftex.def)             Requested size: 462.97855pt x 33.12366pt.
 
-Overfull \hbox (7.73444pt too wide) in paragraph at lines 249--250
+Overfull \hbox (7.73444pt too wide) in paragraph at lines 312--313
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--257
+Underfull \hbox (badness 10000) in paragraph at lines 319--321
 
  []
 
-[9 <./Photos/gpio.png> <./Photos/sb.png>]
-<Photos/tempsesc.png, id=204, 554.07pt x 176.15813pt>
+[13 <./Photos/gpio.png> <./Photos/sb.png>]
+<Photos/tempsesc.png, id=286, 554.07pt x 176.15813pt>
 File: Photos/tempsesc.png Graphic file (type png)
 <use Photos/tempsesc.png>
-Package pdftex.def Info: Photos/tempsesc.png  used on input line 262.
+Package pdftex.def Info: Photos/tempsesc.png  used on input line 327.
 (pdftex.def)             Requested size: 443.2566pt x 140.92668pt.
- [10 <./Photos/tempsesc.png>]
-<Photos/archi_rov.png, id=211, 629.35126pt x 517.18219pt>
+ [14 <./Photos/tempsesc.png>]
+<Photos/archi_rov.png, id=294, 629.35126pt x 517.18219pt>
 File: Photos/archi_rov.png Graphic file (type png)
 <use Photos/archi_rov.png>
-Package pdftex.def Info: Photos/archi_rov.png  used on input line 273.
+Package pdftex.def Info: Photos/archi_rov.png  used on input line 339.
 (pdftex.def)             Requested size: 440.54288pt x 362.02505pt.
- [11 <./Photos/archi_rov.png>]
-Chapitre 5.
-<Photos/Raspberry.jpg, id=216, 1505.625pt x 968.61874pt>
+ [15 <./Photos/archi_rov.png>]
+Chapitre 6.
+<Photos/Raspberry.jpg, id=301, 1505.625pt x 968.61874pt>
 File: Photos/Raspberry.jpg Graphic file (type jpg)
 <use Photos/Raspberry.jpg>
-Package pdftex.def Info: Photos/Raspberry.jpg  used on input line 289.
+Package pdftex.def Info: Photos/Raspberry.jpg  used on input line 355.
 (pdftex.def)             Requested size: 301.11966pt x 193.7203pt.
-<Photos/Camera11.jpg, id=217, 3276.24pt x 2457.18pt>
+<Photos/Camera11.jpg, id=302, 3276.24pt x 2457.18pt>
 File: Photos/Camera11.jpg Graphic file (type jpg)
 <use Photos/Camera11.jpg>
-Package pdftex.def Info: Photos/Camera11.jpg  used on input line 300.
+Package pdftex.def Info: Photos/Camera11.jpg  used on input line 367.
 (pdftex.def)             Requested size: 327.64319pt x 245.73239pt.
-<Photos/Camera1.png, id=219, 770.27776pt x 457.71pt>
+<Photos/Camera1.png, id=304, 770.27776pt x 457.71pt>
 File: Photos/Camera1.png Graphic file (type png)
 <use Photos/Camera1.png>
-Package pdftex.def Info: Photos/Camera1.png  used on input line 306.
+Package pdftex.def Info: Photos/Camera1.png  used on input line 374.
 (pdftex.def)             Requested size: 308.10564pt x 183.08075pt.
-[12
+[16
 
  <./Photos/Raspberry.jpg>]
-<Photos/Camera21.jpg, id=226, 2926.935pt x 2195.20125pt>
+<Photos/Camera21.jpg, id=311, 2926.935pt x 2195.20125pt>
 File: Photos/Camera21.jpg Graphic file (type jpg)
 <use Photos/Camera21.jpg>
-Package pdftex.def Info: Photos/Camera21.jpg  used on input line 315.
+Package pdftex.def Info: Photos/Camera21.jpg  used on input line 384.
 (pdftex.def)             Requested size: 292.71065pt x 219.53297pt.
-<Photos/Camera2.png, id=228, 973.83826pt x 590.80725pt>
+<Photos/Camera2.png, id=313, 973.83826pt x 590.80725pt>
 File: Photos/Camera2.png Graphic file (type png)
 <use Photos/Camera2.png>
-Package pdftex.def Info: Photos/Camera2.png  used on input line 323.
-(pdftex.def)             Requested size: 389.5284pt x 236.31871pt.
+Package pdftex.def Info: Photos/Camera2.png  used on input line 393.
+(pdftex.def)             Requested size: 292.15373pt x 177.24353pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--327
+Underfull \hbox (badness 10000) in paragraph at lines 381--398
 
  []
 
-[13 <./Photos/Camera11.jpg> <./Photos/Camera1.png>] [14 <./Photos/Camera21.jpg> <./Photos/Camera2.png>] [15]
-<Photos/Interface1.png, id=246, 1155.1155pt x 619.113pt>
+[17 <./Photos/Camera11.jpg> <./Photos/Camera1.png>] [18 <./Photos/Camera21.jpg> <./Photos/Camera2.png>] [19]
+<Photos/Interface1.png, id=339, 1155.1155pt x 619.113pt>
 File: Photos/Interface1.png Graphic file (type png)
 <use Photos/Interface1.png>
-Package pdftex.def Info: Photos/Interface1.png  used on input line 341.
+Package pdftex.def Info: Photos/Interface1.png  used on input line 412.
 (pdftex.def)             Requested size: 404.29648pt x 216.6928pt.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 337--346
+Underfull \hbox (badness 10000) in paragraph at lines 408--418
 
  []
 
-[16 <./Photos/Interface1.png>]
+[20 <./Photos/Interface1.png>]
 File: Photos/Interface1.png Graphic file (type png)
 <use Photos/Interface1.png>
-Package pdftex.def Info: Photos/Interface1.png  used on input line 378.
+Package pdftex.def Info: Photos/Interface1.png  used on input line 450.
 (pdftex.def)             Requested size: 346.53732pt x 185.73534pt.
+ [21]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 483.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 483.
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--382
+Underfull \hbox (badness 10000) in paragraph at lines 492--498
 
  []
 
-[17]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 410.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 410.
-
-Underfull \hbox (badness 10000) in paragraph at lines 419--425
-
- []
-
-[18] [19]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 470.
+[22] [23]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 543.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 470.
- [20]
-Underfull \hbox (badness 10000) in paragraph at lines 528--530
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 543.
+ [24]
+Underfull \hbox (badness 10000) in paragraph at lines 601--603
 
  []
 
-[21]
-Chapitre 6.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 558.
-[22
+[25] [26] [27]
+Underfull \hbox (badness 10000) in paragraph at lines 693--696
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 761--764
+
+ []
+
+[29] [30]
+Chapitre 7.
+("Rapport Nautilus.bbl" [31
+
+]) [32
+
+] ("Rapport Nautilus.lof")
+\tf@lof=\write5
+\openout5 = `"Rapport Nautilus.lof"'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 799.
+ [33
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 558.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 799.
  ("Rapport Nautilus.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 558.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 558.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 799.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 799.
 Package rerunfilecheck Info: File `"Rapport Nautilus".out' has not changed.
-(rerunfilecheck)             Checksum: 96E877E7F244B03266C32F88477D6DD9;1766.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 558.
+(rerunfilecheck)             Checksum: 3451522BB9D5A555392A9BC925833511;2093.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 799.
  ) 
 Here is how much of TeX's memory you used:
- 10007 strings out of 493303
- 140776 string characters out of 3138856
- 349607 words of memory out of 3000000
- 13222 multiletter control sequences out of 15000+200000
- 17906 words of font info for 40 fonts, out of 3000000 for 9000
+ 10452 strings out of 493303
+ 147883 string characters out of 3138856
+ 350159 words of memory out of 3000000
+ 13462 multiletter control sequences out of 15000+200000
+ 18220 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,38p,1286b,1380s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,13n,38p,1195b,1950s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\dylan\AppData\Loca
 l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecbx1200.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <
-C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <C:\Users\dylan\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecbx1095.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\U
-sers\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\dylan\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pf
-b>
-Output written on "Rapport Nautilus.pdf" (23 pages, 4560845 bytes).
+nappen\ec\dpi600\ectt1095.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk> <
+C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\dylan\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
+en\ec\dpi600\ecbx2074.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\U
+sers\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\dylan\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecrm1200.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on "Rapport Nautilus.pdf" (34 pages, 5529199 bytes).
 PDF statistics:
- 869 PDF objects out of 1000 (max. 8388607)
- 191 named destinations out of 1000 (max. 500000)
- 297 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1239 PDF objects out of 1440 (max. 8388607)
+ 374 named destinations out of 1000 (max. 500000)
+ 380 words of extra memory for PDF output out of 10000 (max. 10000000)
 

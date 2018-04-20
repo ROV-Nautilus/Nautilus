@@ -1,0 +1,69 @@
+\begin{thebibliography}{10}
+
+\bibitem{ref5}
+Conrad.
+\newblock Moteur d'avion électrique brushless roxxy 315079 chez conrad (x3).
+\newblock
+  \href{http://www.conrad.fr/ce/fr/product/231891/Moteur-davion-lectrique-brushless-ROXXY-315079?ref=searchDetail}{Conrad},
+  2018.
+
+\bibitem{ref6}
+RobotShop.
+\newblock Esc suppo multirotor 20a m20a chez robotshop (x3).
+\newblock
+  \href{https://www.robotshop.com/eu/fr/esc-multirotor-20a-m20a.html}{RobotShop},
+  2018.
+
+\bibitem{ref7}
+HobbyKing.
+\newblock Esc hobbyking 30a avec reverse (x1).
+\newblock
+  \href{https://hobbyking.com/fr_fr/hobbykingr-tm-brushless-car-esc-30a-w-reverse.html}{Hobbyking},
+  2018.
+
+\bibitem{ref8}
+Github.
+\newblock Programme servoblaster.
+\newblock
+  \href{https://github.com/richardghirst/PiBits/tree/master/ServoBlaster}{ServoBlaster},
+  2018.
+
+\bibitem{ref9}
+TopModel.
+\newblock Radiocommande graupner mx-20 (disponible à l'ensea).
+\newblock
+  \href{https://www.topmodel.fr/product-detail-18656-graupner-mx-20-hott-12160?lang=fr}{TopModel},
+  2018.
+
+\bibitem{ref10}
+Conrad.
+\newblock Batterie d'accumulateurs (nimh) 7.2 v 3000 mah conrad (x1).
+\newblock
+  \href{http://www.conrad.fr/ce/fr/product/206028/Batterie-daccumulateurs-NiMh-72-V-3000-mAh-Conrad-energy-206028-stick-fiche-Tamiya-mle?ref=searchDetail}{Conrad},
+  2018.
+
+\bibitem{ref1}
+Nautilus.
+\newblock Adresse video caméra frontale.
+\newblock \href{http://169.254.14.03:8081}{169.254.14.03:8081}, 2018.
+
+\bibitem{ref2}
+Mouse Electronics.
+\newblock Module camera v2 raspberry.
+\newblock
+  \href{https://www.mouser.fr/ProductDetail/SparkFun/DEV-14028?qs=sGAEpiMZZMsB9HsreUc%20%252biQuTz4%2fXD%2fVgeee971KrtC4%3d}{Mouse
+  Electronics}, 2018.
+
+\bibitem{ref3}
+Nautilus.
+\newblock Adresse video caméra du dessous.
+\newblock \href{http://169.254.14.03:8000/}{169.254.14.03:8000}, 2018.
+
+\bibitem{ref4}
+GitHub.
+\newblock Code java de l'interface.
+\newblock
+  \href{https://github.com/ROV-Nautilus/Nautilus/tree/master/Interface}{Github},
+  2018.
+
+\end{thebibliography}
