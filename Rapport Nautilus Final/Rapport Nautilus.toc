@@ -6,7 +6,7 @@
 \contentsline {subsection}{\numberline {3.1.1}Structure}{5}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Commandabilit\IeC {\'e}}{5}{subsection.3.1.2}
 \contentsline {subsection}{\numberline {3.1.3}Milieu d'utilisation}{5}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}\IeC {\'E}nergie}{6}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.4}Energie}{6}{subsection.3.1.4}
 \contentsline {subsection}{\numberline {3.1.5}Motorisation}{6}{subsection.3.1.5}
 \contentsline {subsection}{\numberline {3.1.6}Acquisitions}{6}{subsection.3.1.6}
 \contentsline {chapter}{\numberline {4}Outils de gestion}{7}{chapter.4}
@@ -20,19 +20,30 @@
 \contentsline {chapter}{\numberline {6}Acquisition et Commandabilit\IeC {\'e}}{16}{chapter.6}
 \contentsline {section}{\numberline {6.1}Raspberry}{16}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Cameras}{16}{subsection.6.1.1}
-\contentsline {subsubsection}{Logitech C170}{17}{section*.2}
-\contentsline {subsubsection}{Cam\IeC {\'e}ra V2}{18}{section*.3}
-\contentsline {subsection}{\numberline {6.1.2}Capteur de Pression/Temp\IeC {\'e}rature}{19}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Central Inertielle}{19}{subsection.6.1.3}
-\contentsline {section}{\numberline {6.2}PC}{20}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Interface}{20}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Tunnel SSH}{22}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Vid\IeC {\'e}os}{23}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Capteurs et Moteurs}{26}{subsection.6.2.4}
-\contentsline {subsubsection}{Capteurs}{26}{section*.4}
-\contentsline {subsubsection}{Moteurs}{26}{section*.5}
-\contentsline {subsection}{\numberline {6.2.5}Affichage 3D}{27}{subsection.6.2.5}
-\contentsline {subsection}{\numberline {6.2.6}Cartographie}{29}{subsection.6.2.6}
-\contentsline {chapter}{\numberline {7}Conclusion}{31}{chapter.7}
-\contentsline {chapter}{Bibliographie}{32}{chapter*.6}
-\contentsline {chapter}{Table des figures}{33}{chapter*.7}
+\contentsline {subsubsection}{Logitech C170}{17}{section*.18}
+\contentsline {subsubsection}{Cam\IeC {\'e}ra V2}{18}{section*.21}
+\contentsline {subsection}{\numberline {6.1.2}Capteur de Pression/Temperature}{19}{subsection.6.1.2}
+\contentsline {subsubsection}{MS5803-14BA}{19}{section*.24}
+\contentsline {subsection}{\numberline {6.1.3}Central Inertielle}{20}{subsection.6.1.3}
+\contentsline {subsubsection}{MinIMU-9 v2}{20}{section*.27}
+\contentsline {section}{\numberline {6.2}PC}{23}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Interface}{23}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Tunnel SSH}{25}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Videos}{26}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Capteurs et Moteurs}{29}{subsection.6.2.4}
+\contentsline {subsubsection}{Capteurs}{29}{section*.31}
+\contentsline {subsubsection}{Moteurs}{29}{section*.32}
+\contentsline {subsection}{\numberline {6.2.5}Affichage 3D}{30}{subsection.6.2.5}
+\contentsline {subsection}{\numberline {6.2.6}Cartographie}{32}{subsection.6.2.6}
+\contentsline {chapter}{\numberline {7}Structure}{34}{chapter.7}
+\contentsline {section}{\numberline {7.1}Design}{34}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Squelette interne}{36}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Tube}{37}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Coque}{37}{subsection.7.1.3}
+\contentsline {section}{\numberline {7.2}Mat\IeC {\'e}riaux, m\IeC {\'e}thode de construction}{38}{section.7.2}
+\contentsline {section}{\numberline {7.3}Simulations poids et aqua-dynamisme}{40}{section.7.3}
+\contentsline {section}{\numberline {7.4}Test en eau}{41}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion}{42}{chapter.8}
+\contentsline {chapter}{Bibliographie}{43}{chapter*.46}
+\contentsline {chapter}{\numberline {9}R\IeC {\'e}f\IeC {\'e}rences}{44}{chapter.9}
+\contentsline {chapter}{Table des figures}{45}{chapter*.47}

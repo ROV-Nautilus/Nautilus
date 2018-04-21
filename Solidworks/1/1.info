@@ -1,0 +1,78 @@
+
+    Informations système
+                Etat:   Calcul terminé.
+                Produit:   Flow Simulation 2017 SP2.0. Build: 3731
+                Nom de l'ordinateur:   J-A-R-V-I-S
+                Nom d'utilisateur:   Jultur
+                Processeurs:   Intel(R) Core(TM) i5-6300HQ CPU @ 2.30GHz
+                Mémoire:   16257 Mo / 134217727 Mo
+                Système d'exploitation:   Windows 10 (or higher) (Version 10.0.16299)
+                Version CAO:   SOLIDWORKS 2017 SP2.0
+                Vitesse UC:   2301 (2300) MHz
+
+    Informations générales
+                Modèle:   Assemblage2.SLDASM
+                Nom du projet:   Aqua-dynamisme
+                Commentaire sur le projet:   projet nautilus 
+                Chemin du projet:   C:\Users\Jultur\Documents\Projet 2A\open-rov-underwater-exploration-robots-1.snapshot.1\1
+                Système d'unités:   SI (m-kg-s)
+                Type d'analyse:   Analyse interne
+                Exclure les cavités sans conditions d'écoulement :   Activé
+                Système de coordonnées:   Système de coordonnées global
+                Axe de référence:   X
+
+    Caractéristiques physiques
+                Conduction thermique dans les solides:   Désactivé
+                Transitoire:   Désactivé
+                Effets gravitationnels:   Activé
+                Type d'écoulement:   Laminaire et turbulent
+                Cavitation:   Désactivé
+                Ecoulement à nombre de Mach élevé:   Désactivé
+                Rugosité par défaut:   0 micromètre
+
+        Paramètres gravitationnels
+                Composante X:   0 m/s^2
+                Composante Y:   -9.81 m/s^2
+                Composante Z:   0 m/s^2
+                Conditions par défaut des parois:   Paroi adiabatique
+
+    Domaine de calcul
+
+        Taille
+                X min:   -0.181 m
+                X max:   0.300 m
+                Y min:   -0.105 m
+                Y max:   0.136 m
+                Z min:   0.064 m
+                Z max:   0.545 m
+
+    Calcul du maillage
+
+        Dimensions du maillage basique
+                Nombre de cellules suivant X:   12
+                Nombre de cellules suivant Y:   6
+                Nombre de cellules suivant Z:   12
+
+        Nombre de cellules
+                Cellules:   5143
+                Cellules fluides:   5143
+                Cellules irrégulières:   0
+                Cellules ajustées:   0
+                Niveau de raffinement maximal:   1
+
+    Objectifs
+                
+                Nom   	Unité   	Valeur   	Progression   	Critères   	Delta   	Utiliser pour la convergence 
+
+    Informations générales
+                Itérations:   49
+                Temps de calcul:   10 s
+
+        Log
+                Génération du maillage démarrée	0:   11:05:20 , Apr 21
+                Génération du maillage terminée avec succès	0:   11:05:21 , Apr 21
+                Préparation des données pour le calcul	0:   11:05:22 , Apr 21
+                Calcul démarré	0:   11:05:23 , Apr 21
+                Le calcul a convergé puisque les critères suivants sont respectés:	48:   11:05:32 , Apr 21
+                    Les objectifs ont convergé	48:   
+                Calcul terminé	49:   11:05:33 , Apr 21
