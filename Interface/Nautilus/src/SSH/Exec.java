@@ -26,6 +26,7 @@ public class Exec implements Runnable{
 	public Exec(String Commande) {
 		this.Commande=Commande;
 	}
+	/** Explication ligne par ligne effectué dans la rapport final*/
 	public Exec() {
 		try{
 			JSch jsch=new JSch();

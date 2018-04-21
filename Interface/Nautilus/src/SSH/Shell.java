@@ -15,6 +15,8 @@ import java.awt.*;
 import javax.swing.*;
 
 public class Shell{
+	
+	/** Meme principe que Exec mais avec un shell*/
   public Shell(){
     
     try{

@@ -49,7 +49,7 @@ public class Camera  extends Panel implements Runnable{
     	int h = (int) (source.getHeight() * factor);
     	return source.getScaledInstance(w, h, Image.SCALE_SMOOTH);
     }
-    
+    /** Redimensionne notre image à afficher 2*/
     public BufferedImage scale(BufferedImage bImage, double factor) {
         int destWidth=(int) (bImage.getWidth() * factor);
         int destHeight=(int) (bImage.getHeight() * factor);

@@ -45,7 +45,7 @@ public class Photo extends JPanel implements Runnable{
         super.paintComponent(g);
         g.drawImage(image, this.getAbscisse(), this.getOrdonne(), this);           
     }
-    /** Redimensionement */
+    
     public BufferedImage scale(BufferedImage bImage, double factor) {
         int destWidth=(int) (bImage.getWidth() * factor);
         int destHeight=(int) (bImage.getHeight() * factor);

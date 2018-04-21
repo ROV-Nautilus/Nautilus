@@ -14,7 +14,7 @@ public class Matrice  implements Runnable{
 	public Matrice() {
 		
 	}
-	/** Recupere seulement les valeurs de la centrale*/
+	/** Recupere seulement les valeurs de la matrice*/
 	public void run() {
 		while(true) {
 			Interface.exMatrice2.Commander("python matrice.py");

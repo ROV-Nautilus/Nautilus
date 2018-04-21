@@ -33,7 +33,7 @@ public class Cartographie extends JFrame implements ActionListener, MouseMotionL
 	 */
 	private static final long serialVersionUID = 1L;
 
-	/** Attributs */
+	/** Attribut */
 	public Container win;
 	public String nomPhoto = "carto";
 	public int nombrePhoto = 0;
@@ -57,7 +57,6 @@ public class Cartographie extends JFrame implements ActionListener, MouseMotionL
 		JScrollPane scrollPane = new JScrollPane(panel,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 		scrollPane.setPreferredSize(new Dimension(1366,800));
 		
-		/** Recuperation de chaque photos*/
 		File fichierPhoto = new File(nomPhoto+".jpg");
 		while(fichierPhoto.exists()) {
 			nomPhoto=nomPhoto+"1";
@@ -67,7 +66,6 @@ public class Cartographie extends JFrame implements ActionListener, MouseMotionL
 		carto = new Photo[nombrePhoto];
 		nomPhoto="carto";
 		int h = 0;
-		/** afficage de chaque photo*/
 		for(int k = 0 ; k < nombrePhoto ; k++) {
 			fichierPhoto = new File(nomPhoto+".jpg");
 			carto[k] = new Photo(fichierPhoto,0,0,0.5);

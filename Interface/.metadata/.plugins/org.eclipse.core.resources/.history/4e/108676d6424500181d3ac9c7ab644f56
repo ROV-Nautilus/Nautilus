@@ -452,9 +452,8 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 		if(cmd.equals("CARTO OFF")) {
 			/* Reste à developper */
 		}
-		/** Test et autres*/
-		
-		/** Demarre l'autre caméra*/
+		/* Test et autres*/
+		/* Demarre l'autre caméra*/
 		if(cmd.equals("Demarrer Camera 1")){
 			Exec ex4 = new Exec("python3 rpi_camera_demarrer.py");
 			try {
@@ -466,16 +465,18 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 	    	new Thread(axPanel).start();
 		}
 		
-		/** Commande pour arreter la camera FPV*/
+		/* Commande pour arreter la camera FPV*/
 		if(cmd.equals("Arreter Camera 2")){
 			Exec ex = new Exec("sudo /etc/init.d/motion stop");
 		}
-		/** Ceci permet d'afficher le shell de la raspberry dans la console eclipse */
+		/* Ceci permet d'afficher le shell de la raspberry dans la console eclipse */
 		if(cmd.equals("Shell")){
 			Shell s = new Shell();
 		}
+		if(cmd.equals("Commande")){
+			//Exec ex = new Exec();
+		}
 		
-		/** Enregistre l'image venant de axPanel en jpg*/
 		if(cmd.equals("Prendre Photo")){
 			
 			BufferedImage img = new BufferedImage(axPanel.getWidth(), axPanel.getHeight(), BufferedImage.TYPE_INT_RGB);
@@ -488,7 +489,7 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 		    }
 		    nomPhoto=nomPhoto+"1";
 		}
-		/** Lance la fenetre avec la carte et les photos prises (non developé)*/
+		
 		if(cmd.equals("Carte")){
 			carto = new Cartographie("Cartographie",0,0,true);
 		}

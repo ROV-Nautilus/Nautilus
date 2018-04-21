@@ -262,7 +262,6 @@ public TransformGroup rotationGroup = null;
     return scene.getSceneGroup();
   }
   
-  /** Effectue le mouvement souhaité*/
   public void mouvement(double rotX, double rotY, double rotZ, Vector3d trans, double scale) {
 	  Matrix4d m = new Matrix4d();
 	  double A = Math.cos(rotX* Math.PI/180f);

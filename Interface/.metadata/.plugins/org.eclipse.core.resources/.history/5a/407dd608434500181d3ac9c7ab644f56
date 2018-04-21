@@ -475,7 +475,7 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 			Shell s = new Shell();
 		}
 		
-		/** Enregistre l'image venant de axPanel en jpg*/
+		/** */
 		if(cmd.equals("Prendre Photo")){
 			
 			BufferedImage img = new BufferedImage(axPanel.getWidth(), axPanel.getHeight(), BufferedImage.TYPE_INT_RGB);
@@ -488,7 +488,7 @@ public class Interface extends JFrame implements ActionListener, KeyListener{
 		    }
 		    nomPhoto=nomPhoto+"1";
 		}
-		/** Lance la fenetre avec la carte et les photos prises (non developé)*/
+		
 		if(cmd.equals("Carte")){
 			carto = new Cartographie("Cartographie",0,0,true);
 		}

@@ -12,6 +12,7 @@ import javax.swing.SwingConstants;
 	
 		private static final long serialVersionUID = 1L;
 
+		/** Bouton personnalisé*/
 	public Bouton1(String txt, URL icon, URL iconHover, URL iconPressed) {
 		super(txt);
 		setForeground(Color.WHITE);

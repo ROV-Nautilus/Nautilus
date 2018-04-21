@@ -17,7 +17,7 @@ public class Pression  implements Runnable{
 	public Pression() {
 		
 	}
-	
+	/** Recupere les donnees du capteur de pression et de la centrale*/
 	public void run() {
 		while(true) {
 			

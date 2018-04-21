@@ -17,6 +17,7 @@ public class PhotoZoom extends JFrame{
 	public Container win;
 	private String nomPhoto;
 
+	/** Lorsque l'on clique sur l'image, cela lance une autre fenetre, c'est cella ci*/
 	public PhotoZoom(String titre, int x, int y, boolean b, String nomPhoto){
 		super(titre);
 		super.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

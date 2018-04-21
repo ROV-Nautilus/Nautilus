@@ -15,6 +15,7 @@ public class Moteurs implements Runnable{
 		this.m3=m3;
 	}
 	 
+	/** Envoie la commandes pour le 3 moteurs à la Raspberry */
 	public void run() {
 		Interface.exMoteur.setCommande("echo 0="+m1+" > /dev/servoblaster & echo 1="+m2+" > /dev/servoblaster & echo 2="+m3+" > /dev/servoblaster");
 		Thread a1 = new Thread(Interface.exMoteur);
