@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.27)  20 APR 2018 19:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.27)  21 APR 2018 10:46
 entering extended mode
 **"./Rapport Nautilus.tex"
 ("Rapport Nautilus.tex"
@@ -945,17 +945,17 @@ Chapitre 6.
 <Photos/Raspberry.jpg, id=301, 1505.625pt x 968.61874pt>
 File: Photos/Raspberry.jpg Graphic file (type jpg)
 <use Photos/Raspberry.jpg>
-Package pdftex.def Info: Photos/Raspberry.jpg  used on input line 355.
+Package pdftex.def Info: Photos/Raspberry.jpg  used on input line 356.
 (pdftex.def)             Requested size: 301.11966pt x 193.7203pt.
 <Photos/Camera11.jpg, id=302, 3276.24pt x 2457.18pt>
 File: Photos/Camera11.jpg Graphic file (type jpg)
 <use Photos/Camera11.jpg>
-Package pdftex.def Info: Photos/Camera11.jpg  used on input line 367.
+Package pdftex.def Info: Photos/Camera11.jpg  used on input line 368.
 (pdftex.def)             Requested size: 327.64319pt x 245.73239pt.
 <Photos/Camera1.png, id=304, 770.27776pt x 457.71pt>
 File: Photos/Camera1.png Graphic file (type png)
 <use Photos/Camera1.png>
-Package pdftex.def Info: Photos/Camera1.png  used on input line 374.
+Package pdftex.def Info: Photos/Camera1.png  used on input line 375.
 (pdftex.def)             Requested size: 308.10564pt x 183.08075pt.
 [16
 
@@ -963,15 +963,15 @@ Package pdftex.def Info: Photos/Camera1.png  used on input line 374.
 <Photos/Camera21.jpg, id=311, 2926.935pt x 2195.20125pt>
 File: Photos/Camera21.jpg Graphic file (type jpg)
 <use Photos/Camera21.jpg>
-Package pdftex.def Info: Photos/Camera21.jpg  used on input line 384.
+Package pdftex.def Info: Photos/Camera21.jpg  used on input line 385.
 (pdftex.def)             Requested size: 292.71065pt x 219.53297pt.
 <Photos/Camera2.png, id=313, 973.83826pt x 590.80725pt>
 File: Photos/Camera2.png Graphic file (type png)
 <use Photos/Camera2.png>
-Package pdftex.def Info: Photos/Camera2.png  used on input line 393.
+Package pdftex.def Info: Photos/Camera2.png  used on input line 394.
 (pdftex.def)             Requested size: 292.15373pt x 177.24353pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--398
+Underfull \hbox (badness 10000) in paragraph at lines 382--399
 
  []
 
@@ -979,50 +979,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 381--398
 <Photos/Interface1.png, id=339, 1155.1155pt x 619.113pt>
 File: Photos/Interface1.png Graphic file (type png)
 <use Photos/Interface1.png>
-Package pdftex.def Info: Photos/Interface1.png  used on input line 412.
+Package pdftex.def Info: Photos/Interface1.png  used on input line 413.
 (pdftex.def)             Requested size: 404.29648pt x 216.6928pt.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 408--418
+Underfull \hbox (badness 10000) in paragraph at lines 409--419
 
  []
 
 [20 <./Photos/Interface1.png>]
-File: Photos/Interface1.png Graphic file (type png)
-<use Photos/Interface1.png>
-Package pdftex.def Info: Photos/Interface1.png  used on input line 450.
-(pdftex.def)             Requested size: 346.53732pt x 185.73534pt.
- [21]
+<Photos/Interface2.png, id=353, 1927.2pt x 1031.855pt>
+File: Photos/Interface2.png Graphic file (type png)
+<use Photos/Interface2.png>
+Package pdftex.def Info: Photos/Interface2.png  used on input line 451.
+(pdftex.def)             Requested size: 289.06754pt x 154.77156pt.
+ [21 <./Photos/Interface2.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 483.
+(Font)              <9> on input line 485.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 483.
+(Font)              <5> on input line 485.
 
-Underfull \hbox (badness 10000) in paragraph at lines 492--498
+Underfull \hbox (badness 10000) in paragraph at lines 494--500
 
  []
 
 [22] [23]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 543.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 545.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 543.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 545.
  [24]
-Underfull \hbox (badness 10000) in paragraph at lines 601--603
+Underfull \hbox (badness 10000) in paragraph at lines 603--605
 
  []
 
 [25] [26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 693--696
+Underfull \hbox (badness 10000) in paragraph at lines 695--698
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 761--764
+Underfull \hbox (badness 10000) in paragraph at lines 763--766
 
  []
 
@@ -1036,26 +1037,26 @@ Chapitre 7.
 \tf@lof=\write5
 \openout5 = `"Rapport Nautilus.lof"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 799.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 800.
  [33
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 799.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 800.
  ("Rapport Nautilus.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 799.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 799.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 800.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 800.
 Package rerunfilecheck Info: File `"Rapport Nautilus".out' has not changed.
-(rerunfilecheck)             Checksum: 3451522BB9D5A555392A9BC925833511;2093.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 799.
+(rerunfilecheck)             Checksum: 2D134BAF3945CEDBAE9DB4F256B00DCC;2102.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 800.
  ) 
 Here is how much of TeX's memory you used:
- 10452 strings out of 493303
- 147883 string characters out of 3138856
- 350159 words of memory out of 3000000
- 13462 multiletter control sequences out of 15000+200000
+ 10457 strings out of 493303
+ 148000 string characters out of 3138856
+ 349161 words of memory out of 3000000
+ 13466 multiletter control sequences out of 15000+200000
  18220 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,38p,1195b,1950s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,13n,38p,1193b,1950s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\dylan\AppData\Loca
 l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
 nappen\ec\dpi600\ectt1095.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk> <
@@ -1066,9 +1067,9 @@ sers\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.
 \2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
 c\dpi600\ecrm1200.pk> <C:\Users\dylan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc2074.pk><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on "Rapport Nautilus.pdf" (34 pages, 5529199 bytes).
+Output written on "Rapport Nautilus.pdf" (34 pages, 5770820 bytes).
 PDF statistics:
- 1239 PDF objects out of 1440 (max. 8388607)
+ 1245 PDF objects out of 1440 (max. 8388607)
  374 named destinations out of 1000 (max. 500000)
- 380 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 385 words of extra memory for PDF output out of 10000 (max. 10000000)
 
