@@ -135,7 +135,7 @@
 
 \chapter{Introduction}
 
-        Les fonds marins réunissent aujourd'hui de nombreux secteurs et enjeux, tant professionels que particuliers. On y retrouve entre autre l'exploration sous-marine, la surveillance et maintenance d'installations professionelles, ainsi que la cartographie des fonds marins. Tout ces domaines demandent le développement de solutions techniques plus rentables et pratiques qu'une intervention humaine. Notre projet propose ainsi un ROV (Remotely Operated Vehicle) polyvalent et simple d'utilisation à cet effet.
+        Les fonds marins réunissent aujourd'hui de nombreux secteurs et enjeux, tant professionnels que particuliers. On y retrouve entre autre l'exploration sous-marine, la surveillance et maintenance d'installations professionnelles, ainsi que la cartographie des fonds marins. Tout ces domaines demandent le développement de solutions techniques plus rentables et pratiques qu'une intervention humaine. Notre projet propose ainsi un ROV (Remotely Operated Vehicle) polyvalent et simple d'utilisation à cet effet.
 
 \chapter{Présentation du projet}
         
@@ -146,12 +146,12 @@
 
         \section{Analyse Fonctionnelle}
 						\subsection{Structure}
-								Facilement transportable et peu emcombrant.\newline
+								Facilement transportable et peu encombrant.\newline
 								\textbf{Contraintes :}
 								\begin{itemize}
 										\item Poids : 2-3kg
 										\item Dimension : 300*200*150mm
-										\item Etanche de norme IP 68 \newline \newline
+										\item Étanche de norme IP 68 \newline \newline
 									\end{itemize}
 
 						\subsection{Commandabilité}
@@ -171,26 +171,26 @@
 										\item Eau non salé (moins de 1 g de sels dissous par kilogramme d'eau)
 										\item Eau translucide (transmittance de la lumière entre 75\% et 95\%)
 										\item Lieu : Piscine, lac
-										\item Ecoulement laminaire
-										\item Courant marin inferieur à 2 noeuds
+										\item Écoulement laminaire
+										\item Courant marin inférieur à 2 nœuds
 										\item Profondeur de 10m (résistant à 2 bars) \newline \newline
 								\end{itemize}
 
-						\subsection{Energie}
-								Etre entièrement autonome. \newline
+						\subsection{Énergie}
+								Être entièrement autonome. \newline
 								\textbf{Contraintes :}
 								\begin{itemize}
 										\item Autonomie de 20 minutes
 								\end{itemize}
 
 						\subsection{Motorisation}
-								Etre mobile une fois immergé. \newline
+								Être mobile une fois immergé. \newline
 								\textbf{Contraintes :}
 								\begin{itemize}
-										\item Propulsion electrique
+										\item Propulsion électrique
 										\item Déplacement horizontal (Vitesse maximale de 1m/s)
 										\item Déplacement vertical (Vitesse maximale de 0.5m/s)
-										\item Direction droite/gauche à 360 degres   \newline \newline
+										\item Direction droite/gauche à 360 degrés   \newline \newline
 								\end{itemize}
 
 						\subsection{Acquisitions}
@@ -206,7 +206,7 @@
 \chapter{Outils de gestion}
 
         \section{Trello}
-					Notre premier outil de gestion est Trello. Il nous permet de gerer notre projet en terme de planification des tâches. Nous utilisons un code couleur pour chaque membre du projet :
+					Notre premier outil de gestion est Trello. Il nous permet de gérer notre projet en terme de planification des tâches. Nous utilisons un code couleur pour chaque membre du projet :
 						\begin{figure}[!h]
 							\begin{center}
 								\includegraphics[scale=0.5]{Illustrations/Couleur.png}
@@ -231,7 +231,7 @@
         \section{Github}
 				Tout notre code, que cela soit pour les documents en latex ou les codes liés au projet, est sur Github :
 				\url{https://github.com/ROV-Nautilus/Nautilus}
-				\newline En voici un apercu :
+				\newline En voici un aperçu :
 					\begin{figure}[!h]
 							\begin{center}
 								\includegraphics[scale=0.4]{Illustrations/Github.png}
@@ -281,7 +281,7 @@
 			\end{figure}
 			\newpage 
 			Les trois ESC utilisés dans un premier temps pour nos moteurs \cite{ref6} sont également équipés d'un circuit éliminateur de batterie, ou BEC, permettant de générer un signal d'alimentation constant de 5V et 3A maximum. Ce dernier permet d'alimenter un autre composant, comme une carte Raspberry Pi dans notre cas, sans avoir à recourir à une seconde batterie. 
-			\newline\newline Cependant, ces ESC ne permettent la rotation du moteur que dans un seul sens. Le seul moyen de modifier le sens de rotation du moteur dans ce cas est d'échanger deux des trois signaux déphasés envoyés au moteur. La direction droite/gauche étant assurée par les deux moteurs de propulsion arrière, cette particularité n'est pas problématique: la rotation plus rapide d'un des deux moteurs arrière par rapport à l'autre permet de diriger le ROV à gauche ou à droite. En revanche, le moteur verical devant assuré la propulsion verticale doit pouvoir tourner dans les deux sens. Un second modèle d'ESC a donc été nécessaire pour permettre au moteur de tourner dans les deux sens. Ce dernier \cite{ref7} possède ainsi un mode "reverse" permettant au moteur de tourner dans les deux sens, ainsi qu'un BEC, et sera donc attribué au moteur vertical du ROV.
+			\newline\newline Cependant, ces ESC ne permettent la rotation du moteur que dans un seul sens. Le seul moyen de modifier le sens de rotation du moteur dans ce cas est d'échanger deux des trois signaux déphasés envoyés au moteur. La direction droite/gauche étant assurée par les deux moteurs de propulsion arrière, cette particularité n'est pas problématique: la rotation plus rapide d'un des deux moteurs arrière par rapport à l'autre permet de diriger le ROV à gauche ou à droite. En revanche, le moteur vertical devant assuré la propulsion verticale doit pouvoir tourner dans les deux sens. Un second modèle d'ESC a donc été nécessaire pour permettre au moteur de tourner dans les deux sens. Ce dernier \cite{ref7} possède ainsi un mode "reverse" permettant au moteur de tourner dans les deux sens, ainsi qu'un BEC, et sera donc attribué au moteur vertical du ROV.
 	
 				\newpage\section{Calibration et commande des ESC}
 				
@@ -292,7 +292,7 @@
 						\caption{Signal PWM}
 				  \end{center}
 		  	\end{figure}
-				\newline\newline La caractéristique la plus importante de ce signal est la largeur de chaque impulsion. C'est cette dernière, généralement entre 0.5 ms et 2.5 ms, qui commande directement l'amplitude du signal envoyé aux moteurs et donc leur vitesse de rotation. Notre carte doit donc être capable de générer un signal créneau à 50 Hz, et de rapport cyclique variable sur commande. Pour générer un tel signal, on utlise le programme \cite{ref8}, disponible sur Github. En effet ce dernier a été conçu pour piloter des servomoteurs à partir des pins GPIO de la Raspberry Pi, et est donc le plus adapté pour générer un tel signal. Pour installer ServoBlaster sur la carte, on rentre les commandes suivantes sur le terminal de Raspbian:
+				\newline\newline La caractéristique la plus importante de ce signal est la largeur de chaque impulsion. C'est cette dernière, généralement entre 0.5 ms et 2.5 ms, qui commande directement l'amplitude du signal envoyé aux moteurs et donc leur vitesse de rotation. Notre carte doit donc être capable de générer un signal créneau à 50 Hz, et de rapport cyclique variable sur commande. Pour générer un tel signal, on utilise le programme \cite{ref8}, disponible sur Github. En effet ce dernier a été conçu pour piloter des servomoteurs à partir des pins GPIO de la Raspberry Pi, et est donc le plus adapté pour générer un tel signal. Pour installer ServoBlaster sur la carte, on rentre les commandes suivantes sur le terminal de Raspbian:
 				\begin{figure}[!h]
 				  \begin{center}
 				  	\includegraphics[scale=1]{Photos/ServoBlaster}
@@ -320,7 +320,7 @@
 			Avec chaque nouvelle valeur de y modifiant la valeur du temps haut du signal sortant. \newline
 			
 			Toutefois, avant leur utilisation, les ESC nécessitent d'être calibrés. En effet, en fonction des radiocommandes ou autre dispositifs de commande utilisés, l'intervalle des valeurs du temps d'état haut du signal de commande envoyé à l'ESC peux différer. L'ESC doit donc être calibré pour que la valeur maximale de temps d'état haut corresponde à la vitesse maximale de rotation du moteur. De même pour une valeur neutre (moteur à l'arrêt), et une valeur minimale correspondant à la vitesse de rotation inverse maximale, disponible uniquement pour l'ESC "Reverse"', et donc le moteur vertical associé. \newline
-			La calibration ne peut pas être effectuée à l'aide des commandes issues de ServoBlaster, l'ESC nécessitant une variation douce du temps d'état haut pour cela. C'est le cas d'un joystick de télécommande, mais pas du programme ne permettant que des variations abrupts de la valeur du temps d'état haut. La calibration des ESC a donc été effectuée à l'aide d'une radiocommande disponible à l'ENSEA \cite{ref9}. Pour celà, on place le joystick de la manette au point neutre, on branche l'ESC à l'émetteur de la radiocommande et on allume dans l'ordre la radiocommande, puis l'ESC. Lorsque ce dernier s'allume, il associe ainsi automatiquement le signal en train d'être reçu au point neutre, donc moteur immobile. On effectue la même opération avec le joystick au maximum pour calibrer la valeur maximale de temps d'état haut et l'associer à la vitesse maximale de rotation du moteur. Une fois cette calibration effectuée, l'ESC en marche ne fonctionnera qu'après avoir reçu le signal correspondant à l'état neutre pendant un certain temps. Celà permet d'éviter entre autres un démarrage intempestif des moteurs. \newline
+			La calibration ne peut pas être effectuée à l'aide des commandes issues de ServoBlaster, l'ESC nécessitant une variation douce du temps d'état haut pour cela. C'est le cas d'un joystick de télécommande, mais pas du programme ne permettant que des variations abrupts de la valeur du temps d'état haut. La calibration des ESC a donc été effectuée à l'aide d'une radiocommande disponible à l'ENSEA \cite{ref9}. Pour cela, on place le joystick de la manette au point neutre, on branche l'ESC à l'émetteur de la radiocommande et on allume dans l'ordre la radiocommande, puis l'ESC. Lorsque ce dernier s'allume, il associe ainsi automatiquement le signal en train d'être reçu au point neutre, donc moteur immobile. On effectue la même opération avec le joystick au maximum pour calibrer la valeur maximale de temps d'état haut et l'associer à la vitesse maximale de rotation du moteur. Une fois cette calibration effectuée, l'ESC en marche ne fonctionnera qu'après avoir reçu le signal correspondant à l'état neutre pendant un certain temps. Cela permet d'éviter entre autres un démarrage intempestif des moteurs. \newline
 			
 			Une fois la calibration effectuée, on observe à l'oscilloscope le signal de commande envoyé par la manette pour déterminer le temps d'état haut correspondant au point neutre, à la vitesse maximale, et à la vitesse maximale en rotation inverse pour le moteur vertical.
 \newline On obtient les résultats suivants:
@@ -347,9 +347,10 @@
 				
 				Lorsque les 3 moteurs sont à leur vitesse maximale, avec la carte fonctionnelle, le courant prélevé sur la batterie est de 2A maximum. L'autonomie théorique dans cette configuration est donc d'environ 90 minutes. Toutefois cette dernière risque de diminuer avec l'utilisation et donc l'alimentation des différents capteurs, ainsi que la résistance de l'eau en condition.
 				
+				
 \chapter{Acquisition et Commandabilité}
 	
-	Dans un second temps, nous devions relier les differents elements de notre ROV sur une carte et ensuite traiter les informations reçu pour pouvoir agir sur les moteurs vus précedement. Nous avons choisie la Raspberry.
+	Dans un second temps, nous devons relier les différents éléments de notre ROV sur une carte et ensuite traiter les informations reçu pour pouvoir agir sur les moteurs vus précédemment. Nous avons choisi la Raspberry.
 	
 	\section{Raspberry}
 		Une partie de la programmation et des calculs est effectué sur une Raspberry PI 3 qui supportait tout les types de connections que l'on voulait, en voici la description.
@@ -361,7 +362,7 @@
 				\end{figure}
 				
 		\subsection{Cameras}
-			Nous avons 2 caméras qui permettent, l'une la direction (vision frontale) et l'autre la cartographie (vision par dessous). Dans un premier temps, detaillons leur connection entre la Raspberry et le traitement effectué par celle-ci.
+			Nous avons 2 caméras qui permettent, l'une la direction (vision frontale) et l'autre la cartographie (vision par dessous). Dans un premier temps, détaillons leur connexion entre la Raspberry et le traitement effectué par celle-ci.
 			
 				\subsubsection{Logitech C170}
 					La première est une webcam Logitech C170, que nous avons démonté pour l'assemblage, relié en USB à la Raspberry. 
@@ -371,24 +372,24 @@
 						\caption{Logitech C170}
 					\end{center}
 				\end{figure}
-				\newline Nous l'avons choisi car le pilote de celle ci est deja installé nativement sur la Raspberry. Nous utilisons motion qui permet d'envoyer le flux video venant de la camera et de le diffuser en ligne sur notre adresse local \cite{ref1}. En voici le résultat sur un navigateur:
+				\newline Nous l'avons choisi car le pilote de celle ci est deja installé nativement sur la Raspberry. Nous utilisons motion qui permet d'envoyer le flux vidéo venant de la camera et de le diffuser en ligne sur notre adresse local \cite{ref1}. En voici le résultat sur un navigateur:
 				\begin{figure}[!h]
 					\begin{center}
 						\includegraphics[scale=0.4]{Photos/Camera1.png}
 						\caption{Photo Caméra Frontale}
 					\end{center}
 				\end{figure}
-				\newline Cette video sera recuperé par l'interface (expliquer dans le chapitre associé) en 640*360.
+				\newline Cette vidéo sera récupérée par l'interface (expliquée dans le chapitre associé) en 640*360.
 				
 				\subsubsection{Caméra V2}
-					La deuxieme est un module caméra pour raspberry \cite{ref2} qui se raccorde directement par une nappe (un bus de type CSI-2). 
+					La deuxième est un module caméra pour Raspberry \cite{ref2} qui se raccorde directement par une nappe (un bus de type CSI-2). 
 					\begin{figure}[!h]
 					\begin{center}
 						\includegraphics[scale=0.1]{Photos/Camera21.jpg}
 						\caption{Module Camera V2 Raspberry}
 					\end{center}
 				\end{figure}
-				\newline Elle se paramètre en python avec les librairies données par le constructeur. De même que l'autre caméra, nous renvoyons un flux video en ligne sur notre adresse local \cite{ref3} mais cette fois-ci sur un autre port.
+				\newline Elle se paramètre en python avec les librairies données par le constructeur. De même que l'autre caméra, nous renvoyons un flux vidéo en ligne sur notre adresse local \cite{ref3} mais cette fois-ci sur un autre port.
 				\newline
 				\newline Le résultat sur un navigateur:
 					\begin{figure}[!h]
@@ -397,20 +398,22 @@
 						\caption{Photo Caméra du dessous}
 					\end{center}
 				\end{figure}
-				\newline La video est diffusée en 1920*1080 et affichée par l'interface.
-				
-		\subsection{Capteur de Pression/Temperature}
-		Le Nautilus est équipé d'un capteur lui permettent d'obtenir la température et la pression. Pour l'instant le ROV renvoit directement ces données mais il est envisageable d'utiliser par exemple la pression pour déterminer avec precision la profondeur du Nautilus. Le module utilisé pour notre ROV est le \href{https://www.sparkfun.com/products/12909}{MS5803-14BA de Sparkfun}.\newline
-			\subsubsection{MS5803-14BA}\newline
+				\newline La vidéo est diffusée en 1920*1080 et affichée par l'interface.
+				\newpage
+		
+				\subsection{Capteur de Pression/Température}
+		Le Nautilus est équipé d'un capteur lui permettent d'obtenir la température et la pression. Pour l'instant le ROV renvoit directement ces données mais il est envisageable d'utiliser par exemple la pression pour déterminer avec precision la profondeur du Nautilus. Le module utilisé pour notre ROV est le MS5803-14BA de Sparkfun \cite{ref11}.
+		\newline
+		
+			\subsubsection{MS5803-14BA}
 			\begin{figure}[!h]
 					\begin{center}
 						\includegraphics[scale=1]{Photos/Capture30.jpg}
 						\caption{Capteur de pression et de température MS5803-14BA}
 					\end{center}
 				\end{figure}
-				\newline
-			Ce capteur de pression et de température dispose d'une membrane ,pour des mesures de pressions de gaz ou de liquides, résistant à une pression de 30 Bar. De plus, il possède aussi des interfaces SPI et I2C. Nous utiliserons l'interface I2C car celle-ci utilise moin de connections et la fréquence de communication est basse. De plus bien que les deux modes de communication permettent de placer plusieurs modules sur un même câble, le SPI semble être limité sur la Raspberry. Dans nos conditions de connexion l'adresse esclave est 0x1E. Pour utiliser ce capteur on utilise directement un script python qui sera lancé à chaque fois que l'on veut obtenir la pression. Le script est disponible sur le site suivant \url{https://github.com/ControlEverythingCommunity/MS5803-14BA}. \newline
-			Comme ce capteur doit se trouver dans l'eau, nous l'avons recouvert, à l'execption de la membrane de résine Epoxy. \newline
+			Ce capteur de pression et de température dispose d'une membrane ,pour des mesures de pressions de gaz ou de liquides, résistant à une pression de 30 Bar. De plus, il possède aussi des interfaces SPI et I2C. Nous utiliserons l'interface I2C car celle-ci utilise moins de connections et la fréquence de communication est basse. De plus bien que les deux modes de communication permettent de placer plusieurs modules sur un même câble, le SPI semble être limité sur la Raspberry. Dans nos conditions de connexion l'adresse esclave est 0x1E. Pour utiliser ce capteur on utilise directement un script python qui sera lancé à chaque fois que l'on veut obtenir la pression. Le script est disponible sur ce site \cite{ref12}.
+			Comme ce capteur doit se trouver dans l'eau, nous l'avons recouvert, à l’exception de la membrane de résine Epoxy. \newline
 			
 				\begin{figure}[!h]
 					\begin{center}
@@ -418,24 +421,21 @@
 						\caption{Capteur MS5803-14BA avant le coulage dans la résine}
 					\end{center}
 				\end{figure}
-				\newline
-			
 			\newpage
 					
 		\subsection{Central Inertielle}
 		
-		Le Nautilus dispose aussi d'une centrale inertielle. Avec celle-ci, le Rov peut déterminer son assiette ainsi que sa vitesse. Il est bien-sûr possible d'extrapoler ces données pour obtenir la position et suivre le déplacement du drone. Le module utilisé pour notre ROV est le \href{https://www.pololu.com/product/1268}{MinIMU-9 v2 de Pololu}.\newline
-			\subsubsection{MinIMU-9 v2}\newline
+		Le Nautilus dispose aussi d'une centrale inertielle. Avec celle-ci, le ROV peut déterminer son assiette ainsi que sa vitesse. Il est bien-sûr possible d'extrapoler ces données pour obtenir la position et suivre le déplacement du drone. Le module utilisé pour notre ROV est le MinIMU-9 v2 de Pololu \cite{ref13}.
+		
+			\subsubsection{MinIMU-9 v2}
 			\begin{figure}[!h]
 					\begin{center}
 						\includegraphics[scale=0.5]{Photos/Capture31.jpg}
 						\caption{Matrice inertielle MinIMU-9 v2}
 					\end{center}
 				\end{figure}
-				\newline
-				Cette matrice inertielle se compose d'un gyroscope, d'un acceleromètre et d'un compas. De même ce module dispose des interfaces I2C et SPI mais nous utiliserons une fois encore le I2C. La complexité de la mise en place de cette matrice nous a poussé à aussi utiliser un code trouvé sur internet. Le script est disponible sur le site suivant \url{https://github.com/DavidEGrayson/minimu9-ahrs}. Ce code est accompagné d'un tutoriel permettant de mieux le comprendre et le mettre en place. Le code reconnait la matrice inertielle utilisée et donc s'adapte en connaissance, pas besoin de connaître l'adresse esclave. Nous avons quand même réalisé quelques modifications pour obtenir plus facilement les données en continue.En effet nous avons dans un premier temps modifier le fichier "`minimu9-ahrs.cpp"'. Celui-ci ne faisait qu'afficher les valeurs d'angles d'euler dans le terminal. De plus la vitesse de retour des données était trop rapide, ces même donnée n'étaient pas stockées, et le système ne retournait pas uniquement les angles d'eulers. C'est pour cela que nous avons décidé de stocker les valeurs d'angles d'euler dans un fichier texte qui se réinitialise toutes les 100 valeurs.\newline
-				On remplace alors la ligne d'affichage 63-64 :
-				\newline 
+				Cette matrice inertielle se compose d'un gyroscope, d'un accéléromètre et d'un compas. De même ce module dispose des interfaces I2C et SPI mais nous utiliserons une fois encore le I2C. La complexité de la mise en place de cette matrice nous a poussé à aussi utiliser un code trouvé sur internet. Le script est disponible sur ce site \cite{ref14}. Ce code est accompagné d'un tutoriel permettant de mieux le comprendre et le mettre en place. Le code reconnait la matrice inertielle utilisée et donc s'adapte en connaissance, pas besoin de connaître l'adresse esclave. Nous avons quand même réalisé quelques modifications pour obtenir plus facilement les données en continue.En effet nous avons dans un premier temps modifier le fichier "`minimu9-ahrs.cpp"'. Celui-ci ne faisait qu'afficher les valeurs d'angles d’Euler dans le terminal. De plus la vitesse de retour des données était trop rapide, ces même donnée n'étaient pas stockées, et le système ne retournait pas uniquement les angles d’Euler. C'est pour cela que nous avons décidé de stocker les valeurs d'angles d’Euler dans un fichier texte qui se réinitialise toutes les 100 valeurs.
+				\newline On remplace alors la ligne d'affichage 63-64 :
 				\begin{lstlisting}[language=c++]
 void output_euler(quaternion & rotation)
 {
@@ -443,8 +443,7 @@ void output_euler(quaternion & rotation)
                         * (180 / M_PI));
 }
 				\end{lstlisting}
-				\newline
-				Par le code suivant:  \newline
+				Par le code suivant:
 				\begin{lstlisting}[language=c++]
 
 void output_euler(quaternion & rotation)
@@ -488,29 +487,30 @@ void output_euler(quaternion & rotation)
 }}
 				\end{lstlisting}
 				
-		\newline 
 		On écrit une ligne 'std::cout << c;' pour voir si le compteur de valeurs présent dans le fichier text s'incrémente bien.  
 		\newpage
+				
+		
 	\section{PC}
-		Maintenant que nous avons relié tous nos moteurs, caméras et capteurs à la raspberry ainsi qu'un premier traitement des informations, nous allons voir comment nous traitons cela sur le PC.
+		Maintenant que nous avons relié tous nos moteurs, caméras et capteurs à la Raspberry ainsi qu'un premier traitement des informations, nous allons voir comment nous traitons cela sur le PC.
 		
 		\subsection{Interface}
-			En premier lieu parlons de l'interface, celle ci à pris differentes formes au cours du temps, ici nous presenterons que la derniere version. Toute la partie PC a été programmé en JAVA \cite{ref4}, l'interface utilise la bibliothèque graphique Swing qui nous permet de gerer l'affichage facilement que ce soit pour la video ou pour les interactions.
-			Lorsque l'application est lancé, nous arrivons donc dans un premier menu:
+			En premier lieu parlons de l'interface, celle ci à pris différentes formes au cours du temps, ici nous présenterons que la dernière version. Toute la partie PC a été programmé en JAVA \cite{ref4}, l'interface utilise la bibliothèque graphique Swing qui nous permet de gérer l'affichage facilement que ce soit pour la vidéo ou pour les interactions.
+			Lorsque l'application est lancée, nous arrivons donc dans un premier menu:
 			\begin{figure}[!h]
 					\begin{center}
 						\includegraphics[scale=0.35]{Photos/Interface1.png}
 						\caption{Premier Menu Interface}
 					\end{center}
 				\end{figure}
-				\newline Le bouton de Droite mène à une partie que nous developerons dans la partie~\ref{subsec:Cartographie} liée à la Cartographie.
-				\newline \newline Nous avons donc crée une fenetre JFrame:
+				\newline Le bouton de Droite mène à une partie que nous développerons dans la partie~\ref{subsec:Cartographie} liée à la Cartographie.
+				\newline \newline Nous avons donc crée une fenêtre JFrame:
 				\begin{lstlisting}[language=java]
 Interface inter = new Interface("Nautilus",0,0,1920,1080,true);
 				\end{lstlisting}
-				Elle est parametrée de façon à prendre tous l'écran, ici 1920*1080, les objets se trouvant dans cette fenetre sont geré pour se placer en fonction de la taille de l'ecran.
-				\newline Le manager s'appelle GridBagLayout, il necessite de paramétrer chaque objet.
-				Ce manager crée une grille qui se construit en fonction des parametres de chaque objet qu'elle contient.
+				Elle est paramétrée de façon à prendre tous l'écran, ici 1920*1080, les objets se trouvant dans cette fenêtre sont gérés pour se placer en fonction de la taille de l’écran.
+				\newline Le manager s'appelle GridBagLayout, il nécessite de paramétrer chaque objet.
+				Ce manager crée une grille qui se construit en fonction des paramètres de chaque objet qu'il contient.
 				\newpage Prenons exemple du premier bouton FPV:
 				\begin{lstlisting}[language=java]
 axPanel1.setMinimumSize(new Dimension(400,210));
@@ -526,25 +526,26 @@ c.gridwidth = 1;
 c.gridheight = 1;
 c.insets = new Insets(0, 0, 0, 200);
 				\end{lstlisting}
-				Les 3 premières lignes correspondent à la taille du bouton, que nous avons choisis ici de garder fixe.
-				\newline La ligne 4 n'est pas utile dans ce cas mais permet de correctement redimensionner l'objet lorsque la fenetre change de taille.
+				Les 3 premières lignes correspondent à la taille du bouton, que nous avons choisi ici de garder fixe.
+				\newline La ligne 4 n'est pas utile dans ce cas mais permet de correctement redimensionner l'objet lorsque la fenêtre change de taille.
 				\newline La ligne 5 fixe l'objet au centre de la partie qui lui a été alloué.
-				\newline La ligne 6 et 7 donne la ligne et la colonne où doit se situé l'objet.
-				\newline La ligne 8 et 9 définissent des poids en x et y qui sont utilisé lors d'un redimensionement, cela permet de donner plus de poids à un objet plutot qu'à un autre. Nous ne l'utilisons pas d'où la valeur 0.
-				\newline La ligne 10 et 11 permettent de definir combien de ligne et combien de colonne va prendre notre objet.
-				\newline La ligne 12 insere une marge dans l'ordre suivant (margeSupérieure, margeGauche, margeInférieur, margeDroite).
-				\newline Chaque objet de notre interface est defini de cette façon.
-				\newline Ensuite il y a le bouton de Gauche qui lance le systeme complet. Un nouveau menu remplace le précédent:
+				\newline La ligne 6 et 7 donne la ligne et la colonne où doit se situer l'objet.
+				\newline La ligne 8 et 9 définissent des poids en x et y qui sont utilisé lors d'un redimensionnement, cela permet de donner plus de poids à un objet plutôt qu'à un autre. Nous ne l'utilisons pas d'où la valeur 0.
+				\newline La ligne 10 et 11 permettent de définir combien de ligne et combien de colonne va prendre notre objet.
+				\newline La ligne 12 insère une marge dans l'ordre suivant (margeSupérieure, margeGauche, margeInférieur, margeDroite).
+				\newline Chaque objet de notre interface est défini de cette façon.
+				\newline Ensuite il y a le bouton de Gauche qui lance le système complet. Un nouveau menu remplace le précédent:
 				\begin{figure}[!h]
 					\begin{center}
-						\includegraphics[scale=0.3]{Photos/Interface1.png}
-						\caption{Photo Deuxieme menu interface}
+						\includegraphics[scale=0.15]{Photos/Interface2.png}
+						\caption{Photo Deuxième menu interface}
 					\end{center}
 				\end{figure}
-				\newline Nous avons maintenant la FPV en haut à gauche, le bouton à droite est le même précédement, les informations des capteurs sont affichées à droite, les commandes envoyées aux moteurs sont en bas et pour finir un affichage 3D (\ref{subsec:Affichage 3D}) avec JAVA3D en bas à droite. Toutes les informations etant actualisées en temps reel avec la Raspberry. Nous allons voir comment.
+				\newline Nous avons maintenant la FPV en haut à gauche, le bouton à droite est le même précédemment, les informations des capteurs sont affichées à droite, les commandes envoyées aux moteurs sont en bas et pour finir un affichage 3D (\ref{subsec:Affichage 3D}) avec JAVA3D en bas à droite. Toutes les informations étant actualisées en temps réel avec la Raspberry. Nous allons voir comment.
+				
 		\subsection{Tunnel SSH}
-			Nous avons choisi d'échanger les données avec la Raspberry par SSH, pour cela on utilise la bibliothèque Jcraft, plus précisement jsch. Au lancement de l'application, il y a 5 tunnels qui se créent (1 pour chaque caméras, 1 pour chaque capteurs et 1 pour les moteurs), ils sont crées au tout debut pour ensuite permettre de transmettre directement les données sans refaire la procédure de connection, le systeme gagne en rapidité. 
-			\newline Détaillons maintenant la procédure qui permet de crée ses tunnels. Comme nous sommes en JAVA, une seule classe permet de crée un tunnel et cette classe est ensuite instancié autant de fois que l'on veut.
+			Nous avons choisi d'échanger les données avec la Raspberry par SSH, pour cela on utilise la bibliothèque Jcraft, plus précisément jsch. Au lancement de l'application, il y a 5 tunnels qui se créent (1 pour chaque caméras, 1 pour chaque capteurs et 1 pour les moteurs), ils sont crées au tout début pour ensuite permettre de transmettre directement les données sans refaire la procédure de connexion, le système gagne en rapidité. 
+			\newline Détaillons maintenant la procédure qui permet de crée ses tunnels. Comme nous sommes en JAVA, une seule classe permet de crée un tunnel et cette classe est ensuite instanciée autant de fois que l'on veut.
 			\newline Voici le code (Disponible dans /SSH/Exec.java) de création d'un tunnel :
 			
 			\begin{lstlisting}[language=java]
@@ -579,15 +580,15 @@ catch(Exception e){
 	System.out.println(e);
 }
 			\end{lstlisting}
-			De la ligne 1 à 5, le tunnel est crée et les informations tel que le nom d'utilisateur, le mot de passe, l'adresse IP et le port sont ajouté aux couches correspondante du tunnel, puis ligne 6 la session est lancé.
-		\newline A la ligne 7, nous ouvrons un canal d'execution de commande et ligne 8 nous donnons à ce canal la commande que nous voulons envoyée.
-		\newline Les lignes 9,10 et 11 definissent où vont les données entrées, sorties et sorties erreur. Dans notre cas l'entrée ne nous interesse pas car cela passe par une commande, la sortie normal sera stockée et la sortie erreur renvoyé sur l'afficheur d'erreur du systeme (la console). La ligne 12 lance la connection du canal, c'est ici que la commande est envoyée.
-		\newline De la ligne 13 à 20 nous permet de récuperer les valeurs retournées par la Raspberry et de les stockées pour ensuite pouvoir les traiter.
-		\newline Puis les dernieres lignes, permettent de gerer le cas où le canal est coupé et nous renvoyer d'où vient l'erreur (par exceptions).
-		\newline \newline Ces tunnels nous permettent d'envoyer des commandes à la Raspberry et de pouvoir récuperer le retour de cette commande. C'est par ce moyen que nous récuperons presque tous. L'exception étant pour la video IP. Abordons ce sujet.
-		\subsection{Videos}
-		Nous avons donc 2 flux vidéos à récuperer depuis une adresse IP. Tout d'abord nous devons introduire quelque chse que nous utilisons partout dans notre code: le multi-Thread. Cela permet de lancer plusieurs actions en même temps, c'est ce qu'il se passe avec la récupération des flux videos. Chaque image des flux videos est récuperé puis traité puis affiché en temps reel sans interrompre le reste du programme, tout comme l'envoie de chaque commande.
-		\newline Pour les flux videos, c'est une connection http qui est effectué, pour cela la méthode connect est appelée:
+			De la ligne 1 à 5, le tunnel est crée et les informations tel que le nom d'utilisateur, le mot de passe, l'adresse IP et le port sont ajouté aux couches correspondante du tunnel, puis ligne 6 la session est lancée.
+		\newline A la ligne 7, nous ouvrons un canal d’exécution de commande et ligne 8 nous donnons à ce canal la commande que nous voulons envoyée.
+		\newline Les lignes 9,10 et 11 définissent où vont les données entrées, sorties et sorties erreur. Dans notre cas l'entrée ne nous intéresse pas car cela passe par une commande, la sortie normal sera stockée et la sortie erreur renvoyée sur l'afficheur d'erreur du système (la console). La ligne 12 lance la connexion du canal, c'est ici que la commande est envoyée.
+		\newline De la ligne 13 à 20 nous permet de récupérer les valeurs retournées par la Raspberry et de les stocker pour ensuite pouvoir les traiter.
+		\newline Puis les dernières lignes, permettent de gérer le cas où le canal est coupé et nous renvoyer d'où vient l'erreur (par exceptions).
+		\newline \newline Ces tunnels nous permettent d'envoyer des commandes à la Raspberry et de pouvoir récupérer le retour de cette commande. C'est par ce moyen que nous récupérons presque tous. L'exception étant pour la vidéo IP. Abordons ce sujet.
+		\subsection{Vidéos}
+		Nous avons donc 2 flux vidéos à récupérer depuis une adresse IP. Tout d'abord nous devons introduire quelque chose que nous utilisons partout dans notre code: le multi-Thread. Cela permet de lancer plusieurs actions en même temps, c'est ce qu'il se passe avec la récupération des flux vidéos. Chaque image des flux vidéos est récupérée, traitée puis affichée en temps réel sans interrompre le reste du programme, tout comme l'envoie de chaque commande.
+		\newline Pour les flux vidéos, c'est une connexion http qui est effectuée, pour cela la méthode connect est appelée:
 		\begin{lstlisting}[language=java]
 public void connect()
 	{
@@ -602,7 +603,7 @@ public void connect()
 			if (!initCompleted) initDisplay();
 		}
 		catch(IOException e)
-		{ //Relance la connection si pas de connection en attendant 60 sec
+		{ //Relance la connexion si pas de connexion en attendant 60 sec
 			try
 			{
 				huc.disconnect();
@@ -616,10 +617,10 @@ public void connect()
 		catch(Exception e){;}
 	}
 			\end{lstlisting}
-			De la ligne 5 à 10, la procédure de connection http est effectué.
-			\newline Après la ligne 12, on gère les execeptions liées à la connection.
-			\newline A la ligne 10, les données récuperées sont stockées dans une variable globale à Caméra.
-			\newline Les informations vont être ensuite traité par initDisplay qui est appelé en ligne 11.
+			De la ligne 5 à 10, la procédure de connexion http est effectuée.
+			\newline Après la ligne 12, on gère les exceptions liées à la connexion.
+			\newline A la ligne 10, les données récupérées sont stockées dans une variable globale à Caméra.
+			\newline Les informations vont être ensuite traité par initDisplay qui est appelée en ligne 11.
 			\newline Observons cette méthode :
 		\begin{lstlisting}[language=java]
 public void initDisplay()
@@ -636,15 +637,15 @@ public void initDisplay()
 		initCompleted = true;
 	}
 		\end{lstlisting}
-		Le premier If/Else permet de distinguer le cas où le flux serait videos ou juste photo. Dans notre cas c'est un flux videos composé d'image JPG.
-		\newline Le reste de la méthode permet de preparé l'affichage des images.
-		\newline Nous somme toujours dans la procedure de connection, la lecture de la premiere image récuperé est fait. Pour cela la méthode readMJPGStream qui appel readJPG permet de décoder l'image et de la stocké dans la variable image. Voici les 2 méthodes :
+		Le premier If/Else permet de distinguer le cas où le flux serait une vidéo ou juste une photo. Dans notre cas c'est un flux vidéo composé d'image JPG.
+		\newline Le reste de la méthode permet de préparer l'affichage des images.
+		\newline Nous somme toujours dans la procédure de connexion, la lecture de la première image récupérée est faite. Pour cela la méthode readMJPGStream qui appel readJPG permet de décoder l'image et de la stocker dans la variable image. Voici les 2 méthodes :
 		\begin{lstlisting}[language=java]
 public void readMJPGStream()
 	{
-		readLine(4,dis); //enleve les 3 premieres lignes
+		readLine(4,dis); //enlève les 3 premières lignes
 		readJPG();
-		readLine(1,dis); //enleve les 2 dernieres lignes
+		readLine(1,dis); //enlève les 2 dernières lignes
 	}
 	
 public void readJPG()
@@ -657,8 +658,8 @@ public void readJPG()
 		}
 	}
 		\end{lstlisting}
-		La procédure de decodage d'une image JPEG est faite par une bibliothèque externe.
-		\newpage Après cette procédure de connection, les 2 méthodes ci dessus sont appelé en boucle et l'affichage mis à jour:
+		La procédure de décodage d'une image JPEG est faite par une bibliothèque externe.
+		\newpage Après cette procédure de connexion, les 2 méthodes ci dessus sont appelées en boucle et l'affichage mis à jour:
 		\begin{lstlisting}[language=java]
 public void readStream()
 	{
@@ -672,7 +673,7 @@ public void readStream()
     	}catch(Exception e){;}
     }
 		\end{lstlisting}
-		L'affichage étant geré par la bibliothèque Swing, c'est la méthode paint() qui affiche l'image et de plus trace une ligne qui en fonction des angles d'euler renvoyé par la centrale intertiel :
+		L'affichage étant gérée par la bibliothèque Swing, c'est la méthode paint() qui affiche l'image et de plus trace une ligne qui en fonction des angles d’Euler renvoyés par la centrale inertielle :
 		\begin{lstlisting}[language=java]
 public void paint(Graphics g)
 	{
@@ -688,13 +689,13 @@ public void paint(Graphics g)
     	g2.draw(new Line2D.Double(S,(a/2)-T,b-S,(a/2)+T));
 	}
 		\end{lstlisting}
-	L'image est redimensionnée pour le bien de l'affichage et la ligne est tracé avec 2 points calculé par rapport à une rotation avec une origine au centre de l'image.
-	\newline \newline Nos 2 flux videos sont donc récuperés et peuvent donc être appelés par un JPanel n'importe où.
+	L'image est redimensionnée pour le bien de l'affichage et la ligne est tracé avec 2 points calculés par rapport à une rotation avec une origine au centre de l'image.
+	\newline \newline Nos 2 flux vidéos sont donc récupérés et peuvent donc être appelés par un JPanel n'importe où.
 \newpage
 		\subsection{Capteurs et Moteurs}
 		\subsubsection{Capteurs}
-		Nous avons deja precedement préparé la raspberry pour qu'elle renvoit les informations que l'on veut en fonction d'une commande. Il nous suffit maintenant d'envoyer en temps reel et en boucle infini les commandes (capteur de pression et centrale inertielle) grâce au systeme de multi-thread.
-		\newline Expliquons la méthode pour le capteur de pression. Tout d'abord il faut crée le thread lié à la classe qui sera executer en boucle, puis on lance le thread avec la méthode, ce qui donne :
+		Nous avons déjà précédemment préparé la Raspberry pour qu'elle renvoit les informations que l'on veut en fonction d'une commande. Il nous suffit maintenant d'envoyer en temps réel et en boucle infini les commandes (capteur de pression et centrale inertielle) grâce au système de multi-thread.
+		\newline Expliquons la méthode pour le capteur de pression. Tout d'abord il faut crée le thread lié à la classe qui sera exécuté en boucle, puis on lance le thread avec la méthode, ce qui donne :
 		\begin{lstlisting}[language=java]
 Pression ex4 = new Pression();
 Thread a4 = new Thread(ex4);
@@ -718,11 +719,11 @@ Interface.temperatureC.repaint();
 Interface.temperatureF.setText(" TemperatureF = "+Interface.tempF);
 Interface.temperatureF.repaint();
 		\end{lstlisting}
-		Nous commençons en ligne 1 par envoyer la commande grâce au tunnel précédement crée pour le capteur de Pression puis nous récuperons les valeurs sous forme de chaînes de caracteres.
-		\newline Enfin nous mettons à jour les valeurs globales et l'affichages.
+		Nous commençons en ligne 1 par envoyer la commande grâce au tunnel précédemment crée pour le capteur de Pression puis nous récupérons les valeurs sous forme de chaînes de caractères.
+		\newline Enfin nous mettons à jour les valeurs globales et l’affichage.
 		
 		\subsubsection{Moteurs}
-		Pour les moteurs, on envoi juste une commande à la Raspberry :
+		Pour les moteurs, on envoie juste une commande à la Raspberry :
 		\begin{lstlisting}[language=java]
 Interface.exMoteur.setCommande("echo 0="+m1+" > /dev/servoblaster & echo 1="+m2+" > /dev/servoblaster & echo 2="+m3+" > /dev/servoblaster");
 Thread a1 = new Thread(Interface.exMoteur);
@@ -739,23 +740,23 @@ Interface.moteur3.setText(""+Interface.m3+"    ");
 Interface.moteur3.repaint();
 		\end{lstlisting}
 		On oublie pas de mettre à jour au passage l'affichage.
-		\newline Ce code est donc execter à chaque fois que l'on appuie sur une des touches de directions.
+		\newline Ce code est donc exécuté à chaque fois que l'on appuie sur une des touches de directions.
 		\newline Nous avons défini les touches suivantes:
 		\newline Monter/Descente : Z/S
-		\newline Gauche/Droite : Flêche Gauche/Droite
+		\newline Gauche/Droite : Flèche Gauche/Droite
 		\newline Monter/Descente : Z/S
-		\newline Arrete d'urgence : Barre Espace
+		\newline Arrête d'urgence : Barre Espace
 		
 		\subsection{Affichage 3D}
 			\label{subsec:Affichage 3D}
-			Nous utilisons JAVA3D pour afficher le modele qui est extrait de Solidworks.
-			\newline Tout d'abord nous devons crée un canvas 3D qui contiendra notre objet 3D et nous l'inserons au mileux d'un JPanel :
+			Nous utilisons JAVA3D pour afficher le modèle qui est extrait de Solidworks.
+			\newline Tout d'abord nous devons crée un canvas 3D qui contiendra notre objet 3D et nous l’insérons au milieux d'un JPanel :
 		\begin{lstlisting}[language=java]
 Canvas3D canvas3D = new Canvas3D(SimpleUniverse.getPreferredConfiguration());
 this.add(canvas3D, BorderLayout.CENTER);
 		\end{lstlisting}
 		Puis nous créons un simple univers qui contient notre canvas3D.
-		\newline Nous devons maintenant positionner notre point d'observation pour avoir une vu correcte:
+		\newline Nous devons maintenant positionner notre point d'observation pour avoir une vue correcte:
 		\begin{lstlisting}[language=java]
 OrbitBehavior orbit = new OrbitBehavior(canvas3D, OrbitBehavior.REVERSE_ROTATE);
 orbit.setRotXFactor(0);//or any other value
@@ -772,16 +773,16 @@ t3d.lookAt(new Point3d(-1.2,1.2,1.2), new Point3d(0,0,0), new Vector3d(0,1,0));
 t3d.invert();
 steerTG.setTransform(t3d);
 		\end{lstlisting}
-		De la ligne 1 à 6, nous definissions un mouvement orbital de la caméra puis pour le moment nous fixons les rotations et les translations (on pourra les debloquer si on le veut)
-		\newline Les lignes 9 à 14 permettent de definir la position initiale de notre point d'observation.
-		\newline Nous devons ensuite crée ce qu'on appele une scene, c'est dans cette scene que tous nos objets 3d se trouveront:
+		De la ligne 1 à 6, nous définissions un mouvement orbital de la caméra puis pour le moment nous fixons les rotations et les translations (on pourra les débloquer si on le veut)
+		\newline Les lignes 9 à 14 permettent de définir la position initiale de notre point d'observation.
+		\newline Nous devons ensuite crée ce qu'on appelle une scène, c'est dans cette scène que tous nos objets 3d se trouveront:
 		\begin{lstlisting}[language=java]
 BranchGroup scene = createSceneGraph(simpleU);
 scene.compile();
 simpleU.addBranchGraph(scene);
 		\end{lstlisting}
-		Les 2 ligns suivant compile la scene et rattache notre scene à l'univers.
-		\newline \newline Maintenant nous devons crée cette scene 3d qui contiendra notre objet mais aussi la lumière, notre eau fictive et les mouvements possible.
+		Les 2 ligns suivant compile la scène et rattache notre scène à l'univers.
+		\newline \newline Maintenant nous devons crée cette scène 3d qui contiendra notre objet mais aussi la lumière, notre eau fictive et les mouvements possible.
 		\newline Tous ce passe dans la méthode createSceneGraph.
 		\begin{lstlisting}[language=java]
 public BranchGroup createSceneGraph(SimpleUniverse simpleU) 
@@ -799,9 +800,9 @@ public BranchGroup createSceneGraph(SimpleUniverse simpleU)
     parent.addChild(directionalLight);
 		\end{lstlisting}
 		La ligne 3 crée un objet parent qui contiendra tous nos objets.
-		\newline De la ligne à 4 à 7, on crée une lumiere ambiante de couleur blanche
-		\newline Puis de la ligne 9 à la ligne 13, une lumiere directionnel pour augmenter la luminosité dans la même direction que notre point d'observation.
-		\newline Nous ne detaillerons pas ici le code de la création de l'eau, le principe étant qu'on a crée 4 plans positionnés correctement autour du ROV et on lui applique une textures bleu (que l'on peut changer facilement). Et on oublie pas de l'ajouter à l'objet parent.
+		\newline De la ligne à 4 à 7, on crée une lumière ambiante de couleur blanche
+		\newline Puis de la ligne 9 à la ligne 13, une lumière directionnel pour augmenter la luminosité dans la même direction que notre point d'observation.
+		\newline Nous ne détaillerons pas ici le code de la création de l'eau, le principe étant qu'on a crée 4 plans positionnés correctement autour du ROV et on lui applique une texture bleu (que l'on peut changer facilement). Et on oublie pas de l'ajouter à l'objet parent.
 		\newline Maintenant autorisons les mouvements de la souris pour notre objet :
 		\begin{lstlisting}[language=java]
 TransformGroup mouseTransform = new TransformGroup();
@@ -809,29 +810,29 @@ mouseTransform.setCapability(TransformGroup.ALLOW_TRANSFORM_READ);
 mouseTransform.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
 mouseTransform.addChild(loadWavefrontObject());
 		\end{lstlisting}
-		Et en ligne 4 nous ajoutons notre ROV. La méthode loadWavefrontObject() permet de recuperer un objet 3D à partir d'un fichier .obj.
-		\newline Pour la fin de cette méthode, les commentaires decrivent les opérations effectués
+		Et en ligne 4 nous ajoutons notre ROV. La méthode loadWavefrontObject() permet de récupérer un objet 3D à partir d'un fichier .obj.
+		\newline Pour la fin de cette méthode, les commentaires décrivent les opérations effectuées
 		\begin{lstlisting}[language=java]
-// Creation de l'homethetie (homothetie)
+// Création de l'homethetie (homothetie)
 Transform3D homothetie = new Transform3D();
 homothetie.setScale(Interface.scale); 
     
-// Creation de la transformation (translation)
+// Création de la transformation (translation)
  Transform3D translation = new Transform3D();
 translation.setTranslation(new Vector3f(0f, 0f, 0f));
 translation.mul(homothetie);
     
-// Creation de la rotation X(rotation)
+// Création de la rotation X(rotation)
 Transform3D rotationX = new Transform3D();
 rotationX.rotX( Interface.rotX * Math.PI/180f);
 rotationX.mul(translation);
     
-// Creation de la rotation Y(rotation)
+// Création de la rotation Y(rotation)
 Transform3D rotationY = new Transform3D();
 rotationY.rotY( Interface.rotY * Math.PI/180f);
 rotationY.mul(rotationX);
     
-// Creation de la rotation Z(rotation)
+// Création de la rotation Z(rotation)
 Transform3D rotationZ = new Transform3D();
 rotationZ.rotZ( Interface.rotZ * Math.PI/180f);
 rotationZ.mul(rotationY);
@@ -842,27 +843,26 @@ this.rotationGroup = new TransformGroup(rotationZ);
 rotationGroup.setCapability(TransformGroup.ALLOW_TRANSFORM_READ);
 rotationGroup.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
     
-// Ajout au graphe de la scene
+// Ajout au graphe de la scène
 rotationGroup.addChild(mouseTransform);
 parent.addChild(rotationGroup);
 
 return parent;
 		\end{lstlisting}
-		Notre scene renvoie donc tous les objets qu'on a crée précédement.
-		\newline \newline Maintenant nous voulons que notre ROV 3D soit capable de se mouvoir en fonction des angles d'euler renvoyer et stocker dans notre interface.
+		Notre scène renvoie donc tous les objets qu'on a crée précédemment.
+		\newline \newline Maintenant nous voulons que notre ROV 3D soit capable de se mouvoir en fonction des angles d’Euler renvoyés et stockés dans notre interface.
 		\newline Pour cela on a crée une méthode mouvement:
 		\begin{lstlisting}[language=java]
 public void mouvement(double rotX, double rotY, double rotZ, Vector3d trans, double scale)
 		\end{lstlisting}
-		Elle prend donc en argument, les 3 rotations, un vecteur des translations (sur tous les axes) et un paramêtre multiplicateur d'echelle.
-		\newline Cette méthode modifie la matrice 4*4 contenant la matrice de rotation, translation et de mise à l'echelle.
+		Elle prend donc en argument, les 3 rotations, un vecteur des translations (sur tous les axes) et un paramètre multiplicateur d’échelle.
+		\newline Cette méthode modifie la matrice 4*4 contenant la matrice de rotation, translation et de mise à l’échelle.
 		\newline Puis effectue les transformations de cette matrice.
 		
 		\subsection{Cartographie}
 			\label{subsec:Cartographie}
-<<<<<<< Updated upstream
-			Cette partie n'a pas été beaucoup developpé mais un premier systeme a été crée mais pas intégré dans la dernière version de l'interface.
-			\newline Grâce à l'appuie sur une touche, une photo de la camera du dessous est enregistrer dans un dossier. Voici le code qui permet d'enregistrer notre photo en jpg :
+			Cette partie n'a pas été beaucoup développé mais un premier système a été crée mais pas intégré dans la dernière version de l'interface.
+			\newline Grâce à l'appuie sur une touche, une photo de la camera du dessous est enregistrée dans un dossier. Voici le code qui permet d'enregistrer notre photo en jpg :
 			\begin{lstlisting}[language=java]
 BufferedImage img = new BufferedImage(axPanel.getWidth(), axPanel.getHeight(), BufferedImage.TYPE_INT_RGB);
 axPanel.print(img.getGraphics());
@@ -873,15 +873,16 @@ catch (IOException e5) {
 	e5.printStackTrace();
 }
 		\end{lstlisting}
-			Le systeme n'est pas fini mais dans l'absolu chaque photo serai enregistrer avec un nom different avec les données de localisation dans les meta-données de la photo.
-			\newline Ensuite il y a un autre bouton (non affiché sur la derniere interface) qui ouvre une autre fenetre avec toute nos photos positionnées, en fonction des coordonnées GPS, sur une carte.
-			\newline On peut cliquer sur chaque photo pour les agrandir dans une nouvelle fenetre.
+			Le système n'est pas fini mais dans l'absolu chaque photo serai enregistrée avec un nom différent avec les données de localisation dans les méta-données de la photo.
+			\newline Ensuite il y a un autre bouton (non affiché sur la dernière interface) qui ouvre une autre fenêtre avec toutes nos photos positionnées, en fonction des coordonnées GPS, sur une carte.
+			\newline On peut cliquer sur chaque photo pour les agrandir dans une nouvelle fenêtre.
 			\newline Tous les codes se trouvent dans le sous-dossier /Carto.
+			
 			\newpage	
 			
 \chapter{Structure}
 
-	L'objectif suivant, et non des moindres dans la contruction d'un véhicule sous-marin, était l'établissement de la structure. Comme on peut le voir dans le cahier des charges, la structure a été pensée dans 6 optiques différentes : étanchéité, transportabilité, durabilité, aqua-dynamisme, esthétisme et personnalisation. 
+	L'objectif suivant, et non des moindres dans la construction d'un véhicule sous-marin, était l'établissement de la structure. Comme on peut le voir dans le cahier des charges, la structure a été pensée dans 6 optiques différentes : étanchéité, transportabilité, durabilité, aqua-dynamisme, esthétisme et personnalisation. 
 				
 				\section{Design}
 				
@@ -901,7 +902,7 @@ catch (IOException e5) {
 								\includegraphics[width=\textwidth]{Photos/openrov-trident-rov-2.jpg}
 								\caption{Trident d'Open ROV}
 							\end{subfigure}
-					\end{figure}\newline\newpage
+					\end{figure}\newpage
 					
 					Avec le design de ces drones en tête, on a alors réalisé le notre qui se veut plus épuré dans la même lignée que le Trident. En effet cet aspect se destine mieux à un marché dit 'grand publique'. Très vite, après les premiers croquis, nous sommes passé à une conception sous SolidWorks du R.O.V.. Voici donc son aspect final sous Solidworks ainsi qu'un rendu 3D : 
 					
@@ -913,8 +914,8 @@ catch (IOException e5) {
 							\begin{subfigure}[b]{0.5\textwidth}
 								\includegraphics[width=\textwidth]{Photos/Capture2.png}
 							\end{subfigure}
-							\caption{modèlisation du R.O.V. Nautilus sous Solidworks}
-					\end{figure}\newline
+							\caption{Modélisation du R.O.V. Nautilus sous Solidworks}
+					\end{figure}
 					
 					\begin{figure}[!h]
 						\centering
@@ -925,9 +926,9 @@ catch (IOException e5) {
 								\includegraphics[width=\textwidth]{Photos/Capture4.png}
 							\end{subfigure}
 							\caption{rendu 3D du R.O.V. Nautilus sous Solidworks}
-					\end{figure}\newline
+					\end{figure}
 					
-					Comme on peut l'observer le R.O.V. va se composer de 3 grandes parties : un squelette interne, un tube transparant ainsi qu'une coque. Cela va faciliter l'étanchéification du R.O.V mais aussi la modification ou le remplacement d'une partie sans toucher aux autres. On colle alors parfaitement aux sections esthétisme et personnalisation. Niveau dimensionnement,le R.O.V. a un emcombrement total de 300*200*150 mm. 
+					Comme on peut l'observer le R.O.V. va se composer de 3 grandes parties : un squelette interne, un tube transparent ainsi qu'une coque. Cela va faciliter l'étanchéification du R.O.V mais aussi la modification ou le remplacement d'une partie sans toucher aux autres. On colle alors parfaitement aux sections esthétisme et personnalisation. Niveau dimensionnement,le R.O.V. a un encombrement total de 300*200*150 mm. 
 						\newline
 						\newline
 					
@@ -940,7 +941,7 @@ catch (IOException e5) {
 					\end{center}
 				\end{figure}
 				
-				Le squelette interne du R.O.V. joue, comme son nom l'indique, le rôle d'une structure de soutient et de rigidification du Nautilus. C'est donc la partie du R.O.V. la plus résitante à la déformation. L'ensemble des autres parties, comme la coque,les câbles, ainsi que les trois moteurs brushless viennent se fixer dessus bénéficient ainsi de cette solidité. De plus comme l'eau va circuler énormément dans cette zone, le squelette interne a été conçu pour opposer très peu de résistance au passage de l'eau avec de nombreux trous et même concentrer et diriger les flux aux niveaux des moteurs. \newpage
+				Le squelette interne du R.O.V. joue, comme son nom l'indique, le rôle d'une structure de soutient et de rigidification du Nautilus. C'est donc la partie du R.O.V. la plus résistante à la déformation. L'ensemble des autres parties, comme la coque,les câbles, ainsi que les trois moteurs brushless viennent se fixer dessus bénéficient ainsi de cette solidité. De plus comme l'eau va circuler énormément dans cette zone, le squelette interne a été conçu pour opposer très peu de résistance au passage de l'eau avec de nombreux trous et même concentrer et diriger les flux aux niveaux des moteurs. \newpage
 					
 					
 				\subsection{Tube}	
@@ -963,7 +964,7 @@ catch (IOException e5) {
 					\end{center}
 				\end{figure}
 				
-			La coque, quand à elle, va apporter le profil nécessaire à un bon aqua-dynamisme ainsi qu'une protection à l'environnement. Elle est aussi au coeur de la problématique de personalisation car en plus de pouvoir avoir une forme ou une couleur différente, elle peut aussi acceuillir des modules supplémentaires par exemple sur les bras à l'avant de sa coque.
+			La coque, quand à elle, va apporter le profil nécessaire à un bon aqua-dynamisme ainsi qu'une protection à l'environnement. Elle est aussi au coeur de la problématique de personnalisation car en plus de pouvoir avoir une forme ou une couleur différente, elle peut aussi accueillir des modules supplémentaires par exemple sur les bras à l'avant de sa coque.
 			
 			\section{Matériaux, méthode de construction}
 			
@@ -988,14 +989,14 @@ catch (IOException e5) {
 								\includegraphics[width=\textwidth]{Photos/Capture16.jpg}
 							\end{subfigure}
 							\caption{impressions 3D du Nautilus}
-					\end{figure}\newline
+					\end{figure}
 					
-					Cependant pour de prochaines impressions de la coque, il sera nécéssaire de revoir le positionnement de celle-ci dans la zone d'impression. En effet, les efforts qui s'exercent sur la coque coïncident avec l'agencement des couches de plastique. Ceci explique l'apparition de fissure sur la coque.
+					Cependant pour de prochaines impressions de la coque, il sera nécessaire de revoir le positionnement de celle-ci dans la zone d'impression. En effet, les efforts qui s'exercent sur la coque coïncident avec l'agencement des couches de plastique. Ceci explique l'apparition de fissure sur la coque.
 					
 					
 					\newpage
 				
-		Le tube est réalisé à l'aide d'un tube en acrylique dont une extrémité est un bouchon en acrylique scellé à la résine Epoxy et l'autre est aussi un bouchon avec un joint torrique qui permet d'ouvrir le tube.
+		Le tube est réalisé à l'aide d'un tube en acrylique dont une extrémité est un bouchon en acrylique scellé à la résine Epoxy et l'autre est aussi un bouchon avec un joint torique qui permet d'ouvrir le tube.
 		
 					\begin{figure}[!h]
 						\centering
@@ -1006,7 +1007,7 @@ catch (IOException e5) {
 								\includegraphics[width=\textwidth]{Photos/Capture8.jpeg}
 							\end{subfigure}
 							\caption{réalisation du tube}
-					\end{figure}\newline
+					\end{figure}
 					
 		Pour que l'ensemble des câbles rentrent dans le tube, un petit accès a été réalisé puis scellé à la résine Epoxy.
 		
@@ -1019,11 +1020,11 @@ catch (IOException e5) {
 								\includegraphics[width=\textwidth]{Photos/Capture11.jpeg}
 							\end{subfigure}
 							\caption{accès des câbles et coulage de la résine }
-					\end{figure}\newline
+					\end{figure}
 			
 			\section{Simulations poids et aqua-dynamisme}
 					Une fois la structure réalisée avec Solidworks, on a attribué les matériaux ou des densités ,quand le matériau n'était pas disponible, aux différents composant.\newline
-				Pour un déplacement correct dans l'eau sans modification de l'assiette il faut que le centre d'inertie (en prennant en compte la poussée d'archimdède) soit confondu avec les axes des moteurs.On a donc rajouté des poids en plomb sur le drone en modifiant leurs poids jusqu'à obtenir la positions du centre d'inertie voulue : 
+				Pour un déplacement correct dans l'eau sans modification de l'assiette il faut que le centre d'inertie (en prenant en compte la poussée d’Archimède) soit confondu avec les axes des moteurs.On a donc rajouté des poids en plomb sur le drone en modifiant leurs poids jusqu'à obtenir la positions du centre d'inertie voulue : 
 					\begin{figure}[!h]
 						\centering
 							\begin{subfigure}[b]{0.3\textwidth}
@@ -1035,9 +1036,10 @@ catch (IOException e5) {
 							\caption{répartition du poids}
 					\end{figure}\newline
 					
-				Avec une assiète correcte, on peut s'intéresser à l'aqua-dynamisme du ROV. En effet à l'aide du module flow-simulation de Solidworks, on place le Nautilus dans un cube de fluide s'écoulant à 2m/s (la vitesse maximale du ROV) et on regarde le comportemant de certaines lignes de courants :
+				Avec une assiette correcte, on peut s'intéresser à l'aqua-dynamisme du ROV. En effet à l'aide du module flow-simulation de Solidworks, on place le Nautilus dans un cube de fluide s'écoulant à 2m/s (la vitesse maximale du ROV) et on regarde le comportement de certaines lignes de courants :
 									
 					\begin{figure}[!h]
+					
 						\centering
 							\begin{subfigure}[b]{0.3\textwidth}
 								\includegraphics[width=\textwidth]{Photos/Capture22.png}
@@ -1046,10 +1048,11 @@ catch (IOException e5) {
 								\includegraphics[width=\textwidth]{Photos/Capture23.png}
 							\end{subfigure}
 							\caption{test d'aqua-dynamisme}
-					\end{figure}\newline
+							
+					\end{figure}
 					
 					
-				Comme on peut le voir, le fluide qui rencontre l'avant du ROV suit la paroit en accélérant à une vitesse semblable tout autour du Nautilus. Cet écoulement est bien caractéristique d'une bonne pénétration du ROV dans le fluide.\newpage
+				Comme on peut le voir, le fluide qui rencontre l'avant du ROV suit la paroi en accélérant à une vitesse semblable tout autour du Nautilus. Cet écoulement est bien caractéristique d'une bonne pénétration du ROV dans le fluide.\newpage
 				
 				\section{Test en eau}
 				
@@ -1059,24 +1062,14 @@ catch (IOException e5) {
 						\caption{ROV entièrement monté}
 					\end{center}
 				\end{figure}
-				\newline
-				
-				Une fois la structure entèrement réalisée et testée en simulation, nous avons réalisé les tests en eau. Cependant durant ces tests, nous nous sommes aperçu que le ROV n'était pas parfaitement étanche. En effet au bout d'une dizaine de minutes nous avons pu observer de l'humidité dans le tube. Bien que le reste de la structure se comporte parfaitement bien il faut revoir l'étanchéité du ROV.
-				\newpage
-				
+				Une fois la structure entièrement réalisée et testée en simulation, nous avons réalisé les tests en eau. Cependant durant ces tests, nous nous sommes aperçu que le ROV n'était pas parfaitement étanche. En effet au bout d'une dizaine de minutes nous avons pu observer de l'humidité dans le tube. Bien que le reste de la structure se comporte parfaitement bien il faut revoir l'étanchéité du ROV.
+			
 \chapter{Conclusion}
 
+\bibliographystyle{unsrt} % Le style est mis entre accolades.
 
-\bibliographystyle{unsrt} 
-
-\bibliography{bibliographie}
-
-				
-				
-				
-\chapter{Références}
->>>>>>> Stashed changes
+\bibliography{bibliographie} % mon fichier de base de données s'appelle bibli.bib
 
 \listoffigures
-				
+
 \end{document}
