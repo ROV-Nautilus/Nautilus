@@ -100,7 +100,7 @@
 
 \author{Dylan Bideau, Julien Turpin, Pierre Bogrand, Guillaume Vincenti}
 \title{\huge{Nautilus - Rapport}}
-\date{21 Avril 2018}
+\date{22 Avril 2018}
 
 \begin{document}
 \makeatletter
@@ -220,7 +220,7 @@
 								\caption{Trello - Planning A faire}
 							\end{center}
 						\end{figure}
-						\newpage Et ce que nous sommes entrain de faire ainsi que les tâches terminées :
+						\newpage Et ce que nous sommes en train de faire ainsi que les tâches terminées :
 						\begin{figure}[!h]
 							\begin{center}
 								\includegraphics[scale=0.5]{Illustrations/Planning2.png}
@@ -230,7 +230,7 @@
 						
         \section{Github}
 				Tout notre code, que cela soit pour les documents en latex ou les codes liés au projet, est sur Github :
-				\url{https://github.com/ROV-Nautilus/Nautilus}
+				\url{https://github.com/ROV-Nautilus/Nautilus}.
 				\newline En voici un aperçu :
 					\begin{figure}[!h]
 							\begin{center}
@@ -240,7 +240,7 @@
 						\end{figure}
 				
 				\section{Gestion de Budget}
-				La gestion de notre budget est réalisé à l'aide d'Excel et de Trello, en effet Trello nous permet de mettre en commun les propositions de dépenses et avec Excel nous stockons l'ensemble des commandes par fournisseurs \newline \newline Les voici ci-dessous :
+				La gestion de notre budget est réalisé à l'aide d'Excel et de Trello, en effet Trello nous permet de mettre en commun les propositions de dépenses et avec Excel nous stockons l'ensemble des commandes par fournisseurs. \newline \newline Les voici ci-dessous :
 					\begin{figure}[!h]
 							\begin{center}
 								\includegraphics[scale=0.5]{Illustrations/Conrad.png}
@@ -256,7 +256,7 @@
 					\begin{figure}[!h]
 							\begin{center}
 								\includegraphics[scale=0.5]{Illustrations/Exptech.png}
-								\caption{Commande Exptch}
+								\caption{Commande ExpTech}
 							\end{center}
 					\end{figure}
 								
@@ -350,7 +350,7 @@
 				
 \chapter{Acquisition et Commandabilité}
 	
-	Dans un second temps, nous devons relier les différents éléments de notre ROV sur une carte et ensuite traiter les informations reçu pour pouvoir agir sur les moteurs vus précédemment. Nous avons choisi la Raspberry.
+	Dans un second temps, nous devons relier les différents éléments de notre ROV sur une carte et ensuite traiter les informations reçues pour pouvoir agir sur les moteurs vus précédemment. Nous avons choisi la Raspberry.
 	
 	\section{Raspberry}
 		Une partie de la programmation et des calculs est effectué sur une Raspberry PI 3 qui supportait tout les types de connections que l'on voulait, en voici la description.
@@ -412,7 +412,7 @@
 						\caption{Capteur de pression et de température MS5803-14BA}
 					\end{center}
 				\end{figure}
-			Ce capteur de pression et de température dispose d'une membrane ,pour des mesures de pressions de gaz ou de liquides, résistant à une pression de 30 Bar. De plus, il possède aussi des interfaces SPI et I2C. Nous utiliserons l'interface I2C car celle-ci utilise moins de connections et la fréquence de communication est basse. De plus bien que les deux modes de communication permettent de placer plusieurs modules sur un même câble, le SPI semble être limité sur la Raspberry. Dans nos conditions de connexion l'adresse esclave est 0x1E. Pour utiliser ce capteur on utilise directement un script python qui sera lancé à chaque fois que l'on veut obtenir la pression. Le script est disponible sur ce site \cite{ref12}.
+			Ce capteur de pression et de température dispose d'une membrane, pour des mesures de pressions de gaz ou de liquides, résistant à une pression de 30 Bar. De plus, il possède aussi des interfaces SPI et I2C. Nous utiliserons l'interface I2C car celle-ci utilise moins de connections et la fréquence de communication est basse. De plus bien que les deux modes de communication permettent de placer plusieurs modules sur un même câble, le SPI semble être limité sur la Raspberry. Dans nos conditions de connexion l'adresse esclave est 0x1E. Pour utiliser ce capteur on utilise directement un script python qui sera lancé à chaque fois que l'on veut obtenir la pression. Le script est disponible sur ce site \cite{ref12}.
 			Comme ce capteur doit se trouver dans l'eau, nous l'avons recouvert, à l’exception de la membrane de résine Epoxy. \newline
 			
 				\begin{figure}[!h]
@@ -423,7 +423,7 @@
 				\end{figure}
 			\newpage
 					
-		\subsection{Central Inertielle}
+		\subsection{Centrale Inertielle}
 		
 		Le Nautilus dispose aussi d'une centrale inertielle. Avec celle-ci, le ROV peut déterminer son assiette ainsi que sa vitesse. Il est bien-sûr possible d'extrapoler ces données pour obtenir la position et suivre le déplacement du drone. Le module utilisé pour notre ROV est le MinIMU-9 v2 de Pololu \cite{ref13}.
 		
@@ -434,7 +434,7 @@
 						\caption{Matrice inertielle MinIMU-9 v2}
 					\end{center}
 				\end{figure}
-				Cette matrice inertielle se compose d'un gyroscope, d'un accéléromètre et d'un compas. De même ce module dispose des interfaces I2C et SPI mais nous utiliserons une fois encore le I2C. La complexité de la mise en place de cette matrice nous a poussé à aussi utiliser un code trouvé sur internet. Le script est disponible sur ce site \cite{ref14}. Ce code est accompagné d'un tutoriel permettant de mieux le comprendre et le mettre en place. Le code reconnait la matrice inertielle utilisée et donc s'adapte en connaissance, pas besoin de connaître l'adresse esclave. Nous avons quand même réalisé quelques modifications pour obtenir plus facilement les données en continue.En effet nous avons dans un premier temps modifier le fichier "`minimu9-ahrs.cpp"'. Celui-ci ne faisait qu'afficher les valeurs d'angles d’Euler dans le terminal. De plus la vitesse de retour des données était trop rapide, ces même donnée n'étaient pas stockées, et le système ne retournait pas uniquement les angles d’Euler. C'est pour cela que nous avons décidé de stocker les valeurs d'angles d’Euler dans un fichier texte qui se réinitialise toutes les 100 valeurs.
+				Cette matrice inertielle se compose d'un gyroscope, d'un accéléromètre et d'un compas. De même ce module dispose des interfaces I2C et SPI mais nous utiliserons une fois encore le I2C. La complexité de la mise en place de cette matrice nous a poussé à aussi utiliser un code trouvé sur internet. Le script est disponible sur ce site \cite{ref14}. Ce code est accompagné d'un tutoriel permettant de mieux le comprendre et le mettre en place. Le code reconnait la matrice inertielle utilisée et donc s'adapte en connaissance, pas besoin de connaître l'adresse esclave. Nous avons quand même réalisé quelques modifications pour obtenir plus facilement les données en continue. En effet nous avons dans un premier temps modifier le fichier "`minimu9-ahrs.cpp"'. Celui-ci ne faisait qu'afficher les valeurs d'angles d’Euler dans le terminal. De plus la vitesse de retour des données était trop rapide, ces même donnée n'étaient pas stockées, et le système ne retournait pas uniquement les angles d’Euler. C'est pour cela que nous avons décidé de stocker les valeurs d'angles d’Euler dans un fichier texte qui se réinitialise toutes les 100 valeurs.
 				\newline On remplace alors la ligne d'affichage 63-64 :
 				\begin{lstlisting}[language=c++]
 void output_euler(quaternion & rotation)
@@ -968,7 +968,7 @@ catch (IOException e5) {
 			
 			\section{Matériaux, méthode de construction}
 			
-			Une fois le design établit, nous somme passé à la réalisation. Pour un premier prototypage rapide, nous avons choisi l'impression 3D de type ' fused filament fabrication'. Ainsi la coque a été imprimée en PLA et le squelette en ABS, tout deux avec un support en PVA qui est un plastique qui se dissous dans l'eau.
+			Une fois le design établi, nous sommes passé à la réalisation. Pour un premier prototypage rapide, nous avons choisi l'impression 3D de type ' fused filament fabrication'. Ainsi la coque a été imprimée en PLA et le squelette en ABS, tout deux avec un support en PVA qui est un plastique qui se dissous dans l'eau.
 			
 					\begin{figure}[!h]
 						\centering
@@ -1023,8 +1023,8 @@ catch (IOException e5) {
 					\end{figure}
 			
 			\section{Simulations poids et aqua-dynamisme}
-					Une fois la structure réalisée avec Solidworks, on a attribué les matériaux ou des densités ,quand le matériau n'était pas disponible, aux différents composant.\newline
-				Pour un déplacement correct dans l'eau sans modification de l'assiette il faut que le centre d'inertie (en prenant en compte la poussée d’Archimède) soit confondu avec les axes des moteurs.On a donc rajouté des poids en plomb sur le drone en modifiant leurs poids jusqu'à obtenir la positions du centre d'inertie voulue : 
+					Une fois la structure réalisée avec Solidworks, on a attribué les matériaux ou des densités, quand le matériau n'était pas disponible, aux différents composant.\newline
+				Pour un déplacement correct dans l'eau sans modification de l'assiette il faut que le centre d'inertie (en prenant en compte la poussée d’Archimède) soit confondu avec les axes des moteurs. On a donc rajouté des poids en plomb sur le drone en modifiant leurs poids jusqu'à obtenir la position du centre d'inertie voulue : 
 					\begin{figure}[!h]
 						\centering
 							\begin{subfigure}[b]{0.3\textwidth}
@@ -1065,6 +1065,9 @@ catch (IOException e5) {
 				Une fois la structure entièrement réalisée et testée en simulation, nous avons réalisé les tests en eau. Cependant durant ces tests, nous nous sommes aperçu que le ROV n'était pas parfaitement étanche. En effet au bout d'une dizaine de minutes nous avons pu observer de l'humidité dans le tube. Bien que le reste de la structure se comporte parfaitement bien il faut revoir l'étanchéité du ROV.
 			
 \chapter{Conclusion}
+
+Le projet Nautilus est un projet que nous avons proposé, et pour lequel nous ne sommes partis de rien. De l'établissement du cahier des charges aux premiers tests en eau, nous avons dû, avec l'aide de notre professeur encadrant, trouver pour chaque aspect du développement les solutions techniques qui nous paraissaient optimales. Ce projet nous a permis de découvrir ou de compléter nos connaissances dans de nombreux domaines, tant software et code que mécanique, électrique ou encore en CAO. Malgré un aboutissement permettant la présentation d'un produit final, ce dernier n'a malheureusement pas pu être testé pour vérifier sa conformité au cahier des charges d'origine, à cause d'un problème purement mécanique d'étanchéité, et de défaut de conception d'un des moteurs. Toutefois, plusieurs pistes d'améliorations peuvent être apportées au ROV, comme entre autre une impression différente de la structure pour une plus grande solidité, une révision de l'étanchéité du tube central, une installation d'une pompe à vide, et un meilleur agencement des composants à l'intérieur de ce dernier. Autant de possibilités donnent au projet Nautilus un aspect de développement à plus long terme.
+\newline\newline Nous tenons également à remercier notre professeur encadrant, M. Goutailler, et Éric, de l'atelier mécanique de l'ENSEA, pour leur aide précieuse tout au long de l'avancement de notre projet.
 
 \bibliographystyle{unsrt} % Le style est mis entre accolades.
 
